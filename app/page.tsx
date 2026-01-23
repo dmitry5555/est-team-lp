@@ -26,8 +26,10 @@ export default function Home() {
               you can probably stop reading here.
               <br /><br />
               Chances are, you’ve already dealt with estimate chaos.
-              Let’s do a quick check.If someone asked you right now:
+              Let’s do a quick check. 
+              <br /><br />
 
+              If someone asked you right now:
               <ul className="my-8 gap-1 flex flex-col">
                 <li>- why the final number is different from yesterday</li>
                 <li>- what exactly caused the change</li>
@@ -67,7 +69,7 @@ export default function Home() {
               The real problem isn’t spreadsheets themselves.
               It’s the lack of a single reference point:
 
-              <ul className="my-8 gap-1 flex flex-col">
+              <ul className="my-4 gap-1 flex flex-col">
                 <li>- changes are spread across different files</li>
                 <li>- and everything depends on people being careful and remembering things</li>
               </ul>
