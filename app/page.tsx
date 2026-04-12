@@ -1,14 +1,14 @@
 export default function Home() {
   return (
-    <div className="max-w-screen-lg mx-auto flex flex-col px-8">
-      <div className="my-20">
+    <div className="max-w-screen-xl mx-auto flex flex-col px-8">
+      <div className="my-32">
         {/* <span className='bg-green-300 text-3xl rounded-xl px-3 py-0 top-0'>0</span> */}	
-        <h1 className="staatliches-font text-5xl md:text-5xl text-center mb-12">
-        .... title</h1>
+        <h1 className="staatliches-font text-6xl md:text-6xl text-center">
+        If you run a small construction company ...</h1>
         {/* <Image className="mx-auto" src="/1.png" alt="Hero" width="894" height="0" /> */}
       </div>
 
-      <div className="max-w-screen-md flex flex-col gap-8 helvetica-font text-xl md:text-2xl mx-auto">
+      <div className="max-w-screen-md flex flex-col gap-8 helvetica-font md:text-2xl mx-auto">
 
         <div className="gap-6 flex-col flex text-zinc-700 ">
           <div className="">
@@ -66,7 +66,7 @@ export default function Home() {
               The real problem isn’t spreadsheets themselves.
               It’s the lack of a single reference point:
 
-              <ul className="my-4 gap-1 flex flex-col">
+              <ul className="my-8 gap-1 flex flex-col">
                 <li>- changes are spread across different files</li>
                 <li>- and everything depends on people being careful and remembering things</li>
               </ul>
