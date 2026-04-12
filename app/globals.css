@@ -1,10 +1,6 @@
 @import "tailwindcss";
-.staatliches-font {
-  font-family: var(--font-staatliches), "Arial Narrow", Arial, sans-serif;
-  font-weight: 400;
-}
-
 .source-serif-font {
   font-family: var(--font-source-serif-4), Georgia, "Times New Roman", serif;
   font-weight: 400;
+  font-optical-sizing: none;
 }

@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div className="max-w-screen-xl mx-auto flex flex-col px-6">
-      <div className="my-32 md:my-60">
+    <div className="max-w-screen-xl mx-auto flex flex-col px-6 mb-12">
+      <div className="my-20 md:my-60">
         {/* <span className='bg-green-300 text-3xl rounded-xl px-3 py-0 top-0'>0</span> */}	
         <h1 className="source-serif-font text-5xl md:text-6xl text-center ">
         ....the  title</h1>
