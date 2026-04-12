@@ -12,7 +12,6 @@ export default function Home() {
 
         <div className="gap-6 flex-col flex text-zinc-700 ">
           <div className="">
-
               If you run a small construction company,
               build custom homes or do renovations,
               and keep getting lost in estimate versions, constantly double-checking things,
