@@ -1,14 +1,14 @@
 export default function Home() {
   return (
     <div className="max-w-screen-xl mx-auto flex flex-col px-6">
-      <div className="my-32">
+      <div className="my-48">
         {/* <span className='bg-green-300 text-3xl rounded-xl px-3 py-0 top-0'>0</span> */}	
-        <h1 className="staatliches-font text-5xl md:text-6xl text-center">
-        If you run a small construction company ...</h1>
+        <h1 className="source-serif-font font-bold text-5xl md:text-6xl/17 text-center">
+        If you run a small construction companyIf you run a small construction company ...</h1>
         {/* <Image className="mx-auto" src="/1.png" alt="Hero" width="894" height="0" /> */}
       </div>
 
-      <div className="max-w-screen-md flex flex-col gap-8 helvetica-font text-lg md:text-2xl mx-auto">
+      <div className="max-w-screen-md flex flex-col gap-8 text-lg md:text-2xl mx-auto">
 
         <div className="gap-6 flex-col flex text-zinc-700 ">
           <div className="">
