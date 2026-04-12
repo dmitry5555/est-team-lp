@@ -1,14 +1,14 @@
 export default function Home() {
   return (
     <div className="max-w-screen-xl mx-auto flex flex-col px-6">
-      <div className="my-48">
+      <div className="my-32 md:my-60">
         {/* <span className='bg-green-300 text-3xl rounded-xl px-3 py-0 top-0'>0</span> */}	
-        <h1 className="source-serif-font font-bold text-5xl md:text-6xl/17 text-center">
-        If you run a small construction companyIf you run a small construction company ...</h1>
+        <h1 className="source-serif-font text-5xl md:text-6xl text-center ">
+        ....the  title</h1>
         {/* <Image className="mx-auto" src="/1.png" alt="Hero" width="894" height="0" /> */}
       </div>
 
-      <div className="max-w-screen-md flex flex-col gap-8 text-lg md:text-2xl mx-auto">
+      <div className="max-w-screen-md flex flex-col gap-8 source-serif-font text-lg md:text-2xl mx-auto">
 
         <div className="gap-6 flex-col flex text-zinc-700 ">
           <div className="">
@@ -27,7 +27,7 @@ export default function Home() {
               <br /><br />
 
               If someone asked you right now:
-              <ul className="my-8 gap-1 flex flex-col">
+              <ul className="my-4 gap-1 flex flex-col">
                 <li>- why the final number is different from yesterday</li>
                 <li>- what exactly caused the change</li>
                 <li>- and whether this is actually the latest version</li>
@@ -66,7 +66,7 @@ export default function Home() {
               The real problem isn’t spreadsheets themselves.
               It’s the lack of a single reference point:
 
-              <ul className="my-8 gap-1 flex flex-col">
+              <ul className="my-4 gap-1 flex flex-col">
                 <li>- changes are spread across different files</li>
                 <li>- and everything depends on people being careful and remembering things</li>
               </ul>
@@ -80,7 +80,7 @@ export default function Home() {
               <br /><br />
               You shouldn’t have to remember:
 
-              <ul className="my-8 gap-1 flex flex-col">
+              <ul className="my-4 gap-1 flex flex-col">
                 <li>- where the latest version is</li>
                 <li>- who changed what</li>
                 <li>- or which updates haven’t been applied yet</li>
@@ -94,7 +94,7 @@ export default function Home() {
               <br /><br />
               In practice, that means:
 
-              <ul className="my-8 gap-1 flex flex-col">
+              <ul className="my-4 gap-1 flex flex-col">
                 <li>- instead of 5–10 files — one source of truth</li>
                 <li>- instead of hunting for the right version — instant access</li>
                 <li>- instead of manual comparison — a clear change history</li>
@@ -111,7 +111,7 @@ export default function Home() {
               <br /><br />
               The result:
 
-              <ul className="my-8 gap-1 flex flex-col">
+              <ul className="my-4 gap-1 flex flex-col">
                 <li>- less anxiety and re-checking</li>
                 <li>- faster decisions</li>
                 <li>- more confidence in the numbers</li>
