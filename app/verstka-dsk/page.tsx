@@ -14,75 +14,244 @@ export default function Home() {
         </div>
 
         {/* location */}
-        <div className="flex flex-col md:flex-row gap-6 mt-1.5">
-          <div className="lg:w-1/2 w-full bg-blue-50 border-1 border-[rgba(0,57,174,0.4)] flex flex-col rounded-xl md:rounded-3xl overflow-visible">
-            <div className="min-h-65 h-70 bg-red-300 relative overflow-hidden rounded-t-xl md:rounded-t-3xl">
-              <Image  src={'/image339.png'} fill className="object-cover" alt='' />
-            </div>
-            
-            <div className="gap-5 flex flex-col px-4 md:px-5.5 py-6 md:py-8 rounded-xl md:rounded-3xl border-t-1 bg-white border-white -mt-5 relative">
-              <div className="text-h2 md:text-5xl mb-1 t-dark">Москва</div>
-              
-              {/* info 1 */}
-              <div className="flex flex-col gap-3 mb-4">
-                <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
-                  <div className="t-gray">По городу</div>
-                  <div className="font-semibold! justify-end ml-auto t-blue">1 день</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-1.5">
+
+              {/* loc-1 */}
+              <div className="border-1 border-[rgba(0,57,174,0.4)] flex flex-col rounded-xl md:rounded-3xl overflow-visible">
+                <div className="min-h-65 h-70 bg-red-300 relative overflow-hidden rounded-t-xl md:rounded-t-3xl">
+                  <Image  src={'image339.png'} fill className="object-cover" alt='' />
                 </div>
-                {/* 2/3 */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                  <div className="">
-                    <div className="text-main t-blue font-semibold!">300 ₽</div>
-                    <div className="text-sm2 t-dark">Стоимость доставки</div>
+                
+                <div className="gap-5 flex flex-col px-4 md:px-5.5 py-6 md:py-8 rounded-xl md:rounded-3xl border-t-1 bg-white border-white -mt-5 relative">
+                  <div className="text-h2 md:text-5xl mb-1 t-dark">Москва</div>
+                  
+                  {/* info 1 */}
+                  <div className="flex flex-col gap-3 mb-4">
+                    <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
+                      <div className="t-gray">По городу</div>
+                      <div className="font-semibold! justify-end ml-auto t-blue">1 день</div>
+                    </div>
+                    {/* 2/3 */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                      <div className="">
+                        <div className="text-main t-blue font-semibold!">300 ₽</div>
+                        <div className="text-sm2 t-dark">Стоимость доставки</div>
+                      </div>
+                      <div className="">
+                        <div className="font-semibold! text-main t-blue">от 3 000 ₽</div>
+                        <div className="text-sm2 t-dark">Бесплатная доставка</div>
+                      </div>
+                      <div className="">
+                        <div className="text-main t-blue font-semibold!">09:00 - 18:00</div>
+                        <div className="text-sm2 t-dark">График работы: Пн–Пт</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="">
-                    <div className="font-semibold! text-main t-blue">от 3 000 ₽</div>
-                    <div className="text-sm2 t-dark">Бесплатная доставка</div>
+                  
+                  {/* info 2 */}
+                  <div className="flex flex-col gap-3 mb-1 ">
+                    <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
+                      <div className="t-gray">Самовывоз</div>
+                      <div className="justify-end ml-auto relative group">
+                        <div className="" >
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0ZM9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5ZM9 11.0156C9.75288 11.0156 10.3506 11.6677 10.3506 12.458C10.3505 13.2621 9.75282 13.8994 9 13.8994C8.24736 13.8992 7.65049 13.262 7.65039 12.458C7.65039 11.6678 8.2473 11.0159 9 11.0156ZM10.3242 6.77246L9.89648 10.1699H8.10449L7.67676 6.77246V4H10.3242V6.77246Z" fill="#2C2C32" fillOpacity="0.4"/>
+    </svg>
+
+                        </div>
+                        {/* tooltip */}
+                        <div
+                          className="absolute top-full right-0 mr-7 hidden group-hover:block w-70 border-1 rounded-xl border-[rgba(0,57,174,1)] px-2.5 py-3.5 bg-white -mt-8" 
+                        >
+                          <ul className="list-disc z-10 pl-5 gap-2 flex flex-col">
+                            <li>Забрать после подтверждения готовности менеджером</li>
+                            <li>За 30-60 мин до визита позвонить для пропуска</li>
+                            <li>Бесплатная парковка для легковых, грузовых, велосипедов, самокатов</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <div className="flex flex-col text-lg ">
+                        <div className="text-main t-blue font-semibold!">Ленинградский проспект, д. 80б, корп. 2</div>
+                        <div className="text-sm2 t-dark">Офис в Москве </div>
+                      </div>
+                      <div className="flex flex-col text-lg">
+                        <div className="text-main t-blue font-semibold!">12:00 - 18:00</div>
+                        <div className="text-sm2 t-dark">График работы: Пн–Пт</div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="">
-                    <div className="text-main t-blue font-semibold!">09:00 - 18:00</div>
-                    <div className="text-sm2 t-dark">График работы: Пн–Пт</div>
-                  </div>
+                  
                 </div>
               </div>
-              
-              {/* info 2 */}
-              <div className="flex flex-col gap-3 mb-1 ">
-                <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
-                  <div className="t-gray">Самовывоз</div>
-                  <div className="justify-end ml-auto relative group">
-                    <div className="" >
-                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0ZM9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5ZM9 11.0156C9.75288 11.0156 10.3506 11.6677 10.3506 12.458C10.3505 13.2621 9.75282 13.8994 9 13.8994C8.24736 13.8992 7.65049 13.262 7.65039 12.458C7.65039 11.6678 8.2473 11.0159 9 11.0156ZM10.3242 6.77246L9.89648 10.1699H8.10449L7.67676 6.77246V4H10.3242V6.77246Z" fill="#2C2C32" fillOpacity="0.4"/>
-</svg>
+              {/* end loc-1 */}
+
+
+              {/* loc-2 */}
+              <div className=" border-1 border-[rgba(0,57,174,0.4)] flex flex-col rounded-xl md:rounded-3xl overflow-visible">
+                <div className="min-h-65 h-70 bg-red-300 relative overflow-hidden rounded-t-xl md:rounded-t-3xl">
+                  <Image  src={'image345.png'} fill className="object-cover" alt='' />
+                </div>
+                
+                <div className="gap-5 flex flex-col px-4 md:px-5.5 py-6 md:py-8 rounded-xl md:rounded-3xl border-t-1 bg-white border-white -mt-5 relative">
+                  <div className="text-h2 md:text-5xl mb-1 t-dark">По всей территории России</div>
+
+                  <div className="text-[rgba(44,44,50,0.6)] text-sm1 -mt-2">Доставляем заказы с учетом особенностей каждого региона, температурных режимов и характеристик отправки</div>
+                  
+                  {/* info 1 */}
+                  <div className="flex flex-col gap-3 mb-4">
+                    <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
+                      <div className="t-gray">До двери со склада г. Новосибирск</div>
+                      <div className="font-semibold! justify-end ml-auto t-blue">1 день</div>
+                    </div>
+                    {/* 2/3 */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                      <div className="">
+                        <div className="text-main t-blue font-semibold!">от 30 000 ₽</div>
+                        <div className="text-sm2 t-dark">Бесплатная доставка</div>
+                      </div>
+                      <div className="col-span-1 md:col-span-2">
+                        <div className="font-semibold! text-main t-blue">до 30 000 ₽ в чеке</div>
+                        <div className="text-sm2 t-dark">Оплата доставки в счете или отдельно курьеру ТК</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* info 2 */}
+                  <div className="flex flex-col gap-3 mb-1 ">
+                    <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
+                      <div className="t-gray">До ТК в Москве</div>
+                      {/* <div className="justify-end ml-auto relative group">
+                        <div className="" >
+                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0ZM9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5ZM9 11.0156C9.75288 11.0156 10.3506 11.6677 10.3506 12.458C10.3505 13.2621 9.75282 13.8994 9 13.8994C8.24736 13.8992 7.65049 13.262 7.65039 12.458C7.65039 11.6678 8.2473 11.0159 9 11.0156ZM10.3242 6.77246L9.89648 10.1699H8.10449L7.67676 6.77246V4H10.3242V6.77246Z" fill="#2C2C32" fillOpacity="0.4"/>
+    </svg>
+
+                        </div>
+                      </div> */}
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <div className="flex flex-col text-lg ">
+                        <div className="text-main t-blue font-semibold!">до 30 000 ₽ в чеке</div>
+                        <div className="text-sm2 t-dark">Бесплатная доставка </div>
+                      </div>
+                      {/* <div className="flex flex-col text-lg">
+                        <div className="text-main t-blue font-semibold!">12:00 - 18:00</div>
+                        <div className="text-sm2 t-dark">График работы: Пн–Пт</div>
+                      </div> */}
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+              {/* end loc-2 */}
+
+
+              {/* loc-4 */}
+              <div className=" border-1 border-[rgba(0,57,174,0.4)] flex flex-col rounded-xl md:rounded-3xl overflow-visible">
+                <div className="min-h-65 h-70 bg-red-300 relative overflow-hidden rounded-t-xl md:rounded-t-3xl">
+                  <Image  src={'image341.png'} fill className="object-cover" alt='' />
+                </div>
+                
+                <div className="gap-5 flex flex-col px-4 md:px-5.5 py-6 md:py-8 rounded-xl md:rounded-3xl border-t-1 bg-white border-white -mt-5 relative">
+                  <div className="text-h2 md:text-5xl mb-1 t-dark">Подмосковье (от МКАД)</div>
+                  
+                  {/* info 1 */}
+                  <div className="flex flex-col gap-3 mb-4">
+                    <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
+                      <div className="t-gray">До 5 км по Москве</div>
+                      <div className="font-semibold! justify-end ml-auto t-blue">1-2 дня</div>
+                    </div>
+                    {/* 2/3 */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                      <div className="">
+                        <div className="text-main t-blue font-semibold!">500 ₽</div>
+                        <div className="text-sm2 t-dark">Стоимость доставки</div>
+                      </div>
+                      <div className="">
+                        <div className="font-semibold! text-main t-blue">от 7 000 ₽</div>
+                        <div className="text-sm2 t-dark">Бесплатная доставка</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* info 2 */}
+                  <div className="flex flex-col gap-3 mb-1 ">
+                    <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
+                      <div className="t-gray">До 20 км</div>
+                      <div className="font-semibold! justify-end ml-auto t-blue">1-2 дня</div>
 
                     </div>
-                    {/* tooltip */}
-                    <div
-                      className="absolute top-full right-0 mr-7 hidden group-hover:block w-70 border-1 rounded-xl border-[rgba(0,57,174,1)] px-2.5 py-3.5 bg-white -mt-8" 
-                    >
-                      <ul className="list-disc z-10 pl-5 gap-2 flex flex-col">
-                        <li>Забрать после подтверждения готовности менеджером</li>
-                        <li>За 30-60 мин до визита позвонить для пропуска</li>
-                        <li>Бесплатная парковка для легковых, грузовых, велосипедов, самокатов</li>
-                      </ul>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                      <div className="flex flex-col text-lg ">
+                        <div className="text-main t-blue font-semibold!">1 000 ₽</div>
+                        <div className="text-sm2 t-dark">Стоимость доставки </div>
+                      </div>
+                      <div className="flex flex-col text-lg">
+                        <div className="text-main t-blue font-semibold!">от 12 000 ₽</div>
+                        <div className="text-sm2 t-dark">Бесплатная доставка</div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div className="flex flex-col gap-4">
-                  <div className="flex flex-col text-lg ">
-                    <div className="text-main t-blue font-semibold!">Ленинградский проспект, д. 80б, корп. 2</div>
-                    <div className="text-sm2 t-dark">Офис в Москве </div>
-                  </div>
-                  <div className="flex flex-col text-lg">
-                    <div className="text-main t-blue font-semibold!">12:00 - 18:00</div>
-                    <div className="text-sm2 t-dark">График работы: Пн–Пт</div>
-                  </div>
+                  
                 </div>
               </div>
+              {/* end loc-4 */}
+
               
-            </div>
-          </div>
+              {/* loc-3 */}
+              <div className="  border-1 border-[rgba(0,57,174,0.4)] flex flex-col rounded-xl md:rounded-3xl overflow-visible">
+                <div className="min-h-65 h-70 bg-red-300 relative overflow-hidden rounded-t-xl md:rounded-t-3xl">
+                  <Image  src={'image341.png'} fill className="object-cover" alt='' />
+                </div>
+                
+                <div className="gap-5 flex flex-col px-4 md:px-5.5 py-6 md:py-8 rounded-xl md:rounded-3xl border-t-1 bg-white border-white -mt-5 relative">
+                  <div className="text-h2 md:text-5xl mb-1 t-dark">Новосибирск / Бердск / Кольцово</div>
+                  
+                  {/* info 1 */}
+                  <div className="flex flex-col gap-3 mb-4">
+                    <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
+                      <div className="t-gray">До города со склада г. Новосибирск</div>
+                      <div className="font-semibold! justify-end ml-auto t-blue">1 день</div>
+                    </div>
+                    {/* 2/3 */}
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                      <div className="">
+                        <div className="text-main t-blue font-semibold!">300 ₽</div>
+                        <div className="text-sm2 t-dark">Стоимость доставки</div>
+                      </div>
+                      <div className="">
+                        <div className="font-semibold! text-main t-blue">от 3 000 ₽</div>
+                        <div className="text-sm2 t-dark">Бесплатная доставка</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* info 2 */}
+                  {/* <div className="flex flex-col gap-3 mb-1 ">
+                    <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
+                      <div className="t-gray">До 20 км</div>
+                      <div className="font-semibold! justify-end ml-auto t-blue">1-2 дня</div>
+
+                    </div>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                      <div className="flex flex-col text-lg ">
+                        <div className="text-main t-blue font-semibold!">1 000 ₽</div>
+                        <div className="text-sm2 t-dark">Стоимость доставки </div>
+                      </div>
+                      <div className="flex flex-col text-lg">
+                        <div className="text-main t-blue font-semibold!">от 12 000 ₽</div>
+                        <div className="text-sm2 t-dark">Бесплатная доставка</div>
+                      </div>
+                    </div>
+                  </div> */}
+                  
+                </div>
+              </div>
+              {/* end loc-3 */}
+
+              
 
         </div>
       </div>
@@ -130,8 +299,8 @@ export default function Home() {
 
           <div className="flex flex-row flex-wrap gap-x-20 gap-y-12 items-center w-full">
             <Image src={'3.png'} alt='' width={150} height={100} unoptimized />
-            <Image src={'/1.png'} alt='' width={150} height={100} />
-            <Image src={'/2.png'} alt='' width={150} height={100} />
+            <Image src={'1.png'} alt='' width={150} height={100} />
+            <Image src={'2.png'} alt='' width={150} height={100} />
           </div>
 
         </div>
@@ -193,7 +362,7 @@ export default function Home() {
       </div>
 
       {/* form-div */}
-      <div className="mt-16 flex flex-col md:flex-row w-full gap-4 md:gap-16 px-4 md:px-5.5 py-8 rounded-xl md:rounded-3xl border-t-1 border-white bg-blue1">
+      <div className="mt-10 md:mt-16 flex flex-col md:flex-row w-full gap-4 md:gap-16 px-4 md:px-5.5 py-8 rounded-xl md:rounded-3xl border-t-1 border-white bg-blue1">
         {/* quest */}
         <div className="flex flex-col w-full gap-4">
           <h2 className="text-h2 t-blue font-medium!">Остались вопросы? </h2>
