@@ -1,6 +1,106 @@
 @import "tailwindcss";
 .source-serif-font {
-  font-family: var(--font-source-serif-4), Georgia, "Times New Roman", serif;
-  font-weight: 400;
-  font-optical-sizing: none;
+  /* font-family: var(--font-source-serif-4), Georgia, "Times New Roman", serif; */
+  /* font-weight: 400; */
+  /* font-optical-sizing: none; */
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-Medium.woff') format('woff');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-SemiBold.woff') format('woff');
+  font-weight: 600;
+}
+
+
+/* @font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/Gilroy-SemiBold.woff') format('woff');
+  font-weight: 600;
+} */
+
+@layer utilities {
+  .text-h1 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .text-h2 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.1;
+    letter-spacing: 0;
+    color: #2C2C32;
+  }
+
+  .text-main {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  .text-sm1 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0;
+  }
+
+  .text-sm2 {
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.2;
+    letter-spacing: 0;
+  }
+  
+  .t-dark {
+    color: rgba(44, 44, 50, 1);
+  }
+
+  .t-gray {
+    color: rgba(44, 44, 50, 0.6);
+  }
+  
+  .t-gray2 {
+    color: rgba(44, 44, 50, 0.4);
+  }
+
+  .t-gray3 {
+    color: rgba(187, 188, 188, 1);
+  }
+
+  .t-blue {
+    color: rgba(0, 57, 174, 1); 
+  }
+
+  .bg-blue1 { 
+    background-color: rgba(246, 249, 253, 1); 
+  }
+  .bg-blue2 {
+    background-color: rgba(0, 57, 174, 1); 
+  }
+
+  .bg-blue3 {
+    background-color: rgba(27, 84, 205, 1);
+  }
+  .bg-gray1 { 
+    background-color: rgba(187, 188, 188, 1);
+  }
+  
+
+
+
 }

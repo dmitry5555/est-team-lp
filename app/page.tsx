@@ -3,15 +3,15 @@ export default function Home() {
     <div className="max-w-screen-xl mx-auto flex flex-col px-6 mb-12">
       <div className="my-20 md:my-60">
         {/* <span className='bg-green-300 text-3xl rounded-xl px-3 py-0 top-0'>0</span> */}	
-        <h1 className="source-serif-font text-5xl md:text-6xl text-center ">
-        ....the  title</h1>
+        {false &&<h1 className="source-serif-font text-5xl md:text-6xl text-center ">
+        ....the  title</h1> }
         {/* <Image className="mx-auto" src="/1.png" alt="Hero" width="894" height="0" /> */}
       </div>
 
       <div className="max-w-screen-md flex flex-col gap-8 source-serif-font text-lg md:text-2xl mx-auto">
 
         <div className="gap-6 flex-col flex text-zinc-700 ">
-          <div className="">
+          {false && <div className="">
               If you run a small construction company,
               build custom homes or do renovations,
               and keep getting lost in estimate versions, constantly double-checking things,
@@ -207,7 +207,7 @@ export default function Home() {
 
 
           </div>
-          
+}
         </div>
 
 
