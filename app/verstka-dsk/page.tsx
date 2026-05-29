@@ -203,7 +203,7 @@ export default function Home() {
               {/* loc-3 */}
               <div className="  border-1 border-[rgba(0,57,174,0.4)] flex flex-col rounded-xl md:rounded-3xl overflow-visible">
                 <div className="min-h-65 h-70 bg-red-300 relative overflow-hidden rounded-t-xl md:rounded-t-3xl">
-                  <Image  src={'image341.png'} fill className="object-cover" alt='' />
+                  <Image  src={'image351.png'} fill className="object-cover" alt='' />
                 </div>
                 
                 <div className="gap-5 flex flex-col px-4 md:px-5.5 py-6 md:py-8 rounded-xl md:rounded-3xl border-t-1 bg-white border-white -mt-5 relative">
