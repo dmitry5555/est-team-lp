@@ -1,9 +1,10 @@
+import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="max-w-7xl px-14 mx-auto flex flex-col mb-12 py-12">
+    <div className="max-w-7xl px-4 md:px-14 mx-auto flex flex-col mb-12 py-12">
   
-      <div className="flex flex-col w-full mx-auto gap-4">
+      <div className="flex flex-col w-full mx-auto gap-5">
 
         {/* main */}
         <h1 className="text-h1 md:text-6xl! t-blue">Доставка</h1>
@@ -15,7 +16,9 @@ export default function Home() {
         {/* location */}
         <div className="flex flex-col md:flex-row gap-6 mt-1.5">
           <div className="lg:w-1/2 w-full bg-blue-50 border-1 border-[rgba(0,57,174,0.4)] flex flex-col rounded-xl md:rounded-3xl overflow-visible">
-            <div className="min-h-65 bg-red-300 rounded-t-xl md:rounded-t-3xl">map pic</div>
+            <div className="min-h-65 h-70 bg-red-300 relative overflow-hidden rounded-t-xl md:rounded-t-3xl">
+              <Image  src={'/image339.png'} fill className="object-cover" alt='' />
+            </div>
             
             <div className="gap-5 flex flex-col px-4 md:px-5.5 py-6 md:py-8 rounded-xl md:rounded-3xl border-t-1 bg-white border-white -mt-5 relative">
               <div className="text-h2 md:text-5xl mb-1 t-dark">Москва</div>
@@ -48,10 +51,15 @@ export default function Home() {
                 <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
                   <div className="t-gray">Самовывоз</div>
                   <div className="justify-end ml-auto relative group">
-                    <div className="" >-</div>
+                    <div className="" >
+                      <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0ZM9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5ZM9 11.0156C9.75288 11.0156 10.3506 11.6677 10.3506 12.458C10.3505 13.2621 9.75282 13.8994 9 13.8994C8.24736 13.8992 7.65049 13.262 7.65039 12.458C7.65039 11.6678 8.2473 11.0159 9 11.0156ZM10.3242 6.77246L9.89648 10.1699H8.10449L7.67676 6.77246V4H10.3242V6.77246Z" fill="#2C2C32" fillOpacity="0.4"/>
+</svg>
+
+                    </div>
                     {/* tooltip */}
                     <div
-                      className="absolute top-full right-0 mr-4 hidden group-hover:block w-70 border-1 rounded-xl border-[rgba(0,57,174,1)] px-2.5 py-3.5 bg-white -mt-6" 
+                      className="absolute top-full right-0 mr-7 hidden group-hover:block w-70 border-1 rounded-xl border-[rgba(0,57,174,1)] px-2.5 py-3.5 bg-white -mt-8" 
                     >
                       <ul className="list-disc z-10 pl-5 gap-2 flex flex-col">
                         <li>Забрать после подтверждения готовности менеджером</li>
@@ -83,7 +91,7 @@ export default function Home() {
 
 
       {/* tk */}
-      <div className="flex flex-col gap-4 my-12">
+      <div className="flex flex-col gap-4 my-12 md:my-18">
         <h2 className="md:text-3xl! text-h2 t-blue">Работа с Транспортными команиями</h2>
 
         <div className="flex flex-col md:flex-row gap-8 my-4">
@@ -96,7 +104,7 @@ export default function Home() {
 <path d="M22.9156 11.9101C23.1109 11.9961 23.271 12.1796 23.3257 12.375C23.3492 12.457 23.3648 12.9961 23.3648 13.6601V14.8046H24.3726C26.0132 14.8046 25.8921 14.7421 27.6265 16.4804C28.9976 17.8554 29.0757 17.9492 29.2085 18.4218C29.271 18.625 29.2788 18.9414 29.2945 21.164C29.3062 23.039 29.3218 23.6796 29.3531 23.6914C29.3804 23.6992 29.4468 23.7148 29.5093 23.7265C29.6617 23.7617 29.9156 24.0039 29.9702 24.1679C29.9937 24.2421 30.0054 24.4179 29.9976 24.5586C29.982 24.7968 29.9702 24.8242 29.8218 24.9609C29.7359 25.0429 29.5952 25.1289 29.5132 25.1523C29.4273 25.1757 29.021 25.1953 28.5952 25.1953C27.7359 25.1953 27.7788 25.1796 27.7788 25.4804C27.7788 25.8398 27.5718 26.4531 27.3374 26.7968C26.7632 27.6406 25.9624 28.1054 24.9859 28.1523C23.689 28.2187 22.5523 27.5117 22.064 26.3281C21.9429 26.039 21.8413 25.6054 21.8413 25.3593V25.1953H19.6343H17.4273V25.3515C17.4273 25.5859 17.3179 26.082 17.2046 26.3437C16.9156 27.0351 16.2945 27.6562 15.607 27.9414C15.0093 28.1914 14.1656 28.2304 13.5523 28.0351C12.5992 27.7304 11.8257 26.9296 11.5679 25.9765C11.5406 25.8789 11.5093 25.6679 11.4937 25.5078L11.4702 25.2148L10.982 25.1953C10.4507 25.1718 10.3452 25.1367 10.1421 24.9218L10.0249 24.8007L10.0132 18.5781L10.0054 12.3593L10.1187 12.1836C10.1929 12.0625 10.2906 11.9765 10.4038 11.9179L10.5757 11.8359H16.6695C22.4937 11.8359 22.7671 11.8398 22.9156 11.9101ZM23.3648 17.7929V19.2578H25.5757H27.7906L27.7671 19.0156L27.7476 18.7773L26.521 17.5507L25.2984 16.3281H24.3335H23.3648V17.7929ZM24.521 23.7695C24.1304 23.832 23.6968 24.1836 23.4937 24.5976C23.3999 24.7968 23.3843 24.8671 23.3843 25.1757C23.3843 25.4804 23.3999 25.5586 23.4937 25.7656C23.6343 26.0664 23.9351 26.3671 24.2437 26.5117C24.4468 26.6054 24.5249 26.6211 24.8296 26.6211C25.1382 26.6211 25.2085 26.6054 25.4077 26.5117C26.146 26.1484 26.4624 25.3164 26.1421 24.5898C25.9702 24.1953 25.4859 23.8242 25.0562 23.75C24.8687 23.7187 24.814 23.7226 24.521 23.7695ZM13.9195 23.8359C13.6538 23.9336 13.2984 24.2656 13.1577 24.539C12.5523 25.7304 13.8179 27.0664 15.0249 26.5117C15.3335 26.3671 15.6343 26.0703 15.7749 25.7656C15.8687 25.5586 15.8843 25.4804 15.8843 25.1757C15.8843 24.7461 15.7827 24.4961 15.4859 24.1914C15.0562 23.75 14.4976 23.625 13.9195 23.8359Z" fill="#2C2C32" fillOpacity="0.4"/>
 </svg>
               </div>
-              <div className=" md:text-main t-dark my-auto">Осуществляем доставку через ведущие ТК</div>
+              <div className="text-sm1 md:text-xl! t-dark my-auto">Осуществляем доставку через ведущие ТК</div>
             </div>
             <div className="flex flex-row gap-4 ">
               <div className="my-auto">
@@ -106,7 +114,7 @@ export default function Home() {
 </svg>
 
               </div>
-              <div className=" md:text-main t-dark my-auto">Точные сроки и стоимость доставки зависят от условий конкретной ТК</div>
+              <div className="text-sm1 md:text-xl!  t-dark my-auto">Точные сроки и стоимость доставки зависят от условий конкретной ТК</div>
             </div>
             <div className="flex flex-row gap-4">
               <div className="my-auto">
@@ -116,15 +124,14 @@ export default function Home() {
 <path d="M14.0798 12.1929C13.0416 12.7482 12.3113 13.76 12.0737 14.9647C11.9725 15.4824 11.9769 26.1553 12.0781 26.7341C12.3465 28.2682 13.4199 29.4824 14.8673 29.8918L15.2413 30H20.0366H24.8319L25.2059 29.8918C26.2837 29.5765 27.1416 28.8282 27.6255 27.7882C28.0303 26.9082 27.9995 27.4824 27.9995 20.8941V15.0824L27.8763 14.6588C27.5947 13.7082 27.036 12.9129 26.2705 12.3906C26.0637 12.2447 25.5974 12 25.5358 12C25.5226 12 25.5138 12.0612 25.5138 12.1318C25.5138 12.3906 25.3378 13.0165 25.1443 13.4353C24.6955 14.4141 23.864 15.1388 22.8478 15.4447C22.509 15.5482 22.4519 15.5482 20.0366 15.5482C17.6257 15.5482 17.5641 15.5482 17.221 15.4447C15.8088 15.0259 14.7925 13.84 14.5594 12.3388C14.533 12.1553 14.4934 12 14.4714 12C14.4538 12 14.2778 12.0847 14.0798 12.1929ZM24.37 18.4094C24.7791 18.6776 24.9287 19.1906 24.7219 19.6424C24.6647 19.7694 23.7761 20.7529 22.0735 22.5694C19.8738 24.9176 19.4779 25.3176 19.3019 25.3882C19.0335 25.4918 18.7696 25.4541 18.5144 25.2706C18.2021 25.0494 15.3645 21.9765 15.2853 21.7788C15.1445 21.4118 15.2325 20.9271 15.492 20.6776C15.7648 20.4094 16.1959 20.3294 16.4951 20.4941C16.5787 20.5365 17.177 21.1388 17.8237 21.8259L19.0027 23.0824L21.1672 20.7671C22.8082 19.0165 23.3845 18.4282 23.5341 18.3576C23.8333 18.2118 24.084 18.2306 24.37 18.4094Z" fill="#2C2C32" fillOpacity="0.4"/>
 </svg>
 </div>
-              <div className=" md:text-main t-dark my-auto">Менеджер поможет подобрать лучший вариант отправки</div>
+              <div className="text-sm1 md:text-xl!  t-dark my-auto">Менеджер поможет подобрать лучший вариант отправки</div>
             </div>
           </div>
 
-          <div className="flex flex-row flex-wrap gap-x-8 gap-y-12 items-center w-full">
-            <div className="w-[220px]"><img src="/3.png" /></div>
-            <div className="w-[220px]"><img src="/2.png" /></div>
-            <div className="w-[220px]"><img src="/1.png" /></div>
-
+          <div className="flex flex-row flex-wrap gap-x-20 gap-y-12 items-center w-full">
+            <Image src={'/3.png'} alt='' width={150} height={100} />
+            <Image src={'/1.png'} alt='' width={150} height={100} />
+            <Image src={'/2.png'} alt='' width={150} height={100} />
           </div>
 
         </div>
