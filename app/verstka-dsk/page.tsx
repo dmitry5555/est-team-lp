@@ -129,7 +129,7 @@ export default function Home() {
           </div>
 
           <div className="flex flex-row flex-wrap gap-x-20 gap-y-12 items-center w-full">
-            <Image src={'3.png'} alt='' width={150} height={100} />
+            <Image src={'/3.png'} alt='' width={150} height={100} unoptimized />
             <Image src={'/1.png'} alt='' width={150} height={100} />
             <Image src={'/2.png'} alt='' width={150} height={100} />
           </div>
