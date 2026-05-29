@@ -2,20 +2,15 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import localFont from 'next/font/local'
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-const sourceSerif4 = Source_Serif_4({
-  variable: "--font-source-serif-4",
-  subsets: ["latin"],
-});
+const gilroy = localFont({
+  src: [
+    { path: '../fonts/Gilroy-Medium.woff', weight: '500' },
+    { path: '../fonts/Gilroy-SemiBold.woff', weight: '600' },
+  ],
+  variable: '--font-gilroy',
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -30,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${sourceSerif4.variable} antialiased`}
+        className={`${gilroy.variable} antialiased`}
       >
         {children}
       </body>
