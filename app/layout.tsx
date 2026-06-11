@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 
 import localFont from 'next/font/local'
+import { Raleway } from 'next/font/google'
 
 const gilroy = localFont({
   src: [
@@ -10,6 +10,11 @@ const gilroy = localFont({
     { path: '../fonts/Gilroy-SemiBold.woff', weight: '600' },
   ],
   variable: '--font-gilroy',
+})
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  variable: '--font-raleway',
 })
 
 export const metadata: Metadata = {
@@ -25,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${gilroy.variable} antialiased`}
+        className={`${gilroy.variable} ${raleway.variable} antialiased`}
       >
         {children}
       </body>

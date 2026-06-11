@@ -122,24 +122,15 @@ export default function Home() {
                   <div className="flex flex-col gap-3 mb-1 ">
                     <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
                       <div className="t-gray">До ТК в Москве</div>
-                      {/* <div className="justify-end ml-auto relative group">
-                        <div className="" >
-                          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9C0 4.02944 4.02944 0 9 0ZM9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5ZM9 11.0156C9.75288 11.0156 10.3506 11.6677 10.3506 12.458C10.3505 13.2621 9.75282 13.8994 9 13.8994C8.24736 13.8992 7.65049 13.262 7.65039 12.458C7.65039 11.6678 8.2473 11.0159 9 11.0156ZM10.3242 6.77246L9.89648 10.1699H8.10449L7.67676 6.77246V4H10.3242V6.77246Z" fill="#2C2C32" fillOpacity="0.4"/>
-    </svg>
-
-                        </div>
-                      </div> */}
+                      
+                      
                     </div>
                     <div className="flex flex-col gap-4">
                       <div className="flex flex-col text-lg ">
                         <div className="text-main t-blue font-semibold!">до 30 000 ₽ в чеке</div>
                         <div className="text-sm2 t-dark">Бесплатная доставка </div>
                       </div>
-                      {/* <div className="flex flex-col text-lg">
-                        <div className="text-main t-blue font-semibold!">12:00 - 18:00</div>
-                        <div className="text-sm2 t-dark">График работы: Пн–Пт</div>
-                      </div> */}
+     
                     </div>
                   </div>
                   
@@ -227,29 +218,11 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  
-                  {/* info 2 */}
-                  {/* <div className="flex flex-col gap-3 mb-1 ">
-                    <div className="flex text-sm1 border-b pb-1.5 border-[rgba(44,44,50,0.6)]">
-                      <div className="t-gray">До 20 км</div>
-                      <div className="font-semibold! justify-end ml-auto t-blue">1-2 дня</div>
-
-                    </div>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                      <div className="flex flex-col text-lg ">
-                        <div className="text-main t-blue font-semibold!">1 000 ₽</div>
-                        <div className="text-sm2 t-dark">Стоимость доставки </div>
-                      </div>
-                      <div className="flex flex-col text-lg">
-                        <div className="text-main t-blue font-semibold!">от 12 000 ₽</div>
-                        <div className="text-sm2 t-dark">Бесплатная доставка</div>
-                      </div>
-                    </div>
-                  </div> */}
+ 
                   
                 </div>
               </div>
-              {/* end loc-3 */}
+              
 
               
 
