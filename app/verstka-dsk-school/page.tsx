@@ -7,11 +7,11 @@ export default function Home() {
       {/* header */}
       <div className="flex flex-row gap-4">
         {/* header - full */}
-        <div className="hidden text-sm xl:text-xl lg:flex flex-row gap-6 my-auto">
+        <div className="hidden text-sm lg:text-xl lg:flex flex-row gap-6 my-auto">
           <div>Конгрессы</div>
           <div className="text-blue-700 ">Вебинары</div>
           <div className="flex flex-row gap-2.5"><div className="">Курсы</div>
-            <span className="ml-auto block w-2.5 h-2.5 border-r-2 border-b-2 border-black rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 flex mt-0.5 xl:mt-1.5"></span>
+            <span className="ml-auto block w-2.5 h-2.5 border-r-2 border-b-2 border-black rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 flex mt-0.5 lg:mt-1.5"></span>
           </div>
           <div>Бесплатное обучение</div>
           <div>Лекторы</div>
@@ -111,7 +111,7 @@ export default function Home() {
 
     
 
-      <div className="grid grid-cols-1 lg:grid-cols-[40%_1fr] gap-3">
+      <div className="grid grid-cols-1 lg:grid-cols-[40%_1fr] gap-3 font-gilroy font-bold">
           
           {/* ЛЕВАЯ КОЛОНКА: Первый блок - вся высота */}
           <div className="lg:row-span-2">
@@ -119,14 +119,14 @@ export default function Home() {
               {/* web */}
               <div className="text-white rounded rounded-2xl overflow-hidden bg-[url('/verstka-dsk-school/laptop.png'),_linear-gradient(266.35deg,_#061122_9.01%,_#0A1D36_99.03%)] bg-bottom bg-cover bg-no-repeat">
                 <input type="checkbox" id="webinar-toggle" className="peer hidden" />
-                <label htmlFor="webinar-toggle" className="xl:pointer-events-none gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
+                <label htmlFor="webinar-toggle" className="lg:pointer-events-none gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
                     <img className="w-9" src={'./play-circle.png'} />
                   </div>
-                  <div className="w-6/12">Вебинары</div>
-                  <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4"></span>
+                  <div className="w-6/12 lg:p-4 lg:pt-0 lg:h-14 lg:text-3xl">Вебинары</div>
+                  <span className="lg:hidden ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4"></span>
                 </label>
-                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128 xl:!h-96">
+                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128 lg:!h-96">
                   <div className="px-7 pb-5 pt-2 gap-3 flex flex-wrap">
                     <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Эндодонтия</div>
                     <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Маркетинг и Бизнес</div>
@@ -145,40 +145,41 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-3">
             
             {/*  рядом в одну строку */}
-            <div className="col-span-2 lg:col-span-1">
+            <div className="col-span-2 lg:col-span-1 text-sm">
               {/* courses */}
               <div className="bg-white/10 border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] rounded rounded-2xl overflow-hidden ">
                 <input type="checkbox" id="course-toggle" className="peer hidden" />
-                <label htmlFor="course-toggle" className="gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
+                <label htmlFor="course-toggle" className="lg:pointer-events-none gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
                     <img className="w-9" src={'./play-circle.png'} />
                   </div>
-                  <div className="w-6/12">Курсы</div>
-                  <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4"></span>
+                  <div className="w-6/12 lg:p-4 lg:text-3xl lg:pt-0 lg:h-14 text-[#0039AE]">Курсы</div>
+                  <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 lg:hidden"></span>
                 </label>
-                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128">
+                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128 lg:!h-48 ">
                   <div className="px-7 pb-5 pt-2 gap-3 flex flex-wrap">
-                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Эндодонтия</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Эндодонтия</div>
                     
                   </div>
                 </div>
               </div>
               {/* end */}
             </div>
-            <div className="col-span-2 lg:col-span-1">
+            <div className="col-span-2 lg:col-span-1 text-sm">
               {/* free */}
               <div className="bg-white/10 border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] rounded rounded-2xl overflow-hidden ">
                 <input type="checkbox" id="free-toggle" className="peer hidden" />
-                <label htmlFor="free-toggle" className="gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
+                <label htmlFor="free-toggle" className="lg:pointer-events-none gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
                     <img className="w-9" src={'./play-circle.png'} />
                   </div>
-                  <div className="w-6/12">Бесплатное обучение</div>
-                  <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4"></span>
+                  <div className="w-6/12 lg:p-4 lg:pt-0 lg:h-14 lg:text-3xl text-[#0039AE]">Бесплатное обучение</div>
+                  <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 lg:hidden"></span>
                 </label>
-                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128">
+                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128 lg:!h-48">
                   <div className="px-7 pb-5 pt-2 gap-3 flex flex-wrap">
-                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">123</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Эндодонтия</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Эндодонтия</div>
                   </div>
                 </div>
               </div>
@@ -189,14 +190,14 @@ export default function Home() {
               {/* congress */}
               <div className="text-white rounded rounded-2xl overflow-hidden bg-[url('/verstka-dsk-school/laptop.png'),_linear-gradient(266.35deg,_#061122_9.01%,_#0A1D36_99.03%)] bg-bottom bg-cover bg-no-repeat">
                 <input type="checkbox" id="congress-toggle" className="peer hidden" />
-                <label htmlFor="congress-toggle" className="gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
+                <label htmlFor="congress-toggle" className="lg:pointer-events-none gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
                     <img className="w-9" src={'./play-circle.png'} />
                   </div>
-                  <div className="w-6/12">Конгрессы</div>
-                  <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4"></span>
+                  <div className="w-6/12 lg:p-4 lg:pt-0 lg:h-14 lg:text-3xl">Конгрессы</div>
+                  <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 lg:hidden"></span>
                 </label>
-                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128">
+                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128 lg:!h-48">
                   <div className="px-7 pb-5 pt-2 gap-3 flex flex-wrap">
                     <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">123</div>
                     <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">123</div>
