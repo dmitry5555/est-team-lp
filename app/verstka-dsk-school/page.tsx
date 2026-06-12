@@ -2,21 +2,42 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="font-raleway max-w-[1350px] px-6 md:px-14 mx-auto flex flex-col mb-12 py-12 gap-8">
+    <div className="font-raleway bg-red-200 max-w-[1350px] px-6 md:px-14 mx-auto flex flex-col mb-12 py-12 gap-8">
   
       {/* header */}
       <div className="flex flex-row gap-4">
+
         {/* header - full */}
-        <div className="hidden text-sm lg:text-xl lg:flex flex-row gap-6 my-auto">
+        <div className="hidden md:text-sm xl:text-xl lg:flex flex-row gap-
+        6 my-auto gap-4">
           <div>Конгрессы</div>
-          <div className="text-blue-700 ">Вебинары</div>
-          <div className="flex flex-row gap-2.5"><div className="">Курсы</div>
-            <span className="ml-auto block w-2.5 h-2.5 border-r-2 border-b-2 border-black rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 flex mt-0.5 lg:mt-1.5"></span>
-          </div>
+
+          <details className="relative flex flex-row gap-2.5 items-center
+        [&[open]_.arrow]:rotate-[225deg] [&[open]_.dropdown]:flex">
+            <summary className="flex flex-row gap-2.5 cursor-pointer
+        items-center list-none [&::-webkit-details-marker]:hidden">
+              <div>Курсы</div>
+              <span className="arrow block w-2.5 h-2.5 border-r-2 border-b-2
+        border-black rotate-45 transition-transform duration-300 mr-4
+        shrink-0"></span>
+            </summary>
+
+            <div className="dropdown absolute top-full left-0 mt-3 hidden
+        flex-col z-10 bg-gradient-to-b from-[#013AAF] to-[#0056C5] text-white text-xl rounded rounded-xl p-3 leading-7.5">
+              <a href="#">Терапия</a>
+              <a href="#">Эндодонтия</a>
+              <a href="#">Реставрация</a>
+            </div>
+          </details>
+
           <div>Бесплатное обучение</div>
           <div>Лекторы</div>
           <div>Вопросы</div>
         </div>
+
+
+
+
 
         {/* header - all */}
         <div className="hidden lg:flex text-xl font-bold font-raleway min-w-24 my-auto">DSK-MED</div>
@@ -119,8 +140,7 @@ export default function Home() {
               {/* web */}
               <div className="text-white rounded rounded-2xl overflow-hidden bg-bottom bg-cover bg-no-repeat"
               style={{
-      backgroundImage: `url(${process.env.GITHUB_ACTIONS ===
-  "true" ? "/est-team-lp" : ""}/verstka-dsk-school/laptop.png),
+      backgroundImage: `url(laptop.png),
   linear-gradient(266.35deg, #061122 9.01%, #0A1D36 99.03%)`,
     }}>
                 <input type="checkbox" id="webinar-toggle" className="peer hidden" />
@@ -178,7 +198,7 @@ export default function Home() {
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
                     <img className="w-9" src={'./play-circle.png'} />
                   </div>
-                  <div className="w-6/12 lg:p-4 lg:pt-0 lg:h-14 lg:text-3xl text-[#0039AE]">Бесплатное обучение</div>
+                  <div className="w-6/12 lg:p-4 lg:pt-0 lg:h-14 text-lg lg:text-3xl text-[#0039AE]">Бесплатное обучение</div>
                   <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-blue-800 rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 lg:hidden"></span>
                 </label>
                 <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128 lg:!h-48">
@@ -244,25 +264,28 @@ export default function Home() {
         </div>
 
         {/* courses */}
-        <div className="flex flex-row gap-4">
-          <h2 className="text-2xl w-48">Ближайшие курсы</h2>
-          <div className="ml-auto">фильтры</div>
+        <div className=" flex flex-row gap-4 font-gilroy">
+          <h2 className="text-[#0039AE] text-2xl w-48 lg:text-5xl lg:w-full lg:text-center res font-semibold ">Ближайшие курсы</h2>
+          <div className="ml-auto w-24 text-right text-sm lg:hidden">фильтры</div>
         </div>
+
         {/* all courses */}
-        <div className="flex flex-col gap-4 p-4 bg-gray-50 rounded-4xl shadow-lg">
-          {/* single */}
+        {/* single */}
+        <div className="flex flex-col gap-3 p-4 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg 
+        shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
           <div className="flex flex-col h-48 bg-gray-100 rounded-xl">
             <div>img</div>
           </div>
           <div className="flex flex-col text-center ">
-            <div className="mb-2 uppercase">Москва</div>
-            <div className="uppercase">Иван</div>
-            <div className="uppercase">Клинические ... </div>
-            <div className="mt-2 bg-red-100 text-center rounded rounded-lg py-2 w-48 mx-auto ">Подробнее</div>
+            <div className="mb-2 mt-1 uppercase text-[#777777]">Москва → 10.03.25</div>
+            <div className="uppercase font-bold text-[#777777]">ИВАН ВЬЮЧНОВ</div>
+
+            <div className="uppercase font-bold text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+            <div className="mt-2 text-sm text-center rounded rounded-lg py-2 w-48 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Подробнее</div>
           </div>
         </div>
 
-        <div className="mt-2 bg-red-100 rounded rounded-lg py-2 w-48 mx-auto text-center">Показать еще</div>
+        <div className="mt-2 rounded rounded-lg py-2 w-48 mx-auto text-center bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Показать еще</div>
 
         {/* faq */}
         <div className="flex flex-col bg-red-100 gap-4">
@@ -271,14 +294,12 @@ export default function Home() {
           <div className="flex flex-col gap-3 uppercase">
             <div className="flex flex-row rounded rounded-2xl
             block border-l-2 border-t-2 border-white px-4 py-2">
-              <div>Для кого ...</div>
-              <div className="ml-auto">v</div>
+              <div className="text-2xl font-bold text-[#6C6C6C]">Для кого ...</div>
+               <span className="arrow block w-3.5 h-3.5 border-r-4 border-b-4
+        border-black rotate-45 transition-transform duration-300 mr-4
+        shrink-0 ml-auto my-auto flex border-[#0039AE]"></span>
             </div>
-            <div className="flex flex-row rounded rounded-2xl
-            block border-l-2 border-t-2 border-white px-4 py-2">
-              <div>Для кого ...</div>
-              <div className="ml-auto">v</div>
-            </div>
+            <div>описание</div>
           </div>
         </div>
 
