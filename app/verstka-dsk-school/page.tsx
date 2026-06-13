@@ -70,8 +70,8 @@ export default function Home() {
       </div>
 
         {/* header2 - search */}
-        <div className="flex-col flex">
-          <div className="hidden">1</div>
+        <div className="flex-row flex gap-6">
+          <div className="hidden lg:flex min-w-22 h-auto bg-fill bg-no-repeat mt-1.5" style={{backgroundImage:"url(logo.png)"}}></div>
           <div className="relative flex w-full">
             <input className="flex w-full bg-gradient-to-b from-gray-50 to-white border-1 border-gray-200 rounded-lg px-4 py-3 pr-10 placeholder:text-sm placeholder:font-semibold font-semibold" type="text" placeholder="Поиск" />
             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 font-semibold pointer-events-none"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +79,9 @@ export default function Home() {
 </svg>
 </span>
           </div>
-          <div className="hidden">3</div>
+          <div className="hidden lg:flex">
+            <div className="text-sm text-center rounded-xl pt-3.5 h-full w-36 mx-auto  bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Войти</div>
+          </div>
         </div>
 
         {/* slider */}
