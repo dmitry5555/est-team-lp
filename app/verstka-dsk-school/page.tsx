@@ -479,7 +479,7 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
                   <div className="uppercase text-2xl">20 000</div>
                   <div className="text-sm my-1">Спикеры ... </div>
                   <div className="text-xs underline">Подробнее</div>
-                  <div className="mt-2 bg-red-100 text-center rounded-lg py-2 w-48   ml-auto">Записаться</div>
+                  <div className="mt-2 bg-red-100 text-center rounded-lg py-2 w-48 ml-auto">Записаться</div>
                 </div>
               </div>
             </div>
@@ -489,34 +489,75 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
         </div>
 
 
-
-
         {/* lectors */}
-        <div className="flex flex-col bg-gray-50 gap-10 px-8 py-8 rounded-4xl">
-          <h2 className="text-2xl text-center lg:text-left mx-auto text-[#0039AE] lg:text-5xl lg:w-full font-semibold leading-6">Мы работаем с лучшими лекторами</h2>
-          <div className="gap-4 grid grid-cols-3 lg:grid-cols-6">
-            {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
-              <div className="bg-red-100 my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center">123</div>
-              <div className="text-center text-sm uppercase">name</div>
-            </div>
-            {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
-              <div className="bg-red-100 my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center">123</div>
-              <div className="text-center text-sm uppercase">name</div>
-            </div>
-            {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
-              <div className="bg-red-100 my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center">123</div>
-              <div className="text-center text-sm uppercase">name</div>
-            </div>
-            {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
-              <div className="bg-red-100 my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center">123</div>
-              <div className="text-center text-sm uppercase">name</div>
-            </div>
-  
+        <div className="flex flex-col bg-gray-50 gap-8 px-8 py-8 rounded-4xl">
+          <div className="flex flex-row">
+            <h2 className="text-2xl text-center lg:text-left mx-auto text-[#0039AE] xl:text-5xl lg:w-full font-semibold leading-6 mt-2">Мы работаем с лучшими лекторами</h2>
+            <div className="hidden lg:flex text-sm text-center rounded-lg py-3 justify-center w-64 lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Показать всех</div>
           </div>
+          <div className="gap-4 grid grid-cols-3 lg:grid-cols-6 font-bold">
+            {/* single */}
+            <div className="flex flex-col gap-1 flex-1">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col gap-1 flex-1">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col gap-1 flex-1">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col gap-1 flex-1">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col gap-1 flex-1">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col gap-1 flex-1">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col gap-1 flex-1">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col gap-1 flex-1">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col gap-1 flex-1">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col gap-1 flex-1">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col gap-1 flex-1">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col gap-1 flex-1">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
+            </div>
+          </div>
+          <div className="flex lg:hidden mx-auto align-center text-sm rounded-lg py-3 px-12 lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Показать всех</div>
         </div>
 
 
