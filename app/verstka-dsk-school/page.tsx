@@ -397,6 +397,262 @@ export default function Home() {
           </div>
         </div>
 
+        {/* events */}
+        <div className=" flex flex-row gap-4 font-gilroy">
+          <h2 className="text-[#0039AE] text-2xl w-48 lg:text-5xl lg:w-full lg:text-center font-semibold leading-6 mt-16 lg:mb-8">Все мероприятия</h2>
+          <div className="ml-auto w-24 text-right text-sm lg:hidden">фильтры</div>
+        </div>
+
+       {/* all events */}
+          
+          <div className="p-4 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+          
+            {/* single */}
+            <div className="flex flex-col">
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c1.png)`}}></div>
+              <div className="flex flex-col text-center text-sm">
+                <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
+                    <div className="mt-1">Москва</div>
+                    <div className="mx-2 flex items-center">
+                      <div className="w-20 border-t-1 border-[#777777]"></div>
+                      <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                  rotate-45 -ml-2"></div>
+                    </div>
+                    <div>10.03.25</div>
+                  </div>
+                <div className="uppercase text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+                <div className="uppercase text-[#777777] line-through">7 000₽</div>
+                <div className="uppercase text-[#0039AE] text-xl font-semibold leading-5">5 000 ₽ </div>
+
+                <div className="mt-2 text-lg text-center rounded-lg py-2 px-8 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold lg:w-full">Записаться</div>
+              </div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col">
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c2.png)`}}></div>
+              <div className="flex flex-col text-center text-sm">
+                <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
+                    <div className="mt-1">Москва</div>
+                    <div className="mx-2 flex items-center">
+                      <div className="w-20 border-t-1 border-[#777777]"></div>
+                      <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                  rotate-45 -ml-2"></div>
+                    </div>
+                    <div>10.03.25</div>
+                  </div>
+                <div className="uppercase text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+                <div className="uppercase text-[#777777] line-through">7 000₽</div>
+                <div className="uppercase text-[#0039AE] text-xl font-semibold leading-5">5 000 ₽ </div>
+
+                <div className="mt-2 text-lg text-center rounded-lg py-2 px-8 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold lg:w-full">Записаться</div>
+              </div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col">
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c1.png)`}}></div>
+              <div className="flex flex-col text-center text-sm">
+                <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
+                    <div className="mt-1">Москва</div>
+                    <div className="mx-2 flex items-center">
+                      <div className="w-20 border-t-1 border-[#777777]"></div>
+                      <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                  rotate-45 -ml-2"></div>
+                    </div>
+                    <div>10.03.25</div>
+                  </div>
+                <div className="uppercase text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+                <div className="uppercase text-[#777777] line-through">7 000₽</div>
+                <div className="uppercase text-[#0039AE] text-xl font-semibold leading-5">5 000 ₽ </div>
+
+                <div className="mt-2 text-lg text-center rounded-lg py-2 px-8 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold lg:w-full">Записаться</div>
+              </div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col">
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c2.png)`}}></div>
+              <div className="flex flex-col text-center text-sm">
+                <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
+                    <div className="mt-1">Москва</div>
+                    <div className="mx-2 flex items-center">
+                      <div className="w-20 border-t-1 border-[#777777]"></div>
+                      <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                  rotate-45 -ml-2"></div>
+                    </div>
+                    <div>10.03.25</div>
+                  </div>
+                <div className="uppercase text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+                <div className="uppercase text-[#777777] line-through">7 000₽</div>
+                <div className="uppercase text-[#0039AE] text-xl font-semibold leading-5">5 000 ₽ </div>
+
+                <div className="mt-2 text-lg text-center rounded-lg py-2 px-8 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold lg:w-full">Записаться</div>
+              </div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col">
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c1.png)`}}></div>
+              <div className="flex flex-col text-center text-sm">
+                <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
+                    <div className="mt-1">Москва</div>
+                    <div className="mx-2 flex items-center">
+                      <div className="w-20 border-t-1 border-[#777777]"></div>
+                      <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                  rotate-45 -ml-2"></div>
+                    </div>
+                    <div>10.03.25</div>
+                  </div>
+                <div className="uppercase text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+                <div className="uppercase text-[#777777] line-through">7 000₽</div>
+                <div className="uppercase text-[#0039AE] text-xl font-semibold leading-5">5 000 ₽ </div>
+
+                <div className="mt-2 text-lg text-center rounded-lg py-2 px-8 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold lg:w-full">Записаться</div>
+              </div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col">
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c2.png)`}}></div>
+              <div className="flex flex-col text-center text-sm">
+                <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
+                    <div className="mt-1">Москва</div>
+                    <div className="mx-2 flex items-center">
+                      <div className="w-20 border-t-1 border-[#777777]"></div>
+                      <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                  rotate-45 -ml-2"></div>
+                    </div>
+                    <div>10.03.25</div>
+                  </div>
+                <div className="uppercase text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+                <div className="uppercase text-[#777777] line-through">7 000₽</div>
+                <div className="uppercase text-[#0039AE] text-xl font-semibold leading-5">5 000 ₽ </div>
+
+                <div className="mt-2 text-lg text-center rounded-lg py-2 px-8 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold lg:w-full">Записаться</div>
+              </div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col">
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c1.png)`}}></div>
+              <div className="flex flex-col text-center text-sm">
+                <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
+                    <div className="mt-1">Москва</div>
+                    <div className="mx-2 flex items-center">
+                      <div className="w-20 border-t-1 border-[#777777]"></div>
+                      <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                  rotate-45 -ml-2"></div>
+                    </div>
+                    <div>10.03.25</div>
+                  </div>
+                <div className="uppercase text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+                <div className="uppercase text-[#777777] line-through">7 000₽</div>
+                <div className="uppercase text-[#0039AE] text-xl font-semibold leading-5">5 000 ₽ </div>
+
+                <div className="mt-2 text-lg text-center rounded-lg py-2 px-8 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold lg:w-full">Записаться</div>
+              </div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col">
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c2.png)`}}></div>
+              <div className="flex flex-col text-center text-sm">
+                <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
+                    <div className="mt-1">Москва</div>
+                    <div className="mx-2 flex items-center">
+                      <div className="w-20 border-t-1 border-[#777777]"></div>
+                      <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                  rotate-45 -ml-2"></div>
+                    </div>
+                    <div>10.03.25</div>
+                  </div>
+                <div className="uppercase text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+                <div className="uppercase text-[#777777] line-through">7 000₽</div>
+                <div className="uppercase text-[#0039AE] text-xl font-semibold leading-5">5 000 ₽ </div>
+
+                <div className="mt-2 text-lg text-center rounded-lg py-2 px-8 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold lg:w-full">Записаться</div>
+              </div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col">
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c1.png)`}}></div>
+              <div className="flex flex-col text-center text-sm">
+                <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
+                    <div className="mt-1">Москва</div>
+                    <div className="mx-2 flex items-center">
+                      <div className="w-20 border-t-1 border-[#777777]"></div>
+                      <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                  rotate-45 -ml-2"></div>
+                    </div>
+                    <div>10.03.25</div>
+                  </div>
+                <div className="uppercase text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+                <div className="uppercase text-[#777777] line-through">7 000₽</div>
+                <div className="uppercase text-[#0039AE] text-xl font-semibold leading-5">5 000 ₽ </div>
+
+                <div className="mt-2 text-lg text-center rounded-lg py-2 px-8 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold lg:w-full">Записаться</div>
+              </div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col">
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c2.png)`}}></div>
+              <div className="flex flex-col text-center text-sm">
+                <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
+                    <div className="mt-1">Москва</div>
+                    <div className="mx-2 flex items-center">
+                      <div className="w-20 border-t-1 border-[#777777]"></div>
+                      <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                  rotate-45 -ml-2"></div>
+                    </div>
+                    <div>10.03.25</div>
+                  </div>
+                <div className="uppercase text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+                <div className="uppercase text-[#777777] line-through">7 000₽</div>
+                <div className="uppercase text-[#0039AE] text-xl font-semibold leading-5">5 000 ₽ </div>
+
+                <div className="mt-2 text-lg text-center rounded-lg py-2 px-8 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold lg:w-full">Записаться</div>
+              </div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col">
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c1.png)`}}></div>
+              <div className="flex flex-col text-center text-sm">
+                <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
+                    <div className="mt-1">Москва</div>
+                    <div className="mx-2 flex items-center">
+                      <div className="w-20 border-t-1 border-[#777777]"></div>
+                      <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                  rotate-45 -ml-2"></div>
+                    </div>
+                    <div>10.03.25</div>
+                  </div>
+                <div className="uppercase text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+                <div className="uppercase text-[#777777] line-through">7 000₽</div>
+                <div className="uppercase text-[#0039AE] text-xl font-semibold leading-5">5 000 ₽ </div>
+
+                <div className="mt-2 text-lg text-center rounded-lg py-2 px-8 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold lg:w-full">Записаться</div>
+              </div>
+            </div>
+            {/* single */}
+            <div className="flex flex-col">
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c2.png)`}}></div>
+              <div className="flex flex-col text-center text-sm">
+                <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
+                    <div className="mt-1">Москва</div>
+                    <div className="mx-2 flex items-center">
+                      <div className="w-20 border-t-1 border-[#777777]"></div>
+                      <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                  rotate-45 -ml-2"></div>
+                    </div>
+                    <div>10.03.25</div>
+                  </div>
+                <div className="uppercase text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+                <div className="uppercase text-[#777777] line-through">7 000₽</div>
+                <div className="uppercase text-[#0039AE] text-xl font-semibold leading-5">5 000 ₽ </div>
+
+                <div className="mt-2 text-lg text-center rounded-lg py-2 px-8 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold lg:w-full">Записаться</div>
+              </div>
+            </div>
+            
+
+
+          </div>
+
         <div className="rounded-lg py-2 px-6 mx-auto text-center bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Показать еще</div>
 
 
@@ -439,7 +695,7 @@ export default function Home() {
 
 
         {/* all courses */}
-        <div className=" hidden flex flex-col gap-4 p-4 bg-gray-50 rounded-4xl shadow-lg">
+        <div className=" flex flex-col gap-4 p-4 bg-gray-50 rounded-4xl shadow-lg hidden">
           
           {/* single */}
           <div className="flex flex-col border-blue-800 border-b-2 pb-3 gap-4">
