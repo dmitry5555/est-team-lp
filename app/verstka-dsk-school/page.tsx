@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Home() {
   return (
-    <div className="font-raleway bg-red-00 max-w-[1350px] px-6 md:px-14 mx-auto flex flex-col mb-12 py-12 gap-8">
+    <div className="font-raleway bg-red-00 max-w-[1350px] px-6 md:px-14 mx-auto flex flex-col mb-12 py-12 lg:gap-8 gap-6">
   
       {/* header */}
       <div className="flex flex-row gap-4">
@@ -40,15 +40,15 @@ export default function Home() {
 
         {/* header - all */}
         <div className="hidden lg:flex text-xl font-bold font-raleway min-w-24 my-auto text-[#0039AE]">DSK-MED</div>
-        <div className="flex lg:hidden w-20 h-auto bg-fill bg-no-repeat mt-1.5" style={{
+        <div className="flex lg:hidden w-20 h-9 bg-fill bg-no-repeat mt-1.5" style={{
       backgroundImage: "url(logo.png)"}}></div>
         <div className="flex justify-end flex-col ml-auto">
-          <div className="gap-2 flex my-auto">
-            <div className="my-auto"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <div className="gap-1 flex my-auto">
+            <div className="my-auto"><svg width="13" height="13" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.3927 14.1508C11.7081 14.1508 10.0596 13.8019 8.44717 13.1039C6.83474 12.406 5.37273 11.4013 4.06114 10.0897C2.74954 8.79011 1.74479 7.33111 1.04687 5.71267C0.348957 4.09423 -2.24344e-10 2.4427 0 0.758079C0 0.517419 0.0661815 0.330908 0.198545 0.198545C0.330908 0.0661815 0.517419 0 0.758079 -1.42262e-10L4.36798 -8.19702e-10C4.53644 -8.51316e-10 4.68986 0.0571567 4.82824 0.17147C4.96662 0.285784 5.05386 0.421155 5.08996 0.577584L5.63144 3.646C5.65551 3.81446 5.64949 3.96487 5.61339 4.09724C5.5773 4.2296 5.52315 4.33188 5.45095 4.40408L3.5377 6.35342C3.76633 6.76255 4.03707 7.16264 4.34993 7.55372C4.66279 7.94479 5.01776 8.33887 5.41485 8.73596C5.77584 9.08492 6.14285 9.40981 6.51587 9.71063C6.88889 10.0115 7.26793 10.2762 7.65299 10.5048L9.63843 8.59156C9.7347 8.4953 9.84299 8.42912 9.96332 8.39302C10.0837 8.35692 10.204 8.3509 10.3243 8.37497L13.5371 9.06085C13.7056 9.10898 13.85 9.19622 13.9703 9.32257C14.0906 9.44891 14.1508 9.5903 14.1508 9.74673L14.1508 13.3927C14.1508 13.6334 14.0846 13.8199 13.9523 13.9523C13.8199 14.0846 13.6334 14.1508 13.3927 14.1508Z" fill="#BBBCBC"/>
 </svg>
 </div>
-            <div className="text-md md:text-xl font-gilroy font-bold">8 (800) 234-59-56</div>
+            <div className="text-sm lg:text-lg font-gilroy font-bold">8 (800) 234-59-56</div>
           </div>
           <div className="underline flex ml-auto text-xs">Заказать звонок</div>
         </div>
@@ -278,7 +278,7 @@ export default function Home() {
 
         {/* courses */}
         <div className=" flex flex-row gap-4 font-gilroy">
-          <h2 className="text-[#0039AE] text-2xl w-48 lg:text-5xl lg:w-full lg:text-center font-semibold ">Ближайшие курсы</h2>
+          <h2 className="text-[#0039AE] text-2xl w-48 lg:text-5xl lg:w-full lg:text-center font-semibold leading-6">Ближайшие курсы</h2>
           <div className="ml-auto w-24 text-right text-sm lg:hidden">фильтры</div>
         </div>
 
@@ -302,7 +302,7 @@ export default function Home() {
 
 
   <div className="flex flex-col gap-4">
-    <h2 className="text-2xl w-48 text-center mx-auto">Популярные
+    <h2 className="text-2xl w-48 text-center mx-auto text-[#0039AE] lg:text-5xl lg:w-full font-semibold leading-6">Популярные
   вопросы</h2>
 
     <div className="flex flex-col gap-3 uppercase">
@@ -327,7 +327,7 @@ export default function Home() {
 
         {/* congress */}
         <div className="flex flex-row gap-4">
-          <h2 className="text-2xl w-48">Конгрессы</h2>
+          <h2 className="text-2xl w-48 text-[#0039AE] lg:text-5xl lg:w-full font-semibold leading-6">Конгрессы</h2>
           {/* <div className="ml-auto">фильтры</div> */}
         </div>
         {/* all courses */}
@@ -402,7 +402,7 @@ export default function Home() {
 
         {/* faq */}
         <div className="flex flex-col bg-red-100 gap-4">
-          <h2 className="text-2xl w-48 text-center mx-auto">Популярные вопросы</h2>
+          <h2 className="text-2xl w-48 text-center mx-auto leading-8">Популярные вопросы</h2>
           {/* faq-quest */}
           <div className="flex flex-col gap-3 uppercase">
             <div className="flex flex-row rounded-2xl
