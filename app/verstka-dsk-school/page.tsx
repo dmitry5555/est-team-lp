@@ -1,8 +1,24 @@
 import Image from "next/image"
 
 export default function Home() {
-  return (
-    <div className="font-raleway bg-red-00 max-w-[1350px] px-6 md:px-14 mx-auto flex flex-col mb-12 py-12 lg:gap-8 gap-6">
+
+      const positions = [0, 1200, 2400, 3600]
+
+      return (
+
+
+
+
+   <div
+    className="font-raleway bg-red-00 max-w-[1350px] px-6 md:px-14 mx-auto flex flex-col mb-12 py-12
+lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
+    style={{
+      backgroundImage: "url('bg.png'), url('bg.png'), url('bg.png'), url('bg.png')",
+      backgroundSize: "450px auto, 450px auto, 530px auto, 640px auto",
+      backgroundRepeat: "no-repeat, no-repeat, no-repeat, no-repeat",
+      backgroundPosition: "left -220px top, right -220px top 1200px, left -220px top 2400px, right -220px top 3600px",
+    }}
+  >
   
       {/* header */}
       <div className="flex flex-row gap-4">
@@ -151,7 +167,7 @@ export default function Home() {
           
           {/* ЛЕВАЯ КОЛОНКА: Первый блок - вся высота */}
           <div className="lg:row-span-2">
-            <div className="h-full ">
+
               {/* web */}
               <div className="text-white rounded-2xl overflow-hidden bg-bottom bg-cover bg-no-repeat"
               style={{backgroundImage: `url(laptop.png),linear-gradient(266.35deg, #061122 9.01%, #0A1D36 99.03%)`}}>
@@ -163,19 +179,23 @@ export default function Home() {
                   <div className="w-6/12 lg:p-4 lg:pt-0 lg:h-14 lg:text-3xl">Вебинары</div>
                   <span className="lg:hidden ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4"></span>
                 </label>
-                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128 lg:!h-96">
-                  <div className="px-7 pb-5 pt-2 gap-3 flex flex-wrap">
+                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-auto lg:!h-120">
+                  <div className="px-7 pb-5 pt-2 gap-3 lg:gap-1 flex flex-wrap">
                     <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Эндодонтия</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Реставрация</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Ортопедия</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Гнатология</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Хирургия</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Пародонтология</div>
                     <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Маркетинг и Бизнес</div>
                     <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Детская стоматология</div>
                     <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Зуботехнические курсы</div>
-                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Ортопедия</div>
-                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Гнатология</div>
+     
                   </div>
                 </div>
               </div>
               {/* end */}
-            </div>
+            
           </div>
 
           {/* ПРАВАЯ КОЛОНКА: Сетка для блоков  */}
@@ -193,10 +213,15 @@ export default function Home() {
                   <div className="w-6/12 lg:p-4 lg:text-3xl lg:pt-0 lg:h-14 text-[#0039AE]">Курсы</div>
                   <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-blue-800 rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 lg:hidden"></span>
                 </label>
-                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128 lg:!h-48 ">
-                  <div className="px-7 pb-5 pt-2 gap-3 flex flex-wrap">
+                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-auto lg:!h-46">
+                  <div className="px-7 pb-5 pt-2 gap-3 lg:gap-1 flex flex-wrap">
                     <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Эндодонтия</div>
-                    
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Реставрация</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Ортопедия</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Гнатология</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Ортодонтия</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Хирургия</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Пародонтология</div>                    
                   </div>
                 </div>
               </div>
@@ -210,13 +235,18 @@ export default function Home() {
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
                     <img className="w-9" src={'./play-circle.png'} />
                   </div>
-                  <div className="w-6/12 lg:p-4 lg:pt-0 lg:h-14 text-lg lg:text-3xl text-[#0039AE]">Бесплатное обучение</div>
+                  <div className="w-6/12 lg:p-4 lg:pt-0 lg:h-14 text-md lg:text-3xl text-[#0039AE]">Бесплатное обучение</div>
                   <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-blue-800 rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 lg:hidden"></span>
                 </label>
-                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128 lg:!h-48">
-                  <div className="px-7 pb-5 pt-2 gap-3 flex flex-wrap">
+                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-auto lg:!h-46">
+                  <div className="px-7 pb-5 pt-2 gap-3 lg:gap-1 flex flex-wrap">
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Реставрация</div>
                     <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Эндодонтия</div>
-                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Эндодонтия</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Ортопедия</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Гнатология</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Ортодонтия</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Пародонтология</div>
+                    <div className="bg-[#F4F4F4] px-2 py-1 rounded-lg font">Хирургия</div>
                   </div>
                 </div>
               </div>
@@ -235,8 +265,8 @@ export default function Home() {
                   <div className="w-6/12 lg:p-4 lg:pt-0 lg:h-14 lg:text-3xl">Конгрессы</div>
                   <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 lg:hidden"></span>
                 </label>
-                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-128 lg:!h-48">
-                  <div className="px-7 pb-5 pt-2 gap-3 flex flex-wrap">
+                <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-auto lg:!h-46.5">
+                  <div className="px-7 pb-5 pt-2 gap-3 lg:gap-1 flex flex-wrap">
                     <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">123</div>
                     <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">123</div>
                   </div>
@@ -250,10 +280,10 @@ export default function Home() {
         </div>
 
 
-      <div className="flex flex-col w-full mx-auto gap-5">
+      <div className="flex hiff flex-col w-full mx-auto gap-5">
+      
         {/* lk */}
-
-        <div className="flex flex-col gap-3.5 bg-gray-100 rounded-2xl p-4">
+        <div className="hidden flex flex-col gap-3.5 bg-gray-100 rounded-2xl p-4">
           {/* progile */}
           <div className="flex flex-row my-auto gap-2">
             <div className="bg-red-100 my-auto w-10 h-10 rounded-md flex justify-center items-center">btn1</div>
@@ -283,18 +313,74 @@ export default function Home() {
         </div>
 
         {/* all courses */}
-        {/* single */}
-        <div className="flex flex-col gap-3 p-4 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg 
-        shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
-          <div className="flex flex-col h-48 bg-gray-100 rounded-xl">
-            <div>img</div>
-          </div>
-          <div className="flex flex-col text-center ">
-            <div className="mb-2 mt-1 uppercase text-[#777777]">Москва → 10.03.25</div>
-            <div className="uppercase font-bold text-[#777777]">ИВАН ВЬЮЧНОВ</div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+            {/* single */}
+            <div className="flex flex-col gap-3 p-4 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg 
+          shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
+            <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat rounded-xl" style={{backgroundImage: `url(c3.jpg)`}}></div>
+            <div className="flex flex-col text-center ">
+              <div className="mb-2 mt-1 uppercase text-[#777777] flex flex-row
+                items-center text-center mx-auto">
+                  <div className="">Москва</div>
+                  <div className="mx-2 flex items-center">
+                    <div className="w-40 border-t-1 border-[#777777]"></div>
+                    <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                rotate-45 -ml-2"></div>
+                  </div>
 
-            <div className="uppercase font-bold text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
-            <div className="mt-2 text-sm text-center rounded-lg py-2 w-48 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Подробнее</div>
+                  <div>10.03.25</div>
+                </div>
+              <div className="uppercase font-bold text-[#777777]">ИВАН ВЬЮЧНОВ</div>
+
+              <div className="uppercase font-bold text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+              <div className="mt-2 text-sm text-center rounded-lg py-3 w-48 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Подробнее</div>
+            </div>
+          </div>
+
+          {/* single */}
+            <div className="flex flex-col gap-3 p-4 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg 
+          shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
+            <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat rounded-xl" style={{backgroundImage: `url(c3.jpg)`}}></div>
+            <div className="flex flex-col text-center ">
+              <div className="mb-2 mt-1 uppercase text-[#777777] flex flex-row
+                items-center text-center mx-auto">
+                  <div className="">Москва</div>
+                  <div className="mx-2 flex items-center">
+                    <div className="w-40 border-t-1 border-[#777777]"></div>
+                    <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                rotate-45 -ml-2"></div>
+                  </div>
+
+                  <div>10.03.25</div>
+                </div>
+              <div className="uppercase font-bold text-[#777777]">ИВАН ВЬЮЧНОВ</div>
+
+              <div className="uppercase font-bold text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+              <div className="mt-2 text-sm text-center rounded-lg py-3 w-48 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Подробнее</div>
+            </div>
+          </div>
+          
+          {/* single */}
+            <div className="flex flex-col gap-3 p-4 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg 
+          shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
+            <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat rounded-xl" style={{backgroundImage: `url(c3.jpg)`}}></div>
+            <div className="flex flex-col text-center ">
+              <div className="mb-2 mt-1 uppercase text-[#777777] flex flex-row
+                items-center text-center mx-auto">
+                  <div className="">Москва</div>
+                  <div className="mx-2 flex items-center">
+                    <div className="w-40 border-t-1 border-[#777777]"></div>
+                    <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
+                rotate-45 -ml-2"></div>
+                  </div>
+
+                  <div>10.03.25</div>
+                </div>
+              <div className="uppercase font-bold text-[#777777]">ИВАН ВЬЮЧНОВ</div>
+
+              <div className="uppercase font-bold text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
+              <div className="mt-2 text-sm text-center rounded-lg py-3 w-48 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Подробнее</div>
+            </div>
           </div>
         </div>
 
@@ -305,19 +391,18 @@ export default function Home() {
     <h2 className="text-2xl w-48 text-center mx-auto text-[#0039AE] lg:text-5xl lg:w-full font-semibold leading-6">Популярные
   вопросы</h2>
 
-    <div className="flex flex-col gap-3 uppercase">
+    <div className="flex flex-col gap-3">
       <div className="group rounded-4xl shadow-lg bg-white">
         <input type="checkbox" id="faq-1" className="peer absolute opacity-0 pointer-events-none" />
-
         <label htmlFor="faq-1" className="flex flex-row px-4 py-2 cursor-pointer items-center">
-          <div className="text-3xl font-bold text-[#6C6C6C] p-4">Для кого ...</div>
-          <span className="ml-auto block w-6 h-6 border-r-6 border-b-6 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] -mt-2 mr-8"></
+          <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-lg leading-6 lg:text-3xl font-bold text-[#6C6C6C] p-4 uppercase">Для кого подходит обучение в DSK School?</div>
+          <span className="ml-auto block lg:w-6 lg:h-6 h-4 w-4 lg:border-r-6 lg:border-b-6 border-r-4 border-b-4 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] -mt-2 mr-8"></
   span>
         </label>
 
         <div className="overflow-hidden max-h-0 transition-all
-  duration-300 peer-checked:max-h-40">
-          <div className="px-4 pb-4 text-sm">описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание описание </div>
+  duration-300 peer-checked:max-h-full">
+          <div className="px-8 pb-4 text-md lg:text-xl font-semibold text-[#6C6C6C] text-gilroy">Под описанием каждого практического курса есть кнопка "Записаться", нажмите пожалуйста на нее и выберите удобный для Вас способ связи. Пожалуйста остерегайтесь мошенников, запись на курс ведется только с контактами указанными на официальном сайте (https://www.dsk-med.ru/) или в публикациях в наших социальных сетях. Осторожно, в комментариях также нередко можно “встретить” мошенников. </div>
         </div>
       </div>
     </div>
