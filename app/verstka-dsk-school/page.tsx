@@ -235,7 +235,7 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
                     <img className="w-9" src={'./play-circle.png'} />
                   </div>
-                  <div className="w-6/12 lg:p-4 lg:pt-0 lg:h-14 text-md lg:text-3xl text-[#0039AE]">Бесплатное обучение</div>
+                  <div className="w-10/12 lg:p-4 lg:pt-0 lg:h-14 text-md lg:text-3xl text-[#0039AE]">Бесплатное обучение</div>
                   <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-blue-800 rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 lg:hidden"></span>
                 </label>
                 <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-auto lg:!h-46">
@@ -384,39 +384,50 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
           </div>
         </div>
 
-        <div className="mt-2 rounded-lg py-2 w-48 mx-auto text-center bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Показать еще</div>
+        <div className="rounded-lg py-2 px-6 mx-auto text-center bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Показать еще</div>
 
 
   <div className="flex flex-col gap-4">
     <h2 className="text-2xl w-48 text-center mx-auto text-[#0039AE] lg:text-5xl lg:w-full font-semibold leading-6">Популярные
   вопросы</h2>
-
+    {/* single */}
     <div className="flex flex-col gap-3">
-      <div className="group rounded-4xl shadow-lg bg-white">
+      <div className="group rounded-xl lg:rounded-3xl shadow-lg bg-gray-50 px-4 py-2 md:px-8 md:py-8">
         <input type="checkbox" id="faq-1" className="peer absolute opacity-0 pointer-events-none" />
-        <label htmlFor="faq-1" className="flex flex-row px-4 py-2 cursor-pointer items-center">
-          <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-lg leading-6 lg:text-3xl font-bold text-[#6C6C6C] p-4 uppercase">Для кого подходит обучение в DSK School?</div>
-          <span className="ml-auto block lg:w-6 lg:h-6 h-4 w-4 lg:border-r-6 lg:border-b-6 border-r-4 border-b-4 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] -mt-2 mr-8"></
-  span>
+        <label htmlFor="faq-1" className="flex flex-row  cursor-pointer items-center">
+          <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-md leading-5 lg:text-3xl font-bold text-[#6C6C6C]  uppercase">Для кого подходит обучение в DSK School?</div>
+          <span className="ml-auto block lg:w-6 lg:h-6 h-3 w-3 lg:border-r-6 lg:border-b-6 border-r-4 border-b-4 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] -mt-2 "></span>
         </label>
 
         <div className="overflow-hidden max-h-0 transition-all
   duration-300 peer-checked:max-h-full">
-          <div className="px-8 pb-4 text-md lg:text-xl font-semibold text-[#6C6C6C] text-gilroy">Под описанием каждого практического курса есть кнопка "Записаться", нажмите пожалуйста на нее и выберите удобный для Вас способ связи. Пожалуйста остерегайтесь мошенников, запись на курс ведется только с контактами указанными на официальном сайте (https://www.dsk-med.ru/) или в публикациях в наших социальных сетях. Осторожно, в комментариях также нередко можно “встретить” мошенников. </div>
+          <div className="pt-4 lg:pt-8 text-md lg:text-xl font-semibold text-[#6C6C6C] text-gilroy">Под описанием каждого практического курса есть кнопка "Записаться", нажмите пожалуйста на нее и выберите удобный для Вас способ связи. Пожалуйста остерегайтесь мошенников, запись на курс ведется только с контактами указанными на официальном сайте (https://www.dsk-med.ru/) или в публикациях в наших социальных сетях. Осторожно, в комментариях также нередко можно “встретить” мошенников. </div>
         </div>
       </div>
     </div>
+    {/* single */}
+    <div className="flex flex-col gap-3">
+      <div className="group rounded-xl lg:rounded-3xl shadow-lg bg-gray-50 px-4 py-2 md:px-8 md:py-8">
+        <input type="checkbox" id="faq-2" className="peer absolute opacity-0 pointer-events-none" />
+        <label htmlFor="faq-2" className="flex flex-row  cursor-pointer items-center">
+          <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-md leading-5 lg:text-3xl font-bold text-[#6C6C6C]  uppercase">Вебинар проходит в прямом эфире или в записи?</div>
+          <span className="ml-auto block lg:w-6 lg:h-6 h-3 w-3 lg:border-r-6 lg:border-b-6 border-r-4 border-b-4 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] -mt-2 "></span>
+        </label>
+
+        <div className="overflow-hidden max-h-0 transition-all
+  duration-300 peer-checked:max-h-full">
+          <div className="pt-4 lg:pt-8 text-md lg:text-xl font-semibold text-[#6C6C6C] text-gilroy">Под описанием каждого практического курса есть кнопка "Записаться", нажмите пожалуйста на нее и выберите удобный для Вас способ связи. Пожалуйста остерегайтесь мошенников, запись на курс ведется только с контактами указанными на официальном сайте (https://www.dsk-med.ru/) или в публикациях в наших социальных сетях. Осторожно, в комментариях также нередко можно “встретить” мошенников. </div>
+        </div>
+      </div>
+    </div>
+    
   </div>
 
 
 
-        {/* congress */}
-        <div className="flex flex-row gap-4">
-          <h2 className="text-2xl w-48 text-[#0039AE] lg:text-5xl lg:w-full font-semibold leading-6">Конгрессы</h2>
-          {/* <div className="ml-auto">фильтры</div> */}
-        </div>
+
         {/* all courses */}
-        <div className="flex flex-col gap-4 p-4 bg-gray-50 rounded-4xl shadow-lg">
+        <div className=" hidden flex flex-col gap-4 p-4 bg-gray-50 rounded-4xl shadow-lg">
           
           {/* single */}
           <div className="flex flex-col border-blue-800 border-b-2 pb-3 gap-4">
@@ -449,13 +460,8 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
           </div>
         </div>
 
-        {/* courses - view 2 */}
-        <div className="flex flex-row gap-4">
-          <h2 className="text-2xl w-48">Конгрессы 2</h2>
-          {/* <div className="ml-auto">фильтры</div> */}
-        </div>
         {/* all courses */}
-        <div className="flex flex-col gap-4 p-4 bg-gray-50 rounded-4xl shadow-lg">
+        <div className="flex hidden flex-col gap-4 p-4 bg-gray-50 rounded-4xl shadow-lg">
           
           {/* single */}
           <div className="flex flex-col border-blue-800 border-b-2 pb-3 gap-4">
@@ -483,30 +489,12 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
           
         </div>
 
-        <div className="mt-2 bg-red-100 rounded-lg py-2 w-48 mx-auto text-center">Показать еще</div>
 
-        {/* faq */}
-        <div className="flex flex-col bg-red-100 gap-4">
-          <h2 className="text-2xl w-48 text-center mx-auto leading-8">Популярные вопросы</h2>
-          {/* faq-quest */}
-          <div className="flex flex-col gap-3 uppercase">
-            <div className="flex flex-row rounded-2xl
-            block border-l-2 border-t-2 border-white px-4 py-2">
-              <div>Для кого ...</div>
-              <div className="ml-auto">v</div>
-            </div>
-            <div className="flex flex-row rounded-2xl
-            block border-l-2 border-t-2 border-white px-4 py-2">
-              <div>Для кого ...</div>
-              <div className="ml-auto">v</div>
-            </div>
-          </div>
-        </div>
 
 
         {/* lectors */}
-        <div className="flex flex-col bg-red-100 gap-5">
-          <h2 className="text-2xl w-72 text-center mx-auto">Мы работаем с лучшими лекторами</h2>
+        <div className="flex flex-col bg-gray-50 gap-10 px-8 py-8 rounded-4xl">
+          <h2 className="text-2xl text-center lg:text-left mx-auto text-[#0039AE] lg:text-5xl lg:w-full font-semibold leading-6">Мы работаем с лучшими лекторами</h2>
           <div className="flex flex-wrap gap-4 w-full">
             {/* single */}
             <div className="flex flex-col gap-1 flex-1">
