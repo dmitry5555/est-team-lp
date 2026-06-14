@@ -388,8 +388,7 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
 
 
   <div className="flex flex-col gap-4">
-    <h2 className="text-2xl w-48 text-center mx-auto text-[#0039AE] lg:text-5xl lg:w-full font-semibold leading-6">Популярные
-  вопросы</h2>
+    <h2 className="text-2xl w-48 text-center mx-auto text-[#0039AE] lg:text-5xl lg:w-full font-semibold leading-6 lg:hidden">Популярные вопросы</h2>
     {/* single */}
     <div className="flex flex-col gap-3">
       <div className="group rounded-xl lg:rounded-3xl shadow-lg bg-gray-50 px-4 py-2 md:px-8 md:py-8">
@@ -495,7 +494,7 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
         {/* lectors */}
         <div className="flex flex-col bg-gray-50 gap-10 px-8 py-8 rounded-4xl">
           <h2 className="text-2xl text-center lg:text-left mx-auto text-[#0039AE] lg:text-5xl lg:w-full font-semibold leading-6">Мы работаем с лучшими лекторами</h2>
-          <div className="flex flex-wrap gap-4 w-full">
+          <div className="gap-4 grid grid-cols-3 lg:grid-cols-6">
             {/* single */}
             <div className="flex flex-col gap-1 flex-1">
               <div className="bg-red-100 my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center">123</div>
