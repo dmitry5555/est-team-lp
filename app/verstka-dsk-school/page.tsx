@@ -658,7 +658,7 @@ export default function Home() {
             <div className="flex flex-col gap-8 ">
                 
                 {/* phone */}
-                <div className="flex flex-col  my-auto">
+                <div className="flex flex-col">
                   <div className="gap-4 flex my-auto">
                       <div className="flex w-10 h-10 items-center justify-center cursor-pointer bg-white/10 rounded-full border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/20 ">
                         <svg width="13" height="13" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
