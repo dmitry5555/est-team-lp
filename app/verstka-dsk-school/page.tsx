@@ -268,8 +268,16 @@ export default function Home() {
                 </label>
                 <div className="overflow-hidden transition-all duration-300 h-0 peer-checked:h-auto lg:!h-46.5">
                   <div className="px-7 pb-5 pt-2 gap-3 lg:gap-1 flex flex-wrap">
-                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">123</div>
-                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">123</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Реставрация</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Эндодонтия</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Хирургия</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Ортодонтия</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Эндодонтия</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Гнатология</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Гнатология</div>
+                    <div className="bg-white/10 px-2 py-1 rounded-xl border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)]">Зуботехнические курсы
+</div>
+   
                   </div>
                 </div>
               </div>
@@ -491,7 +499,8 @@ export default function Home() {
 
 
         {/* lectors */}
-        <div className="group flex flex-col bg-gray-50 gap-8 px-4 py-4 lg:px-8 lg:py-8 rounded-xl lg:rounded-4xl">
+        <div className="group flex flex-col  gap-8 px-4 py-4 lg:px-8 lg:py-8 rounded-xl lg:rounded-4xl bg-white/10 backdrop-blur-md  transition z-10"> 
+          
           <input type="checkbox" id="lectors-more" className="peer absolute opacity-0 pointer-events-none" />
           <div className="flex flex-row">
             <h2 className="text-2xl text-center lg:text-left mx-auto text-[#0039AE] xl:text-5xl lg:w-full font-semibold leading-6 mt-2">Мы работаем с лучшими лекторами</h2>
@@ -597,93 +606,97 @@ export default function Home() {
 
     
     {/* footer */}
-    <div className="flex flex-col bg-gradient-to-r from-[#091930] via-[#0156C5] to-[#091930] p-12 gap-8">
-      <div className="flex flex-col lg:flex-row gap-6 font-gilroy text-white">
-        {/* inn */}
-        <div className="flex flex-col gap-4">
-          <div className="opacity-80 w-80">
-          ИП Добрынин Вячеслав Александрович ИНН: 540862498786<br/>
-          ИП Михайлов Михаил Владимирович ИНН: 434548399519ОГРНИП: 322435000047713
-          </div>
-          <div className="flex w-60 h-9 bg-fill bg-no-repeat" style={{
-      backgroundImage: "url(visa.png)"}}></div>
-        </div>
-        {/* events */}
-        <div className="flex flex-col gap-2">
-          <div className="text-2xl font-semibold">Мероприятия</div>
-          <div className="flex gap-2 flex-col opacity-50">
-            <div>Конгрессы</div>
-            <div>Вебинары</div>
-            <div>Курсы</div>
-            <div>Бесплатное обучение</div>
-          </div>
-        </div>
-        {/* info */}
-        <div className="flex flex-col gap-2">
-          <div className="text-2xl font-semibold">Информация</div>
-          <div className="flex gap-2 flex-col opacity-50">
-            <div>Лекторы</div>
-            <div>Вопросы</div>
-            <div>DSK-MED (магазин)</div>
-            <div>Пользовательское соглашение</div>
-            <div>Документы</div>
-          </div>
-        </div>
-        {/* contacts */}
-        <div className="flex flex-col gap-8">
-            
-            {/* phone */}
-            <div className="flex flex-col">
-              <div className="gap-4 flex my-auto">
-                  <div className="flex w-10 h-10 items-center justify-center cursor-pointer bg-white/10 rounded-full border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/20 ">
-                    <svg width="13" height="13" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M13.3927 14.1508C11.7081 14.1508 10.0596 13.8019 8.44717 13.1039C6.83474 12.406 5.37273 11.4013 4.06114 10.0897C2.74954 8.79011 1.74479 7.33111 1.04687 5.71267C0.348957 4.09423 -2.24344e-10 2.4427 0 0.758079C0 0.517419 0.0661815 0.330908 0.198545 0.198545C0.330908 0.0661815 0.517419 0 0.758079 -1.42262e-10L4.36798 -8.19702e-10C4.53644 -8.51316e-10 4.68986 0.0571567 4.82824 0.17147C4.96662 0.285784 5.05386 0.421155 5.08996 0.577584L5.63144 3.646C5.65551 3.81446 5.64949 3.96487 5.61339 4.09724C5.5773 4.2296 5.52315 4.33188 5.45095 4.40408L3.5377 6.35342C3.76633 6.76255 4.03707 7.16264 4.34993 7.55372C4.66279 7.94479 5.01776 8.33887 5.41485 8.73596C5.77584 9.08492 6.14285 9.40981 6.51587 9.71063C6.88889 10.0115 7.26793 10.2762 7.65299 10.5048L9.63843 8.59156C9.7347 8.4953 9.84299 8.42912 9.96332 8.39302C10.0837 8.35692 10.204 8.3509 10.3243 8.37497L13.5371 9.06085C13.7056 9.10898 13.85 9.19622 13.9703 9.32257C14.0906 9.44891 14.1508 9.5903 14.1508 9.74673L14.1508 13.3927C14.1508 13.6334 14.0846 13.8199 13.9523 13.9523C13.8199 14.0846 13.6334 14.1508 13.3927 14.1508Z" fill="#BBBCBC"/>
+    <div className="flex flex-col bg-gradient-to-r from-[#091930] via-[#0156C5] to-[#091930] gap-8">
+      <div className="max-w-[1350px] flex w-full mx-auto flex flex-col py-12 lg:gap-8 gap-6 px-16 lg:px-8">
+
+          <div className="flex flex-col justify-between lg:flex-row gap-6 font-gilroy text-white">
+            {/* inn */}
+            <div className="flex flex-col gap-4">
+              <div className="opacity-80 w-80">
+              ИП Добрынин Вячеслав Александрович ИНН: 540862498786<br/>
+              ИП Михайлов Михаил Владимирович ИНН: 434548399519ОГРНИП: 322435000047713
+              </div>
+              <div className="flex w-60 h-9 bg-fill bg-no-repeat" style={{
+          backgroundImage: "url(visa.png)"}}></div>
+            </div>
+            {/* events */}
+            <div className="flex flex-col gap-2">
+              <div className="text-2xl font-semibold">Мероприятия</div>
+              <div className="flex gap-2 flex-col opacity-50">
+                <div>Конгрессы</div>
+                <div>Вебинары</div>
+                <div>Курсы</div>
+                <div>Бесплатное обучение</div>
+              </div>
+            </div>
+            {/* info */}
+            <div className="flex flex-col gap-2">
+              <div className="text-2xl font-semibold">Информация</div>
+              <div className="flex gap-2 flex-col opacity-50">
+                <div>Лекторы</div>
+                <div>Вопросы</div>
+                <div>DSK-MED (магазин)</div>
+                <div>Пользовательское соглашение</div>
+                <div>Документы</div>
+              </div>
+            </div>
+            {/* contacts */}
+            <div className="flex flex-col gap-8">
+                
+                {/* phone */}
+                <div className="flex flex-col">
+                  <div className="gap-4 flex my-auto">
+                      <div className="flex w-10 h-10 items-center justify-center cursor-pointer bg-white/10 rounded-full border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/20 ">
+                        <svg width="13" height="13" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13.3927 14.1508C11.7081 14.1508 10.0596 13.8019 8.44717 13.1039C6.83474 12.406 5.37273 11.4013 4.06114 10.0897C2.74954 8.79011 1.74479 7.33111 1.04687 5.71267C0.348957 4.09423 -2.24344e-10 2.4427 0 0.758079C0 0.517419 0.0661815 0.330908 0.198545 0.198545C0.330908 0.0661815 0.517419 0 0.758079 -1.42262e-10L4.36798 -8.19702e-10C4.53644 -8.51316e-10 4.68986 0.0571567 4.82824 0.17147C4.96662 0.285784 5.05386 0.421155 5.08996 0.577584L5.63144 3.646C5.65551 3.81446 5.64949 3.96487 5.61339 4.09724C5.5773 4.2296 5.52315 4.33188 5.45095 4.40408L3.5377 6.35342C3.76633 6.76255 4.03707 7.16264 4.34993 7.55372C4.66279 7.94479 5.01776 8.33887 5.41485 8.73596C5.77584 9.08492 6.14285 9.40981 6.51587 9.71063C6.88889 10.0115 7.26793 10.2762 7.65299 10.5048L9.63843 8.59156C9.7347 8.4953 9.84299 8.42912 9.96332 8.39302C10.0837 8.35692 10.204 8.3509 10.3243 8.37497L13.5371 9.06085C13.7056 9.10898 13.85 9.19622 13.9703 9.32257C14.0906 9.44891 14.1508 9.5903 14.1508 9.74673L14.1508 13.3927C14.1508 13.6334 14.0846 13.8199 13.9523 13.9523C13.8199 14.0846 13.6334 14.1508 13.3927 14.1508Z" fill="#BBBCBC"/>
+        </svg>
+                      </div>
+                    <div className="flex flex-col">
+                      <div className="text-xl font-gilroy font-bold">8 (800) 234-59-56</div>
+                      <div className="underline flex ml-auto text-xs opacity-50">Заказать звонок</div>
+                    </div>
+                  </div>
+                </div>
+                {/* address */}
+                <div className="flex flex-col">
+                  <div className="gap-4 flex my-auto">
+                      <div className="flex w-10 h-10 items-center justify-center cursor-pointer bg-white/10 rounded-full border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/20 ">
+                        <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12.4745 2.96512C11.2292 1.06744 9.17337 0 6.86058 0C4.56756 0 2.51175 1.06744 1.22686 2.96512C-0.0580219 4.82326 -0.354534 7.19535 0.436164 9.27093C0.653606 9.82442 0.989652 10.3977 1.42454 10.9116L6.4257 16.8023C6.5443 16.9209 6.66291 17 6.84082 17C7.01872 17 7.13733 16.9209 7.25593 16.8023L12.2769 10.9116C12.7117 10.3977 13.0676 9.84419 13.2652 9.27093C14.0559 7.19535 13.7594 4.82326 12.4745 2.96512ZM6.86058 9.96279C5.16058 9.96279 3.75709 8.5593 3.75709 6.8593C3.75709 5.1593 5.16058 3.75581 6.86058 3.75581C8.56058 3.75581 9.96407 5.1593 9.96407 6.8593C9.96407 8.5593 8.58035 9.96279 6.86058 9.96279Z" fill="white"/>
     </svg>
-                  </div>
-                <div className="flex flex-col">
-                  <div className="text-xl font-gilroy font-bold">8 (800) 234-59-56</div>
-                  <div className="underline flex ml-auto text-xs opacity-50">Заказать звонок</div>
-                </div>
-              </div>
-            </div>
-            {/* address */}
-             <div className="flex flex-col">
-              <div className="gap-4 flex my-auto">
-                  <div className="flex w-10 h-10 items-center justify-center cursor-pointer bg-white/10 rounded-full border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/20 ">
-                    <svg width="14" height="17" viewBox="0 0 14 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.4745 2.96512C11.2292 1.06744 9.17337 0 6.86058 0C4.56756 0 2.51175 1.06744 1.22686 2.96512C-0.0580219 4.82326 -0.354534 7.19535 0.436164 9.27093C0.653606 9.82442 0.989652 10.3977 1.42454 10.9116L6.4257 16.8023C6.5443 16.9209 6.66291 17 6.84082 17C7.01872 17 7.13733 16.9209 7.25593 16.8023L12.2769 10.9116C12.7117 10.3977 13.0676 9.84419 13.2652 9.27093C14.0559 7.19535 13.7594 4.82326 12.4745 2.96512ZM6.86058 9.96279C5.16058 9.96279 3.75709 8.5593 3.75709 6.8593C3.75709 5.1593 5.16058 3.75581 6.86058 3.75581C8.56058 3.75581 9.96407 5.1593 9.96407 6.8593C9.96407 8.5593 8.58035 9.96279 6.86058 9.96279Z" fill="white"/>
-</svg>
 
+                      </div>
+                    <div className="flex flex-col">
+                      <div className="text-sm font-gilroy font-bold w-44">г. Москва, ул. Чапаевский переулок, 6</div>
+                    </div>
                   </div>
-                <div className="flex flex-col">
-                  <div className="text-sm font-gilroy font-bold w-44">г. Москва, ул. Чапаевский переулок, 6</div>
                 </div>
-              </div>
-            </div>
 
-            {/* time */}
-             <div className="flex flex-col">
-              <div className="gap-4 flex my-auto">
-                  <div className="flex w-10 h-10 items-center justify-center cursor-pointer bg-white/10 rounded-full border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/20 ">
-                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M9.1125 7.6875V5.26875C9.1125 4.99375 9.01562 4.75938 8.82188 4.56563C8.62813 4.37188 8.39375 4.275 8.11875 4.275C7.84375 4.275 7.60938 4.37188 7.41563 4.56563C7.22188 4.75938 7.125 4.99375 7.125 5.26875V8.1C7.125 8.2375 7.15 8.3665 7.2 8.487C7.25 8.60763 7.325 8.71613 7.425 8.8125L9.76875 11.1562C9.95625 11.3438 10.1844 11.4406 10.4531 11.4469C10.7219 11.4531 10.9563 11.3563 11.1562 11.1562C11.3438 10.9688 11.4406 10.7375 11.4469 10.4625C11.4531 10.1875 11.3625 9.95625 11.175 9.76875L9.1125 7.6875ZM8.1 16.2C6.9795 16.2 5.9265 15.9874 4.941 15.5621C3.9555 15.1369 3.09825 14.5598 2.36925 13.8308C1.64025 13.1018 1.06313 12.2445 0.637875 11.259C0.212625 10.2735 0 9.2205 0 8.1C0 6.97625 0.213 5.92025 0.639 4.932C1.065 3.94362 1.64313 3.08394 2.37338 2.35294C3.10363 1.62181 3.96088 1.04688 4.94513 0.628125C5.92938 0.209375 6.981 0 8.1 0C9.22363 0 10.2795 0.209375 11.2676 0.628125C12.2559 1.04688 13.1156 1.62188 13.8469 2.35313C14.5781 3.08438 15.1531 3.94425 15.5719 4.93275C15.9906 5.92138 16.2 6.97762 16.2 8.1015C16.2 9.2255 15.9906 10.2781 15.5719 11.2594C15.1531 12.2406 14.5782 13.0964 13.8471 13.8266C13.1161 14.5569 12.2564 15.135 11.268 15.561C10.2798 15.987 9.22375 16.2 8.1 16.2Z" fill="white"/>
-</svg>
-                  </div>
+                {/* time */}
                 <div className="flex flex-col">
-                  <div className="text-sm font-gilroy font-bold w-44">ПН-ЧТ: 10:00-18:00, 
-ПТ: 10:00-17:00 </div>
+                  <div className="gap-4 flex my-auto">
+                      <div className="flex w-10 h-10 items-center justify-center cursor-pointer bg-white/10 rounded-full border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/20 ">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M9.1125 7.6875V5.26875C9.1125 4.99375 9.01562 4.75938 8.82188 4.56563C8.62813 4.37188 8.39375 4.275 8.11875 4.275C7.84375 4.275 7.60938 4.37188 7.41563 4.56563C7.22188 4.75938 7.125 4.99375 7.125 5.26875V8.1C7.125 8.2375 7.15 8.3665 7.2 8.487C7.25 8.60763 7.325 8.71613 7.425 8.8125L9.76875 11.1562C9.95625 11.3438 10.1844 11.4406 10.4531 11.4469C10.7219 11.4531 10.9563 11.3563 11.1562 11.1562C11.3438 10.9688 11.4406 10.7375 11.4469 10.4625C11.4531 10.1875 11.3625 9.95625 11.175 9.76875L9.1125 7.6875ZM8.1 16.2C6.9795 16.2 5.9265 15.9874 4.941 15.5621C3.9555 15.1369 3.09825 14.5598 2.36925 13.8308C1.64025 13.1018 1.06313 12.2445 0.637875 11.259C0.212625 10.2735 0 9.2205 0 8.1C0 6.97625 0.213 5.92025 0.639 4.932C1.065 3.94362 1.64313 3.08394 2.37338 2.35294C3.10363 1.62181 3.96088 1.04688 4.94513 0.628125C5.92938 0.209375 6.981 0 8.1 0C9.22363 0 10.2795 0.209375 11.2676 0.628125C12.2559 1.04688 13.1156 1.62188 13.8469 2.35313C14.5781 3.08438 15.1531 3.94425 15.5719 4.93275C15.9906 5.92138 16.2 6.97762 16.2 8.1015C16.2 9.2255 15.9906 10.2781 15.5719 11.2594C15.1531 12.2406 14.5782 13.0964 13.8471 13.8266C13.1161 14.5569 12.2564 15.135 11.268 15.561C10.2798 15.987 9.22375 16.2 8.1 16.2Z" fill="white"/>
+    </svg>
+                      </div>
+                    <div className="flex flex-col">
+                      <div className="text-sm font-gilroy font-bold w-44">ПН-ЧТ: 10:00-18:00, 
+    ПТ: 10:00-17:00 </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+
             </div>
 
+          </div>
+
+          {/* big-logo */}
+          <div className="flex w-full justify-center">
+            <div className="flex w-60 bg-cover bg-no-repeat aspect-[15/8] mt-3" style={{backgroundImage: "url(logo-xl.png)"}}></div>
+          </div>
         </div>
 
-      </div>
-
-      {/* big-logo */}
-      <div className="flex w-full justify-center">
-        <div className="flex w-60 bg-cover bg-no-repeat aspect-[15/8] mt-3" style={{backgroundImage: "url(logo-xl.png)"}}></div>
-      </div>
     </div>
   </div>
   );
