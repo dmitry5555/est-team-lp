@@ -10,7 +10,7 @@ export default function Home() {
 
 
    <div
-    className="font-raleway bg-red-00 w-full min-h-screen bg-top bg-no-repeat"
+    className="font-raleway bg-red-00 w-full min-h-screen bg-top bg-no-repeat flex flex-col"
     style={{
       backgroundImage: "url('bg.png'), url('bg.png'), url('bg.png'), url('bg.png')",
       backgroundSize: "450px auto, 450px auto, 530px auto, 640px auto",
@@ -606,13 +606,13 @@ export default function Home() {
 
     
     {/* footer */}
-    <div className="flex flex-col bg-gradient-to-r from-[#091930] via-[#0156C5] to-[#091930] gap-8">
-      <div className="max-w-[1350px] flex w-full mx-auto flex flex-col py-12 lg:gap-8 gap-6 px-16 lg:px-8">
+    <div className="flex flex-col bg-gradient-to-r from-[#091930] via-[#0156C5] to-[#091930] gap-8  ">
+      <div className="max-w-[1350px] flex w-full mx-auto flex flex-col py-12 lg:gap-8 gap-6 px-16 lg:px-8  ">
 
-          <div className="flex flex-col justify-between lg:flex-row gap-6 font-gilroy text-white">
+          <div className="flex flex-col justify-between lg:flex-row gap-6 font-gilroy text-white  ">
             {/* inn */}
-            <div className="flex flex-col gap-4">
-              <div className="opacity-80 w-80">
+            <div className="flex flex-col gap-4 my-auto">
+              <div className="opacity-80 max-w-80">
               ИП Добрынин Вячеслав Александрович ИНН: 540862498786<br/>
               ИП Михайлов Михаил Владимирович ИНН: 434548399519ОГРНИП: 322435000047713
               </div>
@@ -620,9 +620,9 @@ export default function Home() {
           backgroundImage: "url(visa.png)"}}></div>
             </div>
             {/* events */}
-            <div className="flex flex-col gap-2">
-              <div className="text-2xl font-semibold">Мероприятия</div>
-              <div className="flex gap-2 flex-col opacity-50">
+            <div className="flex flex-col gap-2  my-auto">
+              <div className="text-2xl lg:text-3xl font-semibold">Мероприятия</div>
+              <div className="flex gap-2 lg:text-lg flex-col opacity-50">
                 <div>Конгрессы</div>
                 <div>Вебинары</div>
                 <div>Курсы</div>
@@ -630,9 +630,9 @@ export default function Home() {
               </div>
             </div>
             {/* info */}
-            <div className="flex flex-col gap-2">
-              <div className="text-2xl font-semibold">Информация</div>
-              <div className="flex gap-2 flex-col opacity-50">
+            <div className="flex flex-col gap-2  my-auto">
+              <div className="text-2xl lg:text-3xl font-semibold">Информация</div>
+              <div className="flex gap-2 lg:text-lg flex-col opacity-50">
                 <div>Лекторы</div>
                 <div>Вопросы</div>
                 <div>DSK-MED (магазин)</div>
@@ -641,10 +641,10 @@ export default function Home() {
               </div>
             </div>
             {/* contacts */}
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8 ">
                 
                 {/* phone */}
-                <div className="flex flex-col">
+                <div className="flex flex-col  my-auto">
                   <div className="gap-4 flex my-auto">
                       <div className="flex w-10 h-10 items-center justify-center cursor-pointer bg-white/10 rounded-full border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/20 ">
                         <svg width="13" height="13" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -693,7 +693,7 @@ export default function Home() {
 
           {/* big-logo */}
           <div className="flex w-full justify-center">
-            <div className="flex w-60 bg-cover bg-no-repeat aspect-[15/8] mt-3" style={{backgroundImage: "url(logo-xl.png)"}}></div>
+            <div className="flex lg:w-120 w-60 bg-cover bg-no-repeat aspect-[15/8] mt-3" style={{backgroundImage: "url(logo-xl.png)"}}></div>
           </div>
         </div>
 
