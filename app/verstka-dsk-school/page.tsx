@@ -124,16 +124,13 @@ export default function Home() {
               {/* Контейнер слайдов */}
               <div className="slides flex transition-transform duration-500 ease-in-out">
                 {/* Слайд 1 */}
-                <div className="min-w-full bg-no-repeat bg-fill h-100 flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.png)`}}>
-                  
+                <div className="min-w-full aspect-[1350/400] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.png)`}}>
                 </div>
                 {/* Слайд 2 */}
-                <div className="min-w-full bg-no-repeat bg-fill h-100 flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.png)`}}>
-                  Слайд 2
+                <div className="min-w-full aspect-[1350/400] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.png)`}}>
                 </div>
                 {/* Слайд 3 */}
-                <div className="min-w-full bg-no-repeat bg-fill h-100 flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.png)`}}>
-                  Слайд 3
+                <div className="min-w-full aspect-[1350/400] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.png)`}}>
                 </div>
               </div>
             </div>
@@ -625,7 +622,7 @@ export default function Home() {
               </div>
               <div className="flex w-60 h-9 bg-fill bg-no-repeat" style={{
           backgroundImage: "url(visa.png)"}}></div>
-          
+
             {/* social */}
               <div className="flex flex-row gap-4 ">
                 <div className="flex w-14 h-14 items-center justify-center cursor-pointer bg-white/10 rounded-full border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/20 bg-no-repeat bg-center" style={{ backgroundImage: "url(i-vk.png)"}}>
