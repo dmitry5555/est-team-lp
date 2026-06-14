@@ -16,7 +16,7 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
       backgroundImage: "url('bg.png'), url('bg.png'), url('bg.png'), url('bg.png')",
       backgroundSize: "450px auto, 450px auto, 530px auto, 640px auto",
       backgroundRepeat: "no-repeat, no-repeat, no-repeat, no-repeat",
-      backgroundPosition: "left -220px top, right -220px top 1200px, left -220px top 2400px, right -220px top 3600px",
+      backgroundPosition: "left -220px top 100px, right -220px top 1200px, left -220px top 2400px, right -220px top 3600px",
     }}
   >
   
@@ -413,9 +413,9 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
           <span className="ml-auto block lg:w-6 lg:h-6 h-3 w-3 lg:border-r-6 lg:border-b-6 border-r-4 border-b-4 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] -mt-2 "></span>
         </label>
 
-        <div className="overflow-hidden max-h-0 transition-all
-  duration-300 peer-checked:max-h-full">
-          <div className="pt-4 lg:pt-8 text-md lg:text-xl font-semibold text-[#6C6C6C] text-gilroy">Под описанием каждого практического курса есть кнопка "Записаться", нажмите пожалуйста на нее и выберите удобный для Вас способ связи. Пожалуйста остерегайтесь мошенников, запись на курс ведется только с контактами указанными на официальном сайте (https://www.dsk-med.ru/) или в публикациях в наших социальных сетях. Осторожно, в комментариях также нередко можно “встретить” мошенников. </div>
+        <div className="overflow-hidden max-h-0 
+  duration-300 peer-checked:max-h-full ">
+          <div className="pt-4 lg:pt-8 text-md lg:text-xl font-semibold text-[#6C6C6C] text-gilroy ">Под описанием каждого практического курса есть кнопка "Записаться", нажмите пожалуйста на нее и выберите удобный для Вас способ связи. Пожалуйста остерегайтесь мошенников, запись на курс ведется только с контактами указанными на официальном сайте (https://www.dsk-med.ru/) или в публикациях в наших социальных сетях. Осторожно, в комментариях также нередко можно “встретить” мошенников. </div>
         </div>
       </div>
     </div>
@@ -490,10 +490,11 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
 
 
         {/* lectors */}
-        <div className="flex flex-col bg-gray-50 gap-8 px-8 py-8 rounded-4xl">
+        <div className="group flex flex-col bg-gray-50 gap-8 px-8 py-8 rounded-4xl">
+          <input type="checkbox" id="lectors-more" className="peer absolute opacity-0 pointer-events-none" />
           <div className="flex flex-row">
             <h2 className="text-2xl text-center lg:text-left mx-auto text-[#0039AE] xl:text-5xl lg:w-full font-semibold leading-6 mt-2">Мы работаем с лучшими лекторами</h2>
-            <div className="hidden lg:flex text-sm text-center rounded-lg py-3 justify-center w-64 lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Показать всех</div>
+            <label htmlFor="lectors-more" className="hidden lg:flex text-sm text-center rounded-lg py-3 justify-center w-64 lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold cursor-pointer">Показать всех</label>
           </div>
           <div className="gap-4 grid grid-cols-3 lg:grid-cols-6 font-bold">
             {/* single */}
@@ -512,52 +513,82 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:flex">
               <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:flex">
               <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:flex">
               <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex">
               <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex">
               <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex">
               <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex">
               <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex">
               <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
-            <div className="flex flex-col gap-1 flex-1">
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
+            </div>
+            {/* single */}
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:hidden">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
+            </div>
+            {/* single */}
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:hidden">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
+            </div>
+            {/* single */}
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:hidden">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
+            </div>
+            {/* single */}
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:hidden">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
+            </div>
+            {/* single */}
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:hidden">
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
+            </div>
+            {/* single */}
+            <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:hidden">
               <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
           </div>
-          <div className="flex lg:hidden mx-auto align-center text-sm rounded-lg py-3 px-12 lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Показать всех</div>
+          <label htmlFor="lectors-more" className="flex lg:hidden mx-auto align-center text-sm rounded-lg py-3 px-12 lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold cursor-pointer">Показать всех</label>
         </div>
 
 
