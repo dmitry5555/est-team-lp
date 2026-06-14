@@ -18,7 +18,7 @@ export default function Home() {
       backgroundPosition: "left -100px top 100px, right -100px top 1200px, left 0px top 2400px, right -0px top 3600px",
     }}
   >
-    <div className="max-w-[1350px] px-6 md:px-14 mx-auto flex flex-col py-12 lg:gap-8 gap-6 min-h-screen">
+    <div className="max-w-[1350px] px-6 lg:px-14 mx-auto flex flex-col py-12 lg:gap-8 gap-6 min-h-screen">
   
       {/* header */}
       <div className="flex flex-row gap-4">
@@ -97,7 +97,14 @@ export default function Home() {
 </span>
           </div>
           <div className="hidden lg:flex">
-            <div className="text-sm text-center rounded-xl pt-3.5 h-full w-36 mx-auto  bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Войти</div>
+            <div className="text-sm text-center rounded-xl my-auto px-10 py-4 mx-auto bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold flex flex-row gap-2">
+              
+                <svg className="my-auto" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.83077 7.10401C5.84194 7.10401 5.00273 6.75921 4.31315 6.06963C3.62356 5.38005 3.27877 4.54084 3.27877 3.552C3.27877 2.56317 3.62356 1.72396 4.31315 1.03437C5.00273 0.344791 5.84194 0 6.83077 0C7.81961 0 8.65882 0.344791 9.3484 1.03437C10.038 1.72396 10.3828 2.56317 10.3828 3.552C10.3828 4.54084 10.038 5.38005 9.3484 6.06963C8.65882 6.75921 7.81961 7.10401 6.83077 7.10401ZM0 12.7052V11.9831C0 11.4497 0.126857 10.9683 0.380572 10.5389C0.634286 10.1095 0.975825 9.78427 1.40519 9.56308C2.26391 9.12071 3.14866 8.78893 4.05943 8.56774C4.9702 8.34656 5.89398 8.23596 6.83077 8.23596C7.76757 8.23596 8.69135 8.34656 9.60212 8.56774C10.5129 8.78893 11.3976 9.12071 12.2564 9.56308C12.6857 9.78427 13.0273 10.1095 13.281 10.5389C13.5347 10.9683 13.6615 11.4497 13.6615 11.9831V12.7052C13.6615 13.2907 13.4631 13.7819 13.0663 14.1787C12.6695 14.5756 12.1783 14.774 11.5928 14.774H2.06875C1.48325 14.774 0.992089 14.5756 0.595253 14.1787C0.198418 13.7819 0 13.2907 0 12.7052Z" fill="white"/>
+</svg>
+
+              <div>Войти</div>
+            </div>
           </div>
         </div>
 
@@ -117,15 +124,15 @@ export default function Home() {
               {/* Контейнер слайдов */}
               <div className="slides flex transition-transform duration-500 ease-in-out">
                 {/* Слайд 1 */}
-                <div className="min-w-full h-64 bg-blue-500 flex items-center justify-center text-white text-3xl shrink-0">
-                  Слайд 1
+                <div className="min-w-full bg-no-repeat bg-fill h-100 flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.png)`}}>
+                  
                 </div>
                 {/* Слайд 2 */}
-                <div className="min-w-full h-64 bg-green-500 flex items-center justify-center text-white text-3xl shrink-0">
+                <div className="min-w-full bg-no-repeat bg-fill h-100 flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.png)`}}>
                   Слайд 2
                 </div>
                 {/* Слайд 3 */}
-                <div className="min-w-full h-64 bg-purple-500 flex items-center justify-center text-white text-3xl shrink-0">
+                <div className="min-w-full bg-no-repeat bg-fill h-100 flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.png)`}}>
                   Слайд 3
                 </div>
               </div>
@@ -618,7 +625,17 @@ export default function Home() {
               </div>
               <div className="flex w-60 h-9 bg-fill bg-no-repeat" style={{
           backgroundImage: "url(visa.png)"}}></div>
+          
+            {/* social */}
+              <div className="flex flex-row gap-4 ">
+                <div className="flex w-14 h-14 items-center justify-center cursor-pointer bg-white/10 rounded-full border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/20 bg-no-repeat bg-center" style={{ backgroundImage: "url(i-vk.png)"}}>
+                </div>
+                <div className="flex w-14 h-14 items-center justify-center cursor-pointer bg-white/10 rounded-full border border-white/20 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] hover:bg-white/20 bg-no-repeat bg-center" style={{ backgroundImage: "url(i-tg.png)"}}>
+                </div>
+              </div>
             </div>
+          
+
             {/* events */}
             <div className="flex flex-col gap-2  my-auto">
               <div className="text-2xl lg:text-3xl font-semibold">Мероприятия</div>
