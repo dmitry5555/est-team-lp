@@ -10,15 +10,15 @@ export default function Home() {
 
 
    <div
-    className="font-raleway bg-red-00 max-w-[1350px] px-6 md:px-14 mx-auto flex flex-col mb-12 py-12
-lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
+    className="font-raleway bg-red-00 w-full min-h-screen bg-top bg-no-repeat"
     style={{
       backgroundImage: "url('bg.png'), url('bg.png'), url('bg.png'), url('bg.png')",
       backgroundSize: "450px auto, 450px auto, 530px auto, 640px auto",
       backgroundRepeat: "no-repeat, no-repeat, no-repeat, no-repeat",
-      backgroundPosition: "left -220px top 100px, right -220px top 1200px, left -220px top 2400px, right -220px top 3600px",
+      backgroundPosition: "left -100px top 100px, right -100px top 1200px, left 0px top 2400px, right -0px top 3600px",
     }}
   >
+    <div className="max-w-[1350px] px-6 md:px-14 mx-auto flex flex-col py-12 lg:gap-8 gap-6 min-h-screen">
   
       {/* header */}
       <div className="flex flex-row gap-4">
@@ -592,8 +592,8 @@ lg:gap-8 gap-6 min-h-screen bg-top bg-no-repeat"
         </div>
 
 
-
       </div>
     </div>
+  </div>
   );
 }
