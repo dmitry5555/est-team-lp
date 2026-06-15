@@ -12,7 +12,7 @@ export default function Home() {
    <div
     className="font-raleway bg-red-00 w-full min-h-screen bg-top bg-no-repeat flex flex-col"
     style={{
-      backgroundImage: "url('bg.png'), url('bg.png'), url('bg.png'), url('bg.png')",
+      backgroundImage: "url('bg.webp'), url('bg.webp'), url('bg.webp'), url('bg.webp')",
       backgroundSize: "450px auto, 450px auto, 530px auto, 640px auto",
       backgroundRepeat: "no-repeat, no-repeat, no-repeat, no-repeat",
       backgroundPosition: "left -100px top 100px, right -100px top 1200px, left 0px top 2400px, right -0px top 3600px",
@@ -124,13 +124,13 @@ export default function Home() {
               {/* Контейнер слайдов */}
               <div className="slides flex transition-transform duration-500 ease-in-out">
                 {/* Слайд 1 */}
-                <div className="min-w-full aspect-[1350/400] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.png)`}}>
+                <div className="min-w-full aspect-[1350/400] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.webp)`}}>
                 </div>
                 {/* Слайд 2 */}
-                <div className="min-w-full aspect-[1350/400] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.png)`}}>
+                <div className="min-w-full aspect-[1350/400] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.webp)`}}>
                 </div>
                 {/* Слайд 3 */}
-                <div className="min-w-full aspect-[1350/400] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.png)`}}>
+                <div className="min-w-full aspect-[1350/400] bg-cover bg-center bg-no-repeat flex items-center justify-center text-white text-3xl shrink-0" style={{backgroundImage: `url(s1.webp)`}}>
                 </div>
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function Home() {
 
               {/* web */}
               <div className="text-white rounded-2xl overflow-hidden bg-bottom bg-cover bg-no-repeat"
-              style={{backgroundImage: `url(bg-1.png),linear-gradient(266.35deg, #061122 9.01%, #0A1D36 99.03%)`}}>
+              style={{backgroundImage: `url(bg-1.webp),linear-gradient(266.35deg, #061122 9.01%, #0A1D36 99.03%)`}}>
                 <input type="checkbox" id="webinar-toggle" className="peer hidden" />
                 <label htmlFor="webinar-toggle" className="lg:pointer-events-none gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
@@ -268,7 +268,7 @@ export default function Home() {
             <div className="col-span-2">
               {/* congress */}
               <div className="text-white rounded-2xl overflow-hidden bg-bottom bg-cover bg-no-repeat"
-              style={{backgroundImage: `url(bg-2.png),linear-gradient(266.35deg, #061122 9.01%, #0A1D36 99.03%)`}}>
+              style={{backgroundImage: `url(bg-2.webp),linear-gradient(266.35deg, #061122 9.01%, #0A1D36 99.03%)`}}>
                 <input type="checkbox" id="congress-toggle" className="peer hidden" />
                 <label htmlFor="congress-toggle" className="lg:pointer-events-none gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
@@ -345,7 +345,7 @@ export default function Home() {
             {/* single */}
             <div className="flex flex-col gap-3 p-4 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg 
           shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
-            <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat rounded-xl" style={{backgroundImage: `url(c3.jpg)`}}></div>
+            <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat rounded-xl" style={{backgroundImage: `url(c3.webp)`}}></div>
             <div className="flex flex-col text-center ">
               <div className="mb-2 mt-1 uppercase text-[#777777] flex flex-row
                 items-center text-center mx-auto">
@@ -425,7 +425,7 @@ export default function Home() {
           
             {/* single */}
             <div className="flex flex-col">
-              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c1.png)`}}></div>
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c1.webp)`}}></div>
               <div className="flex flex-col text-center text-sm">
                 <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
                     <div className="mt-1">Москва</div>
@@ -445,7 +445,7 @@ export default function Home() {
             </div>
             {/* single */}
             <div className="flex flex-col">
-              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c2.png)`}}></div>
+              <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat " style={{backgroundImage: `url(c2.webp)`}}></div>
               <div className="flex flex-col text-center text-sm">
                 <div className=" mt-1 uppercase text-[#777777] flex flex-row items-center text-center mx-auto text-xs">
                     <div className="mt-1">Москва</div>
@@ -784,12 +784,12 @@ export default function Home() {
           <div className="gap-4 grid grid-cols-3 lg:grid-cols-6 font-bold">
             {/* single */}
             <div className="flex flex-col gap-1 flex-1">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.webp)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
             <div className="flex flex-col gap-1 flex-1">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.webp)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
