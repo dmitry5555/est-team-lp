@@ -175,7 +175,7 @@ export default function Home() {
 
               {/* web */}
               <div className="text-white rounded-2xl overflow-hidden bg-bottom bg-cover bg-no-repeat"
-              style={{backgroundImage: `url(laptop.png),linear-gradient(266.35deg, #061122 9.01%, #0A1D36 99.03%)`}}>
+              style={{backgroundImage: `url(bg-1.png),linear-gradient(266.35deg, #061122 9.01%, #0A1D36 99.03%)`}}>
                 <input type="checkbox" id="webinar-toggle" className="peer hidden" />
                 <label htmlFor="webinar-toggle" className="lg:pointer-events-none gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
@@ -213,7 +213,10 @@ export default function Home() {
                 <input type="checkbox" id="course-toggle" className="peer hidden" />
                 <label htmlFor="course-toggle" className="lg:pointer-events-none gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
-                    <img className="w-9" src={'./play-circle.png'} />
+                    <svg width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M8.48304 2.9643e-07H12.2714C13.5211 -1.05399e-05 14.529 -1.9299e-05 15.3452 0.0666669C16.1856 0.135329 16.9237 0.280394 17.6067 0.628363C18.6914 1.18109 19.5734 2.06304 20.1261 3.14782C20.4741 3.83074 20.6191 4.56889 20.6878 5.40928C20.7545 6.22545 20.7545 7.23332 20.7545 8.48288L20.7545 21.4039C20.7545 21.8024 20.7545 22.1683 20.7304 22.4666C20.7057 22.7727 20.6473 23.1627 20.4294 23.5283C20.0444 24.1745 19.3684 24.5923 18.6183 24.6477C18.1938 24.679 17.8189 24.5568 17.5341 24.4421C17.2564 24.3302 16.9292 24.1666 16.5728 23.9883L16.5356 23.9697C15.7901 23.597 15.5695 23.4937 15.354 23.4396C15.0639 23.3666 14.7624 23.3508 14.4662 23.393C14.2463 23.4243 14.0161 23.5039 13.2357 23.7965L12.6259 24.0252C12.0032 24.2591 11.5326 24.4358 11.0368 24.5074C10.5994 24.5706 10.1551 24.5706 9.71763 24.5074C9.22192 24.4358 8.75128 24.2591 8.12856 24.0252L7.51876 23.7965C6.73834 23.5039 6.50815 23.4243 6.28822 23.393C5.99207 23.3508 5.69053 23.3666 5.40042 23.4396C5.18499 23.4937 4.9644 23.597 4.21889 23.9697L4.1816 23.9884C3.82521 24.1666 3.49804 24.3302 3.2204 24.4421C2.93553 24.5568 2.56069 24.679 2.13617 24.6477C1.38604 24.5923 0.710073 24.1745 0.325044 23.5283C0.107142 23.1627 0.0488197 22.7727 0.0240705 22.4666C-5.02256e-05 22.1683 -2.53699e-05 21.8025 1.81674e-06 21.404L6.52238e-06 8.48303C-4.88609e-06 7.2334 -1.39556e-05 6.22548 0.0666726 5.40928C0.135335 4.56889 0.2804 3.83074 0.628369 3.14781C1.18109 2.06303 2.06304 1.18108 3.14782 0.628362C3.83075 0.280393 4.5689 0.135328 5.40928 0.0666661C6.22549 -2.02998e-05 7.23341 -1.10896e-05 8.48304 2.9643e-07ZM5.76513 5.76513C5.12833 5.76513 4.6121 6.28135 4.6121 6.91815C4.6121 7.55495 5.12833 8.07118 5.76513 8.07118H14.9893C15.6261 8.07118 16.1424 7.55495 16.1424 6.91815C16.1424 6.28135 15.6261 5.76513 14.9893 5.76513H5.76513ZM5.76513 10.3772C5.12833 10.3772 4.6121 10.8935 4.6121 11.5303C4.6121 12.1671 5.12833 12.6833 5.76513 12.6833H14.9893C15.6261 12.6833 16.1424 12.1671 16.1424 11.5303C16.1424 10.8935 15.6261 10.3772 14.9893 10.3772H5.76513ZM5.76513 14.9893C5.12833 14.9893 4.6121 15.5056 4.6121 16.1424C4.6121 16.7792 5.12833 17.2954 5.76513 17.2954H10.3772C11.014 17.2954 11.5303 16.7792 11.5303 16.1424C11.5303 15.5056 11.014 14.9893 10.3772 14.9893H5.76513Z" fill="#0139AE"/>
+</svg>
+
                   </div>
                   <div className="w-6/12 lg:p-4 lg:text-3xl lg:pt-0 lg:h-14 text-[#0039AE]">Курсы</div>
                   <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-blue-800 rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 lg:hidden"></span>
@@ -238,7 +241,11 @@ export default function Home() {
                 <input type="checkbox" id="free-toggle" className="peer hidden" />
                 <label htmlFor="free-toggle" className="lg:pointer-events-none gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
-                    <img className="w-9" src={'./play-circle.png'} />
+                    <svg width="21" height="18" viewBox="0 0 21 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.164065 4.81024C0.0557058 5.02403 -7.39415e-06 5.25851 7.3515e-10 5.49525V12.2186C7.3515e-10 12.7377 0.420803 13.1585 0.939891 13.1585C1.45898 13.1585 1.87978 12.7377 1.87978 12.2186V7.41308L7.12345 10.2065C8.06108 10.7064 8.70616 11.0503 9.40576 11.1879C10.0213 11.309 10.6563 11.309 11.2718 11.1879C11.9714 11.0503 12.6165 10.7064 13.5541 10.2065L19.2696 7.16178C19.747 6.90752 20.2951 6.65166 20.536 6.13397C20.7326 5.71137 20.7239 5.22528 20.5135 4.81023C20.2556 4.30126 19.6997 4.06289 19.2147 3.82373L13.3684 0.940048C12.4809 0.50193 11.8705 0.20058 11.214 0.0797817C10.6359 -0.0265939 10.0417 -0.0265939 9.4636 0.0797817C8.80711 0.20058 8.19666 0.501931 7.30916 0.940051L1.46292 3.82373C0.977902 4.06289 0.422032 4.30127 0.164065 4.81024Z" fill="#0139AE"/>
+<path d="M3.23416 10.264C3.04634 10.1639 2.81962 10.3 2.81962 10.5128V13.2855L2.81958 13.3014C2.81882 13.6021 2.81805 13.907 2.9124 14.1961C2.99449 14.4476 3.12874 14.6789 3.30638 14.875C3.51126 15.1011 3.77757 15.2522 4.04001 15.4011L4.05091 15.4073L4.80201 15.8365C6.56003 16.8414 7.63206 17.4541 8.78853 17.6978C9.81078 17.9131 10.8667 17.9131 11.889 17.6978C13.0456 17.4541 14.1178 16.8412 15.8762 15.8361L16.6266 15.4073L16.6398 15.3998C16.9014 15.2512 17.1668 15.1005 17.3711 14.875C17.5487 14.6789 17.683 14.4476 17.7651 14.1961C17.8596 13.9065 17.8587 13.6019 17.8579 13.3008L17.8579 13.2945V10.5129C17.8579 10.3001 17.6311 10.164 17.4433 10.264L14.5603 11.7999C13.6582 12.2804 12.7027 12.8218 11.6346 13.0319C10.7795 13.2 9.89807 13.2 9.04301 13.0319C7.97459 12.8217 7.01954 12.2805 6.11732 11.7999L3.23416 10.264Z" fill="#0139AE"/>
+</svg>
+
                   </div>
                   <div className="w-10/12 lg:p-4 lg:pt-0 lg:h-14 text-md lg:text-3xl text-[#0039AE]">Бесплатное обучение</div>
                   <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-blue-800 rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 lg:hidden"></span>
@@ -261,11 +268,19 @@ export default function Home() {
             <div className="col-span-2">
               {/* congress */}
               <div className="text-white rounded-2xl overflow-hidden bg-bottom bg-cover bg-no-repeat"
-              style={{backgroundImage: `url(laptop.png),linear-gradient(266.35deg, #061122 9.01%, #0A1D36 99.03%)`}}>
+              style={{backgroundImage: `url(bg-2.png),linear-gradient(266.35deg, #061122 9.01%, #0A1D36 99.03%)`}}>
                 <input type="checkbox" id="congress-toggle" className="peer hidden" />
                 <label htmlFor="congress-toggle" className="lg:pointer-events-none gap-1 cursor-pointer font-bold flex px-4 py-5 items-center text-xl uppercase">
                   <div className="lg:hidden w-10 flex items-center justify-center h-full my-auto">
-                    <img className="w-9" src={'./play-circle.png'} />
+                    <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7.94857 5.87333C7.94857 2.62958 10.4905 0 13.6261 0C16.7617 0 19.3037 2.62958 19.3037 5.87333C19.3037 9.11707 16.7617 11.7467 13.6261 11.7467C10.4905 11.7467 7.94857 9.11707 7.94857 5.87333Z" fill="white" fillOpacity="0.25"/>
+<path d="M5.67755 19.6756C5.67755 16.5941 8.09238 14.096 11.0712 14.096H16.181C19.1599 14.096 21.5747 16.5941 21.5747 19.6756C21.5747 21.7841 19.9224 23.4933 17.8843 23.4933H9.36795C7.3298 23.4933 5.67755 21.7841 5.67755 19.6756Z" fill="white" fillOpacity="0.25"/>
+<path d="M6.79335 2.2765C7.01945 1.8179 6.93056 1.26044 6.57406 0.901267C6.21756 0.542092 5.67652 0.464898 5.23934 0.710834C3.47362 1.70415 2.27102 3.64261 2.27102 5.87336C2.27102 8.10408 3.47359 10.0425 5.23928 11.0358C5.67646 11.2818 6.21749 11.2046 6.574 10.8454C6.93051 10.4863 7.0194 9.9288 6.79331 9.47021C6.26172 8.39198 5.96143 7.17067 5.96143 5.87339C5.96143 4.57608 6.26173 3.35475 6.79335 2.2765Z" fill="white" fillOpacity="0.25"/>
+<path d="M22.0129 0.710838C21.5757 0.464902 21.0347 0.542096 20.6782 0.901272C20.3217 1.26045 20.2328 1.81791 20.4589 2.2765C20.9905 3.35475 21.2908 4.57609 21.2908 5.87339C21.2908 7.17067 20.9905 8.39197 20.4589 9.4702C20.2328 9.9288 20.3217 10.4863 20.6782 10.8454C21.0347 11.2046 21.5758 11.2818 22.013 11.0358C23.7786 10.0425 24.9812 8.10408 24.9812 5.87336C24.9812 3.64261 23.7786 1.70415 22.0129 0.710838Z" fill="white" fillOpacity="0.25"/>
+<path d="M4.45678 16.2834C4.67531 15.8284 4.58633 15.2797 4.23625 14.9234C3.88617 14.5671 3.35434 14.4839 2.91814 14.7174C1.18715 15.6437 0 17.5153 0 19.6757C0 21.436 1.15075 22.9153 2.71449 23.3581C3.12813 23.4752 3.57027 23.3413 3.85749 23.0119C4.14472 22.6824 4.22802 22.2137 4.07284 21.8001C3.82623 21.1428 3.69041 20.4271 3.69041 19.6757C3.69041 18.4548 3.96657 17.304 4.45678 16.2834Z" fill="white" fillOpacity="0.25"/>
+<path d="M24.3341 14.7174C23.8979 14.484 23.3661 14.5671 23.016 14.9234C22.6659 15.2797 22.5769 15.8284 22.7955 16.2834C23.2857 17.304 23.5618 18.4548 23.5618 19.6757C23.5618 20.4271 23.426 21.1428 23.1794 21.8001C23.0242 22.2137 23.1075 22.6824 23.3947 23.0119C23.682 23.3413 24.1241 23.4752 24.5377 23.3581C26.1015 22.9153 27.2522 21.436 27.2522 19.6757C27.2522 17.5153 26.0651 15.6437 24.3341 14.7174Z" fill="white" fillOpacity="0.25"/>
+</svg>
+
                   </div>
                   <div className="w-6/12 lg:p-4 lg:pt-0 lg:h-14 lg:text-3xl">Конгрессы</div>
                   <span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4 lg:hidden"></span>
@@ -336,7 +351,7 @@ export default function Home() {
                 items-center text-center mx-auto">
                   <div className="">Москва</div>
                   <div className="mx-2 flex items-center">
-                    <div className="w-40 border-t-1 border-[#777777]"></div>
+                    <div className="w-26 border-t-1 border-[#777777]"></div>
                     <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
                 rotate-45 -ml-2"></div>
                   </div>
@@ -359,7 +374,7 @@ export default function Home() {
                 items-center text-center mx-auto">
                   <div className="">Москва</div>
                   <div className="mx-2 flex items-center">
-                    <div className="w-40 border-t-1 border-[#777777]"></div>
+                    <div className="w-26 border-t-1 border-[#777777]"></div>
                     <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
                 rotate-45 -ml-2"></div>
                   </div>
@@ -382,7 +397,7 @@ export default function Home() {
                 items-center text-center mx-auto">
                   <div className="">Москва</div>
                   <div className="mx-2 flex items-center">
-                    <div className="w-40 border-t-1 border-[#777777]"></div>
+                    <div className="w-26 border-t-1 border-[#777777]"></div>
                     <div className="w-2 h-2 border-r-1 border-t-1 border-[#777777]
                 rotate-45 -ml-2"></div>
                   </div>
