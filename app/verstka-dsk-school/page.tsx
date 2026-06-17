@@ -905,25 +905,29 @@ export default function Home() {
           
           {/* single */}
           <div className="flex flex-col border-blue-800 pb-8 border-b-2 pb-3 gap-4 text-[#777777]">
-            <div className="flex flex-col lg:flex-row gap-8 font-bold">
-              <div className="flex flex-col aspect-[1/1] h-auto bg-contain bg-no-repeat rounded-xl w-full lg:w-96" style={{backgroundImage: `url(congress.png)`}}>
+            <div className="flex flex-col lg:flex-row gap-4 font-bold">
+              <div className="lg:hidden flex flex-row">
+                <div className="text-md my-auto">23-24.05.2026</div>
+                <a href="#" className="ml-auto text-md text-[#0039AE] underline my-auto">Новосибирск</a>
+              </div>
+              <div className="flex flex-col aspect-[1/1] h-auto bg-contain bg-no-repeat rounded-xl lg:w-96" style={{backgroundImage: `url(congress.png)`}}>
               </div>
               <div className="flex flex-col w-full">
-                <div className="flex flex-row">
+                <div className="hidden lg:flex flex-row">
                   <div className="text-xl my-auto">23-24.05.2026</div>
                   <a href="#" className="ml-auto text-2xl text-[#0039AE] underline my-auto">Новосибирск</a>
                 </div>
-                <div className="flex flex-col ">
-                  <div className="text-3xl text-[#0039AE]">Большой стоматологический</div>
+                <div className="flex flex-col text-center lg:text-left">
+                  <div className="text-xl lg:text-3xl text-[#0039AE]">Большой стоматологический конгресс Погружение</div>
                   <div className="">*** 4.9/5</div>
-                  <div className="uppercase flex flex-row gap-2"> 
-                    <span className="text-4xl text-[#0039AE]">20 000 ₽ </span>
-                    <span className="text-sm line-through">25 000 ₽</span>
+                  <div className="uppercase flex flex-row gap-1 justify-center lg:justify-start"> 
+                    <span className="text-2xl lg:text-4xl text-[#0039AE]">20 000 ₽ </span>
+                    <span className="text-xs lg:text-sm line-through">25 000 ₽</span>
                   </div>
-                  <div className="text-md my-1">Cпикеры: Вьючнов Иван, Рузин Иван, Соколик Владимир,
+                  <div className="text-xs lg:text-lg leading-4 lg:text-md my-1">Cпикеры: Вьючнов Иван, Рузин Иван, Соколик Владимир,
 Латыпов Айнур, Мехтиев Багир, Маланьин Сергей.......</div>
                   <div className="text-sm underline">Подробнее</div>
-                  <div className="mt-2 text-white text-lg text-center rounded-2xl py-2 px-16 ml-auto bg-[#013AAF]">
+                  <div className="flex mt-2 text-white text-lg text-center rounded-2xl py-2 px-14 mx-auto lg:mx-0 lg:ml-auto bg-[#013AAF]">
                     Записаться
                   </div>
                 </div>
