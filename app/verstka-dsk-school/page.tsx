@@ -901,7 +901,7 @@ export default function Home() {
 
 
         {/* all courses */}
-        <div className=" flex flex-col p-8 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10  gap-10">
+        <div className="hidden flex flex-col p-8 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10  gap-10">
           
           {/* single */}
           <div className="flex flex-col border-blue-800 pb-8 border-b-2 pb-3 gap-4 text-[#777777]">
