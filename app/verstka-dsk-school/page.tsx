@@ -379,7 +379,6 @@ export default function Home() {
         </div>
 
 
-      <div className="flex hiff flex-col w-full mx-auto gap-5">
       
         {/* lk */}
         <div className="hidden flex flex-col gap-3.5 bg-gray-100 rounded-2xl p-4">
@@ -1145,7 +1144,7 @@ export default function Home() {
           </div>
         </div>
 
-    </div>
+    {/* </div> */}
   </div>
   {isModalOpen && (
     <div
