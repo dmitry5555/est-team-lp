@@ -472,7 +472,7 @@ export default function Home() {
       {/* events + filter */}
       <div className="flex flex-row gap-8">
        {/* all events */}
-          <div className="w-18/24 p-4 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="w-18/24 lg:w-full p-4 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           
             {/* single */}
@@ -719,7 +719,7 @@ export default function Home() {
           </div>
 
           {/* event filters */}
-          <form className="w-6/24 self-start h-fit px-4 py-6 rounded-2xl flex bg-gradient-to-b from-[#091930] to-[#0156C5] via-[#003BAF] flex flex-col font-gilroy text-white gap-4">
+          <form className="hidden lg-flex w-6/24 self-start h-fit px-4 py-6 rounded-2xl  bg-gradient-to-b from-[#091930] to-[#0156C5] via-[#003BAF] flex flex-col font-gilroy text-white gap-4">
             <h3 className="text-2xl font-semibold">Фильтры</h3>
 
             {/* city */}
