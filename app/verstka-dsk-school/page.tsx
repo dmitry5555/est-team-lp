@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react"
 
 export default function Home() {
+      const [isModalOpen, setIsModalOpen] = useState(false)
       const minPrice = 5000
       const maxPrice = 100000
       const [priceFrom, setPriceFrom] = useState(String(minPrice))
@@ -55,11 +56,26 @@ export default function Home() {
         }
       }, [dragging, priceFromNumber, priceToNumber])
 
+      useEffect(() => {
+        const handleEscape = (event: KeyboardEvent) => {
+          if (event.key === "Escape") {
+            setIsModalOpen(false)
+          }
+        }
+
+        if (isModalOpen) {
+          document.body.style.overflow = "hidden"
+          window.addEventListener("keydown", handleEscape)
+        }
+
+        return () => {
+          document.body.style.overflow = ""
+          window.removeEventListener("keydown", handleEscape)
+        }
+      }, [isModalOpen])
+
       return (
-
-
-
-
+        <>
    <div
     className="font-raleway bg-red-00 w-full min-h-screen bg-top bg-no-repeat flex flex-col"
     style={{
@@ -139,7 +155,7 @@ export default function Home() {
 
         {/* header2 - search */}
         <div className="flex-row flex gap-6">
-          <div className="hidden lg:flex min-w-22 h-auto bg-fill bg-no-repeat mt-1.5" style={{backgroundImage:"url(logo.png)"}}></div>
+          <div className="hidden lg:flex min-w-30 bg-contain bg-no-repeat my-1" style={{backgroundImage:"url(logo-lg.png)"}}></div>
           <div className="relative flex w-full">
             <input className="flex w-full bg-gradient-to-b from-gray-50 to-white border-2 lg:border-1 lg:border-gray-200 border-gray-300 rounded-xl lg:rounded-lg px-4 py-2 lg:py-3 pr-10 placeholder:text-sm placeholder:font-semibold font-semibold" type="text" placeholder="Поиск" />
             <span className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 font-semibold pointer-events-none"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,14 +164,18 @@ export default function Home() {
 </span>
           </div>
           <div className="hidden lg:flex">
-            <div className="text-sm text-center rounded-xl my-auto px-10 py-4 mx-auto bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold flex flex-row gap-2">
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(true)}
+              className="flex text-sm text-center rounded-xl my-auto px-10 py-4 mx-auto bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold flex flex-row gap-2"
+            >
               
                 <svg className="my-auto" width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.83077 7.10401C5.84194 7.10401 5.00273 6.75921 4.31315 6.06963C3.62356 5.38005 3.27877 4.54084 3.27877 3.552C3.27877 2.56317 3.62356 1.72396 4.31315 1.03437C5.00273 0.344791 5.84194 0 6.83077 0C7.81961 0 8.65882 0.344791 9.3484 1.03437C10.038 1.72396 10.3828 2.56317 10.3828 3.552C10.3828 4.54084 10.038 5.38005 9.3484 6.06963C8.65882 6.75921 7.81961 7.10401 6.83077 7.10401ZM0 12.7052V11.9831C0 11.4497 0.126857 10.9683 0.380572 10.5389C0.634286 10.1095 0.975825 9.78427 1.40519 9.56308C2.26391 9.12071 3.14866 8.78893 4.05943 8.56774C4.9702 8.34656 5.89398 8.23596 6.83077 8.23596C7.76757 8.23596 8.69135 8.34656 9.60212 8.56774C10.5129 8.78893 11.3976 9.12071 12.2564 9.56308C12.6857 9.78427 13.0273 10.1095 13.281 10.5389C13.5347 10.9683 13.6615 11.4497 13.6615 11.9831V12.7052C13.6615 13.2907 13.4631 13.7819 13.0663 14.1787C12.6695 14.5756 12.1783 14.774 11.5928 14.774H2.06875C1.48325 14.774 0.992089 14.5756 0.595253 14.1787C0.198418 13.7819 0 13.2907 0 12.7052Z" fill="white"/>
 </svg>
 
               <div>Войти</div>
-            </div>
+            </button>
           </div>
         </div>
 
@@ -396,7 +416,7 @@ export default function Home() {
             {/* single */}
             <div className="flex flex-col gap-3 p-4 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg 
           shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
-            <div className="flex flex-col aspect-[12/15] bg-cover bg-no-repeat rounded-xl" style={{backgroundImage: `url(c3.webp)`}}></div>
+            <div className="flex flex-col max-w-full aspect-[12/15] bg-cover bg-no-repeat rounded-xl" style={{backgroundImage: `url(c3.webp)`}}></div>
             <div className="flex flex-col text-center ">
               <div className="mb-2 mt-1 uppercase text-[#777777] flex flex-row
                 items-center text-center mx-auto">
@@ -412,7 +432,9 @@ export default function Home() {
               <div className="uppercase font-bold text-[#777777]">ИВАН ВЬЮЧНОВ</div>
 
               <div className="uppercase font-bold text-[#0039AE]">Клинические аспекты применения материалов на основе МТА</div>
-              <div className="mt-2 text-sm text-center rounded-lg py-3 w-48 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Подробнее</div>
+              <div className="mt-2 text-sm text-center rounded-lg py-3 w-48 mx-auto lg:uppercase bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">
+                Подробнее
+              </div>
             </div>
           </div>
 
@@ -464,15 +486,15 @@ export default function Home() {
         </div>
 
         {/* events */}
-        <div className=" flex flex-row gap-4 font-gilroy">
-          <h2 className="text-[#0039AE] text-2xl w-48 lg:text-5xl lg:w-full lg:text-center font-semibold leading-6 mt-16 lg:mb-8">Все мероприятия</h2>
+        <div className=" flex flex-row gap-4 font-gilroy mt-16">
+          <h2 className="text-[#0039AE] text-2xl w-48 lg:text-5xl lg:w-full lg:text-center font-semibold leading-6 lg:mb-8">Все мероприятия</h2>
           <div className="ml-auto w-24 text-right text-sm lg:hidden">фильтры</div>
         </div>
 
       {/* events + filter */}
       <div className="flex flex-row gap-8">
        {/* all events */}
-          <div className="w-18/24 lg:w-full p-4 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="flex w-full lg:w-17/24 p-4 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           
             {/* single */}
@@ -719,7 +741,7 @@ export default function Home() {
           </div>
 
           {/* event filters */}
-          <form className="hidden lg-flex w-6/24 self-start h-fit px-4 py-6 rounded-2xl  bg-gradient-to-b from-[#091930] to-[#0156C5] via-[#003BAF] flex flex-col font-gilroy text-white gap-4">
+          <form className="hidden lg:flex lg:w-7/24 self-start h-fit px-4 py-6 rounded-2xl  bg-gradient-to-b from-[#091930] to-[#0156C5] via-[#003BAF] flex flex-col font-gilroy text-white gap-4">
             <h3 className="text-2xl font-semibold">Фильтры</h3>
 
             {/* city */}
@@ -747,7 +769,7 @@ export default function Home() {
                 <div className="flex flex-1 flex-col gap-2">
                   <div className="text-xs text-white/40 text-bold">От</div>
                   <input
-                    className="w-full rounded-2xl bg-white px-6 py-4 text-md font-semibold text-[#2C2C32] placeholder:text-[#2C2C32]"
+                    className="w-full rounded-xl bg-white px-6 py-3 text-md font-semibold text-[#2C2C32] placeholder:text-[#2C2C32]"
                     placeholder="5 000 ₽"
                     type="text"
                     name="price_from"
@@ -760,7 +782,7 @@ export default function Home() {
                 <div className="flex flex-1 flex-col gap-2">
                   <div className="text-xs text-white/40 text-bold">До</div>
                   <input
-                    className="w-full rounded-2xl bg-white px-6 py-4 text-md font-semibold text-[#2C2C32] placeholder:text-[#2C2C32]"
+                    className="w-full rounded-xl bg-white px-6 py-3 text-md font-semibold text-[#2C2C32] placeholder:text-[#2C2C32]"
                     placeholder="100 000 ₽"
                     type="text"
                     name="price_to"
@@ -854,7 +876,7 @@ export default function Home() {
 
         <div className="overflow-hidden max-h-0 transition-all
   duration-300 peer-checked:max-h-full">
-          <div className="pt-4 lg:pt-8 text-md lg:text-xl font-semibold text-[#6C6C6C] text-gilroy">Под описанием каждого практического курса есть кнопка "Записаться", нажмите пожалуйста на нее и выберите удобный для Вас способ связи. Пожалуйста остерегайтесь мошенников, запись на курс ведется только с контактами указанными на официальном сайте (https://www.dsk-med.ru/) или в публикациях в наших социальных сетях. Осторожно, в комментариях также нередко можно “встретить” мошенников. </div>
+          <div className="pt-4 lg:pt-8 text-md lg:text-xl font-semibold text-[#6C6C6C] text-gilroy">Под описанием каждого практического курса есть кнопка &quot;Записаться&quot;, нажмите пожалуйста на нее и выберите удобный для Вас способ связи. Пожалуйста остерегайтесь мошенников, запись на курс ведется только с контактами указанными на официальном сайте (https://www.dsk-med.ru/) или в публикациях в наших социальных сетях. Осторожно, в комментариях также нередко можно “встретить” мошенников. </div>
         </div>
       </div>
     </div>
@@ -869,7 +891,7 @@ export default function Home() {
 
         <div className="overflow-hidden max-h-0 
   duration-300 peer-checked:max-h-full ">
-          <div className="pt-4 lg:pt-8 text-md lg:text-xl font-semibold text-[#6C6C6C] text-gilroy ">Под описанием каждого практического курса есть кнопка "Записаться", нажмите пожалуйста на нее и выберите удобный для Вас способ связи. Пожалуйста остерегайтесь мошенников, запись на курс ведется только с контактами указанными на официальном сайте (https://www.dsk-med.ru/) или в публикациях в наших социальных сетях. Осторожно, в комментариях также нередко можно “встретить” мошенников. </div>
+          <div className="pt-4 lg:pt-8 text-md lg:text-xl font-semibold text-[#6C6C6C] text-gilroy ">Под описанием каждого практического курса есть кнопка &quot;Записаться&quot;, нажмите пожалуйста на нее и выберите удобный для Вас способ связи. Пожалуйста остерегайтесь мошенников, запись на курс ведется только с контактами указанными на официальном сайте (https://www.dsk-med.ru/) или в публикациях в наших социальных сетях. Осторожно, в комментариях также нередко можно “встретить” мошенников. </div>
         </div>
       </div>
     </div>
@@ -880,60 +902,31 @@ export default function Home() {
 
 
         {/* all courses */}
-        <div className=" flex flex-col gap-4 p-4 bg-gray-50 rounded-4xl shadow-lg hidden">
+        <div className=" flex flex-col p-8 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10  gap-10">
           
           {/* single */}
-          <div className="flex flex-col border-blue-800 border-b-2 pb-3 gap-4">
-            <div className="flex flex-row">
-              <div className="text-sm my-auto">23-24.05.2026</div>
-              <a href="#" className="ml-auto underline my-auto">Новосибирск</a>
-            </div>
-            <div className="flex flex-col h-48 bg-gray-100 rounded-xl mx-6">
-              <div>img</div>
-            </div>
-            <div className="flex flex-col text-center ">
-              <div className="text-lg">Большой стоматологический</div>
-              <div className="">***</div>
-              <div className="uppercase text-2xl">20 000</div>
-              <div className="text-sm my-1">Спикеры ... </div>
-              <div className="text-xs underline">Подробнее</div>
-              <div className="mt-2 bg-red-100 text-center rounded-lg py-2 w-48 mx-auto ">Записаться</div>
-            </div>
-          </div>
-
-          {/* single */}
-          <div className="flex flex-col h-48 bg-gray-100 rounded-xl">
-            <div>img</div>
-          </div>
-          <div className="flex flex-col text-center ">
-            <div className="mb-2 uppercase">Москва</div>
-            <div className="uppercase">Иван</div>
-            <div className="uppercase">Клинические ... </div>
-            <div className="mt-2 bg-red-100 text-center rounded-lg py-2 w-48 mx-auto ">Подробнее</div>
-          </div>
-        </div>
-
-        {/* all courses */}
-        <div className="flex hidden flex-col gap-4 p-4 bg-gray-50 rounded-4xl shadow-lg">
-          
-          {/* single */}
-          <div className="flex flex-col border-blue-800 border-b-2 pb-3 gap-4">
-            <div className="flex flex-row gap-5">
-              <div className="flex flex-col h-48 bg-gray-100 rounded-xl mx-6 w-96">
-                <div>img</div>
+          <div className="flex flex-col border-blue-800 pb-8 border-b-2 pb-3 gap-4 text-[#777777]">
+            <div className="flex flex-col lg:flex-row gap-8 font-bold">
+              <div className="flex w-full flex-col aspect-[1/1] h-auto bg-contain bg-no-repeat rounded-xl w-96" style={{backgroundImage: `url(congress.png)`}}>
               </div>
               <div className="flex flex-col w-full">
                 <div className="flex flex-row">
-                  <div className="text-sm my-auto">23-24.05.2026</div>
-                  <a href="#" className="ml-auto underline my-auto">Новосибирск</a>
+                  <div className="text-xl my-auto">23-24.05.2026</div>
+                  <a href="#" className="ml-auto text-2xl text-[#0039AE] underline my-auto">Новосибирск</a>
                 </div>
-                <div className="flex flex-col  ">
-                  <div className="text-lg">Большой стоматологический</div>
-                  <div className="">***</div>
-                  <div className="uppercase text-2xl">20 000</div>
-                  <div className="text-sm my-1">Спикеры ... </div>
-                  <div className="text-xs underline">Подробнее</div>
-                  <div className="mt-2 bg-red-100 text-center rounded-lg py-2 w-48 ml-auto">Записаться</div>
+                <div className="flex flex-col ">
+                  <div className="text-3xl text-[#0039AE]">Большой стоматологический</div>
+                  <div className="">*** 4.9/5</div>
+                  <div className="uppercase flex flex-row gap-2"> 
+                    <span className="text-4xl text-[#0039AE]">20 000 ₽ </span>
+                    <span className="text-sm line-through">25 000 ₽</span>
+                  </div>
+                  <div className="text-md my-1">Cпикеры: Вьючнов Иван, Рузин Иван, Соколик Владимир,
+Латыпов Айнур, Мехтиев Багир, Маланьин Сергей.......</div>
+                  <div className="text-sm underline">Подробнее</div>
+                  <div className="mt-2 text-white text-lg text-center rounded-2xl py-2 px-16 ml-auto bg-[#013AAF]">
+                    Записаться
+                  </div>
                 </div>
               </div>
             </div>
@@ -1154,5 +1147,54 @@ export default function Home() {
 
     </div>
   </div>
+  {isModalOpen && (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-[#091930]/60 px-4 backdrop-blur-md"
+      onClick={() => setIsModalOpen(false)}
+    >
+      <div
+        className="relative w-full max-w-xl rounded-2xl bg-gradient-to-b from-[#091930] via-[#003BAF] to-[#0156C5] p-6 lg:p-8 font-gilroy text-white "
+        onClick={(event) => event.stopPropagation()}
+      >
+        <button
+          type="button"
+          onClick={() => setIsModalOpen(false)}
+          className="absolute -right-3 -top-12 flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/40 text-white backdrop-blur-md  hover:bg-white/30 transition"
+          aria-label="Закрыть"
+        >
+          <span className="text-4xl font-light leading-none">×</span>
+        </button>
+
+        <div className="flex items-start gap-4 pr-12">
+          <div>
+            <div className="text-2xl lg:text-3xl font-semibold">Пожалуйста, авторизуйтесь</div>
+            <div className="mt-2 text-sm lg:text-base text-white/60">
+              Оставьте телефон, и мы отправим код для входа.
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 flex flex-col gap-4">
+          <input
+            className="w-full rounded-xl bg-white px-6 py-4 text-md font-semibold text-[#2C2C32] placeholder:text-[#2C2C32]"
+            type="text"
+            placeholder="Телефон"
+          />
+          <input
+            className="w-full rounded-xl bg-white px-6 py-4 text-md font-semibold text-[#2C2C32] placeholder:text-[#2C2C32]"
+            type="text"
+            placeholder="Код из SMS"
+          />
+          <button
+            type="button"
+            className="flex justify-center mx-auto w-full text-lg rounded-2xl py-4  ml-auto bg-white text-[#0039AE] font-bold"
+          >
+            Войти
+          </button>
+        </div>
+      </div>
+    </div>
+  )}
+  </>
   );
 }
