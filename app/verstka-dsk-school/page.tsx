@@ -1,8 +1,59 @@
-import Image from "next/image"
+"use client"
+
+import { useEffect, useRef, useState } from "react"
 
 export default function Home() {
+      const minPrice = 5000
+      const maxPrice = 100000
+      const [priceFrom, setPriceFrom] = useState(String(minPrice))
+      const [priceTo, setPriceTo] = useState(String(maxPrice))
+      const [dragging, setDragging] = useState<"from" | "to" | null>(null)
+      const sliderRef = useRef<HTMLDivElement | null>(null)
 
-      const positions = [0, 1200, 2400, 3600]
+      const normalizePrice = (value: string) => {
+        const digits = value.replace(/[^\d]/g, "")
+        return digits
+      }
+
+      const formatPrice = (value: string) => {
+        if (!value) return ""
+        return new Intl.NumberFormat("ru-RU").format(Number(value))
+      }
+
+      const priceFromNumber = Math.max(minPrice, Math.min(maxPrice, Number(priceFrom || minPrice)))
+      const priceToNumber = Math.max(minPrice, Math.min(maxPrice, Number(priceTo || maxPrice)))
+      const fromPercent = ((priceFromNumber - minPrice) / (maxPrice - minPrice)) * 100
+      const toPercent = ((priceToNumber - minPrice) / (maxPrice - minPrice)) * 100
+
+      const updatePriceFromPointer = (clientX: number, handle: "from" | "to") => {
+        const track = sliderRef.current
+        if (!track) return
+
+        const rect = track.getBoundingClientRect()
+        const nextValue = Math.round((((clientX - rect.left) / rect.width) * (maxPrice - minPrice) + minPrice) / 1000) * 1000
+        const clampedValue = Math.max(minPrice, Math.min(maxPrice, nextValue))
+
+        if (handle === "from") {
+          setPriceFrom(String(Math.min(clampedValue, priceToNumber)))
+        } else {
+          setPriceTo(String(Math.max(clampedValue, priceFromNumber)))
+        }
+      }
+
+      useEffect(() => {
+        if (!dragging) return
+
+        const handlePointerMove = (event: PointerEvent) => updatePriceFromPointer(event.clientX, dragging)
+        const handlePointerUp = () => setDragging(null)
+
+        window.addEventListener("pointermove", handlePointerMove)
+        window.addEventListener("pointerup", handlePointerUp)
+
+        return () => {
+          window.removeEventListener("pointermove", handlePointerMove)
+          window.removeEventListener("pointerup", handlePointerUp)
+        }
+      }, [dragging, priceFromNumber, priceToNumber])
 
       return (
 
@@ -18,7 +69,7 @@ export default function Home() {
       backgroundPosition: "left -100px top 100px, right -100px top 1200px, left 0px top 2400px, right -0px top 3600px",
     }}
   >
-    <div className="max-w-[1350px] px-6 lg:px-14 mx-auto flex flex-col py-12 lg:gap-8 gap-6 min-h-screen">
+    <div className="max-w-[1350px] px-6 lg:px-14 mx-auto flex flex-col py-6 lg:gap-8 gap-6 min-h-screen">
   
       {/* header */}
       <div className="flex flex-row gap-4">
@@ -418,9 +469,10 @@ export default function Home() {
           <div className="ml-auto w-24 text-right text-sm lg:hidden">фильтры</div>
         </div>
 
+      {/* events + filter */}
+      <div className="flex flex-row gap-8">
        {/* all events */}
-          
-          <div className="p-4 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="w-18/24 p-4 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
           
             {/* single */}
@@ -664,9 +716,127 @@ export default function Home() {
               </div>
             </div>
             
-
-
           </div>
+
+          {/* event filters */}
+          <form className="w-6/24 self-start h-fit px-4 py-6 rounded-2xl flex bg-gradient-to-b from-[#091930] to-[#0156C5] via-[#003BAF] flex flex-col font-gilroy text-white gap-4">
+            <h3 className="text-2xl font-semibold">Фильтры</h3>
+
+            {/* city */}
+            <div className="flex flex-col gap-2">
+              <div className="text-sm font-bold">Город</div>
+              <div className="relative">
+                <input className="w-full rounded-lg border-1 border-white bg-transparent p-2 pr-10 text-xs placeholder:text-white/70" placeholder="Поиск" type="text" name="city_search" id="city-search" />
+                <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+                  <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.1078 10.5235L9.25663 7.67208C9.74107 6.90084 10.0222 5.98928 10.0222 5.01101C10.0222 2.24334 7.77857 0 5.01101 0C2.24345 0 0 2.24334 0 5.01101C0 7.77878 2.24334 10.0219 5.01101 10.0219C6.07563 10.0219 7.06173 9.68907 7.87316 9.12351L10.6904 11.941C10.8862 12.1365 11.1428 12.2339 11.3991 12.2339C11.6557 12.2339 11.9121 12.1365 12.1081 11.941C12.4993 11.5494 12.4993 10.915 12.1078 10.5235ZM5.01101 8.39842C3.14039 8.39842 1.62381 6.88194 1.62381 5.01122C1.62381 3.14049 3.14039 1.62391 5.01101 1.62391C6.88173 1.62391 8.39821 3.14049 8.39821 5.01122C8.39821 6.88194 6.88173 8.39842 5.01101 8.39842Z" fill="white"/>
+                  </svg>
+                </span>
+              </div>
+
+              <label htmlFor="city-moscow" className="flex items-center gap-2 text-xs cursor-pointer select-none">
+                <input type="checkbox" name="city[]" id="city-moscow" value="moscow" className="" />
+                <span>Москва</span>
+              </label>
+            </div>
+
+            {/* price */}
+            <div className="flex flex-col gap-2">
+              <div className="text-sm font-bold">Цена</div>
+              <div className="flex flex-row gap-5">
+                <div className="flex flex-1 flex-col gap-2">
+                  <div className="text-xs text-white/40 text-bold">От</div>
+                  <input
+                    className="w-full rounded-2xl bg-white px-6 py-4 text-md font-semibold text-[#2C2C32] placeholder:text-[#2C2C32]"
+                    placeholder="5 000 ₽"
+                    type="text"
+                    name="price_from"
+                    id="price-from"
+                    inputMode="numeric"
+                    value={formatPrice(priceFrom)}
+                    onChange={(event) => setPriceFrom(normalizePrice(event.target.value))}
+                  />
+                </div>
+                <div className="flex flex-1 flex-col gap-2">
+                  <div className="text-xs text-white/40 text-bold">До</div>
+                  <input
+                    className="w-full rounded-2xl bg-white px-6 py-4 text-md font-semibold text-[#2C2C32] placeholder:text-[#2C2C32]"
+                    placeholder="100 000 ₽"
+                    type="text"
+                    name="price_to"
+                    id="price-to"
+                    inputMode="numeric"
+                    value={formatPrice(priceTo)}
+                    onChange={(event) => setPriceTo(normalizePrice(event.target.value))}
+                  />
+                </div>
+              </div>
+              <div className="pt-1 px-1">
+                <div ref={sliderRef} className="relative h-4">
+                  <div className="absolute left-0 top-1/2 h-1 w-full -translate-y-1/2 rounded-full bg-white/20" />
+                  <div
+                    className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-white"
+                    style={{
+                      left: `${Math.max(0, Math.min(100, fromPercent))}%`,
+                      width: `${Math.max(0, Math.min(100, toPercent - fromPercent))}%`,
+                    }}
+                  />
+                  <div
+                    className="absolute top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
+                    style={{ left: `calc(${Math.max(0, Math.min(100, fromPercent))}% - 8px)` }}
+                    onPointerDown={() => setDragging("from")}
+                  />
+                  <div
+                    className="absolute top-1/2 h-4 w-4 -translate-y-1/2 rounded-full bg-white shadow-[0_4px_12px_rgba(0,0,0,0.15)]"
+                    style={{ left: `calc(${Math.max(0, Math.min(100, toPercent))}% - 8px)` }}
+                    onPointerDown={() => setDragging("to")}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* format */}
+            <div className="flex flex-col gap-2">
+              <div className="text-sm font-bold">Формат</div>
+              <label htmlFor="format-webinars" className="flex items-center gap-2 text-xs cursor-pointer select-none">
+                <input type="checkbox" name="format[]" id="format-webinars" value="webinars" className="" />
+                <span>Вебинары</span>
+              </label>
+              <label htmlFor="format-congresses" className="flex items-center gap-2 text-xs cursor-pointer select-none">
+                <input type="checkbox" name="format[]" id="format-congresses" value="congresses" className="" />
+                <span>Конгрессы</span>
+              </label>
+            </div>
+            
+            {/* cat */}
+            <div className="flex flex-col gap-2">
+              <div className="text-sm font-bold">Категория</div>
+              <label htmlFor="category-all" className="flex items-center gap-2 text-xs cursor-pointer select-none">
+                <input type="checkbox" name="category[]" id="category-all" value="all" className="" />
+                <span>Все</span>
+              </label>
+              <label htmlFor="category-child" className="flex items-center gap-2 text-xs cursor-pointer select-none">
+                <input type="checkbox" name="category[]" id="category-child" value="child" className="" />
+                <span>Детская стоматология</span>
+              </label>
+              <label htmlFor="category-ortho" className="flex items-center gap-2 text-xs cursor-pointer select-none">
+                <input type="checkbox" name="category[]" id="category-ortho" value="ortho" className="" />
+                <span>Ортопедия</span>
+              </label>
+              <span className="text-sm">Показать все</span>
+            </div>
+            {/* buttons */}
+            <div className="flex flex-col gap-2">
+              <button type="submit" className="w-full text-center rounded-xl bg-white px-4 py-3  text-md font-semibold text-[#0039AE]">Применить</button>
+              <button type="reset" className="w-full text-center rounded-xl border border-white px-4 py-3  text-md font-semibold text-white">Сбросить</button>
+
+            </div>
+              {/* end filter */}
+
+          </form>
+          {/* end  */}
+        </div>
+
 
         <div className="rounded-lg py-2 px-6 mx-auto text-center bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white font-bold">Показать еще</div>
 
@@ -784,92 +954,92 @@ export default function Home() {
           <div className="gap-4 grid grid-cols-3 lg:grid-cols-6 font-bold">
             {/* single */}
             <div className="flex flex-col gap-1 flex-1">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.webp)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo1.webp)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
             <div className="flex flex-col gap-1 flex-1">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.webp)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo2.webp)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
             <div className="flex flex-col gap-1 flex-1">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:flex">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:flex">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:flex">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:hidden">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:hidden">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:hidden">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:hidden">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:hidden">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo1.png)"}}></div>
               <div className="text-center text-[#777777] w-20 mx-auto text-sm uppercase leading-4 ">Иван Рузин</div>
             </div>
             {/* single */}
             <div className="hidden flex-col gap-1 flex-1 group-has-[:checked]:flex lg:hidden">
-              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 h-26 w-26 text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
+              <div className="my-auto mx-auto rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{ backgroundImage: "url(photo2.png)"}}></div>
               <div className="text-center w-20 mx-auto text-sm leading-4 uppercase text-[#777777]">Владимир соколик</div>
             </div>
           </div>
