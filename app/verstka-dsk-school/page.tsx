@@ -381,15 +381,24 @@ export default function Home() {
 
       
         {/* lk */}
-        <div className="flex flex-col w-full p-4 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10 gap-4">
+        <div className="flex flex-col w-full p-0 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-none lg:shadow-lg bg-white/0 lg:bg-white/10 lg:backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
+          <div className="flex gap-4 flex-row text-md text-[#BBBCBC]">
+            <span>Главная</span>
+            <svg className="my-auto" width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.66944 3.87394L0.244156 1.44866C0.0813853 1.28589 0 1.08514 0 0.846407C0 0.607677 0.0813853 0.406926 0.244156 0.244156C0.406926 0.0813853 0.607677 0 0.846407 0C1.08514 0 1.28589 0.0813853 1.44866 0.244156L4.47619 3.27169C4.563 3.3585 4.6254 3.45074 4.66338 3.5484C4.70136 3.64606 4.72035 3.75457 4.72035 3.87394C4.72035 3.9933 4.70136 4.10182 4.66338 4.19948C4.6254 4.29714 4.563 4.38938 4.47619 4.47619L1.44866 7.50372C1.28589 7.66649 1.08514 7.74788 0.846407 7.74788C0.607677 7.74788 0.406926 7.66649 0.244156 7.50372C0.0813853 7.34095 0 7.1402 0 6.90147C0 6.66274 0.0813853 6.46199 0.244156 6.29922L2.66944 3.87394Z" fill="#BBBCBC"/>
+</svg>
 
-          <div className="flex xl:flex-row">
-            <div className="flex flex-col border-2 border-[#0039AE] px-4 py-4 rounded-xl w-full gap-4">
-              
+            <span className="">Личный кабинет</span>
+          </div>
+
+          <h2 className="flex text-[#0039AE] text-2xl lg:text-5xl font-semibold mb-2"><span>Личный кабинет</span> <span className="text-[#BBBCBC] mx-2">-</span> <span className="text-[#BBBCBC]">Сертификаты</span></h2>
+
+          <div className="flex flex-col xl:flex-row gap-8">
+            {/* col-1 menu */}
+            <div className="flex xl:w-1/3 flex-col border-2 border-[#0039AE] px-4 py-4 rounded-xl w-full gap-4">
               {/* line 1 */}
               <div className="flex flex-row gap-2 bg-gradient-to-b from-[#013AAF] to-[#0056C5] text-white p-3 rounded-xl">
-                <div className="flex flex-row ">
-                  <div className="bg-white my-auto text-[#0039AE] w-9 h-9 rounded-lg flex justify-center items-center font-bold">И</div>
+                <div className="bg-white my-auto text-[#0039AE] w-9 h-9 rounded-lg flex justify-center items-center font-bold">И
                 </div>
                 <div className="flex flex-col">
                   <div className="font-bold text-lg leading-5">Иван Иванов</div>
@@ -397,7 +406,6 @@ export default function Home() {
                 </div>
                 <div className="my-auto ml-auto"><span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4"></span>
                 </div>
-                
               </div>
 
               {/* line .. */}
@@ -426,7 +434,6 @@ export default function Home() {
                   <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fillRule="evenodd" clipRule="evenodd" d="M1.03342 0.00430379L9.21125 0V2.14329C9.21125 4.20911 9.21532 4.28658 9.29669 4.47594C9.34145 4.58354 9.4513 4.75569 9.54081 4.85898C9.62625 4.96227 9.79306 5.09569 10.1063 5.27215L14.2156 5.31518L14.2278 10.6734C14.2359 14.1896 14.2237 16.1478 14.1953 16.3673C14.1749 16.5481 14.1098 16.7891 14.0569 16.901C14.004 17.0172 13.882 17.185 13.7843 17.2754C13.6867 17.3701 13.5077 17.4906 13.1781 17.6455H1.05376L0.838127 17.5466C0.724206 17.4906 0.545189 17.3701 0.447543 17.2754C0.349897 17.185 0.22784 17.0172 0.174949 16.901C0.122057 16.7891 0.0610286 16.5782 0.0366172 16.4276C0.0122057 16.2597 0 14.2585 0 11.0823C0.00406858 8.2891 0.0162743 4.87189 0.0569601 0.968353L0.166812 0.753164C0.223772 0.632658 0.345829 0.46481 0.431269 0.378734C0.516709 0.292658 0.687589 0.172152 0.809646 0.111899L1.03342 0.00430379ZM3.29148 4.55772C3.20604 4.6481 3.17349 4.72987 3.17349 4.85037C3.16942 4.94075 3.19383 5.05265 3.22231 5.09999C3.25486 5.14734 3.33216 5.21189 3.39726 5.24202C3.48677 5.28506 3.96686 5.29366 5.52106 5.28506L7.53093 5.27215C7.69774 5.06987 7.72622 4.98379 7.72622 4.86329C7.72622 4.72987 7.69774 4.66101 7.60417 4.56202L7.48211 4.43291H3.4054L3.29148 4.55772ZM3.24265 7.24328C3.20604 7.29493 3.17349 7.40252 3.16942 7.4886C3.16942 7.57467 3.20197 7.68657 3.25079 7.75543C3.29961 7.82429 3.40133 7.89316 3.48677 7.91898C3.58035 7.9448 4.93925 7.96202 7.11594 7.96202C9.29263 7.96202 10.6515 7.9448 10.7492 7.91898C10.8346 7.89316 10.9363 7.82429 10.9852 7.75543C11.034 7.68657 11.0665 7.57467 11.0665 7.4886C11.0625 7.40252 11.0299 7.29493 10.9933 7.24328C10.9526 7.19594 10.8794 7.13138 10.8305 7.10556C10.7655 7.07113 9.70355 7.05822 7.1078 7.05822C4.5446 7.05822 3.45422 7.07544 3.39319 7.10556C3.34844 7.13138 3.28334 7.19594 3.24265 7.24328ZM3.25079 9.88581C3.20197 9.95467 3.16942 10.0709 3.16942 10.1569C3.17349 10.2387 3.20604 10.3463 3.24265 10.398C3.28334 10.4496 3.35657 10.5099 3.4054 10.54C3.47049 10.5701 4.53239 10.5873 7.11594 10.5873C9.70355 10.5873 10.7655 10.5701 10.8305 10.54C10.8794 10.5099 10.9526 10.4496 10.9933 10.398C11.0299 10.3463 11.0625 10.2387 11.0665 10.1569C11.0665 10.0666 11.034 9.95467 10.9852 9.88581C10.9363 9.82125 10.8346 9.74809 10.7492 9.72657C10.6515 9.69644 9.30076 9.68353 7.0956 9.68784C5.09792 9.68784 3.53966 9.70505 3.46643 9.73088C3.38912 9.75239 3.29555 9.82125 3.25079 9.88581ZM3.21011 12.5671C3.18976 12.6144 3.16942 12.7177 3.16942 12.8038C3.16942 12.9114 3.20604 12.9888 3.29148 13.0835L3.41353 13.2126H10.8265C11.0299 12.9888 11.0625 12.9114 11.0625 12.8038C11.0625 12.7177 11.0462 12.6144 11.0218 12.5671C11.0014 12.5197 10.9282 12.4509 10.859 12.4164C10.7532 12.3605 10.2569 12.3519 7.1078 12.3519C4.00348 12.3519 3.45829 12.3648 3.36471 12.4164C3.30368 12.4509 3.23452 12.5197 3.21011 12.5671ZM10.0453 0.279747L11.9779 2.32405C13.0398 3.44734 13.8983 4.38126 13.882 4.39848C13.8657 4.41569 13.0479 4.4286 10.2854 4.41139L10.0453 4.13164V0.279747Z" fill="#0039AE"/>
 </svg>
-
                 </div>
                 <div className="font-bold text-lg my-auto">Сертификаты</div>
               </div>
@@ -437,7 +444,6 @@ export default function Home() {
                   <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.97096 17.2783C6.62513 17.2783 6.3192 17.1619 6.05318 16.9292C5.78715 16.6964 5.62754 16.4071 5.57433 16.0613L5.37481 14.5848C5.2817 14.5316 5.18194 14.4751 5.07553 14.4152C4.96912 14.3554 4.86936 14.2922 4.77626 14.2257L3.35967 14.8043C3.02714 14.9506 2.69461 14.9639 2.36208 14.8442C2.02955 14.7245 1.77682 14.5117 1.60391 14.2057L0.187326 11.6519C0.0144097 11.346 -0.0387953 11.0267 0.0277109 10.6942C0.0942172 10.3617 0.267133 10.089 0.54646 9.87617L1.70367 8.97834V8.26007L0.566411 7.40214C0.287085 7.18932 0.114169 6.91332 0.0476628 6.57414C-0.0188434 6.23496 0.0343616 5.9124 0.207278 5.60647L1.62386 3.11249C1.79678 2.80656 2.04618 2.59707 2.37206 2.48401C2.69794 2.37095 3.02714 2.38092 3.35967 2.51394L4.69645 3.05264C4.80286 2.98613 4.91924 2.91962 5.04561 2.85312C5.17197 2.78661 5.28835 2.7201 5.39476 2.6536L5.57433 1.21706C5.61423 0.871231 5.77052 0.581929 6.0432 0.349158C6.31588 0.116386 6.62513 0 6.97096 0H9.80413C10.15 0 10.4592 0.116386 10.7319 0.349158C11.0046 0.581929 11.1609 0.871231 11.2008 1.21706L11.3803 2.67355C11.4867 2.74006 11.6031 2.80656 11.7295 2.87307C11.8558 2.93957 11.9722 3.00608 12.0786 3.07259L13.3955 2.51394C13.728 2.36762 14.0572 2.35432 14.3831 2.47403C14.709 2.59374 14.965 2.80656 15.1512 3.11249L16.5678 5.60647C16.7407 5.9124 16.7939 6.23496 16.7274 6.57414C16.6609 6.91332 16.488 7.18932 16.2087 7.40214L15.0315 8.29998V9.01824L16.1688 9.87617C16.4481 10.089 16.6243 10.365 16.6975 10.7042C16.7707 11.0434 16.7208 11.3659 16.5479 11.6718L15.1313 14.2057C14.9584 14.5117 14.7023 14.7245 14.3631 14.8442C14.0239 14.9639 13.6881 14.9506 13.3556 14.8043L11.9789 14.2257C11.8858 14.2789 11.7893 14.3354 11.6896 14.3953C11.5898 14.4551 11.4934 14.5117 11.4003 14.5649L11.2008 16.0613C11.1476 16.4071 10.9879 16.6964 10.7219 16.9292C10.4559 17.1619 10.15 17.2783 9.80413 17.2783H6.97096ZM8.36759 11.9711C9.29868 11.9711 10.0901 11.6452 10.7419 10.9935C11.3936 10.3417 11.7195 9.55029 11.7195 8.61921C11.7195 7.68812 11.3936 6.8967 10.7419 6.24493C10.0901 5.59317 9.29868 5.26729 8.36759 5.26729C7.4365 5.26729 6.64508 5.59317 5.99332 6.24493C5.34156 6.8967 5.01568 7.68812 5.01568 8.61921C5.01568 9.55029 5.34156 10.3417 5.99332 10.9935C6.64508 11.6452 7.4365 11.9711 8.36759 11.9711Z" fill="#0039AE"/>
 </svg>
-
                 </div>
                 <div className="font-bold text-lg my-auto">Настройки профиля</div>
               </div>
@@ -448,19 +454,254 @@ export default function Home() {
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.1149 15.6423C1.52964 15.6423 1.03085 15.4361 0.618508 15.0238C0.206169 14.6114 0 14.1126 0 13.5274V2.1149C0 1.52964 0.206169 1.03085 0.618508 0.618508C1.03085 0.206169 1.52964 0 2.1149 0H6.76368C7.05631 0 7.30571 0.103085 7.51188 0.309254C7.71805 0.515423 7.82113 0.764822 7.82113 1.05745C7.82113 1.35008 7.71805 1.59948 7.51188 1.80564C7.30571 2.01181 7.05631 2.1149 6.76368 2.1149H2.1149V13.5274H6.76368C7.05631 13.5274 7.30571 13.6305 7.51188 13.8366C7.71805 14.0428 7.82113 14.2922 7.82113 14.5848C7.82113 14.8774 7.71805 15.1268 7.51188 15.333C7.30571 15.5392 7.05631 15.6423 6.76368 15.6423H2.1149ZM11.5322 8.85863H6.36465C6.07202 8.85863 5.82262 8.75555 5.61645 8.54938C5.41028 8.34321 5.3072 8.09381 5.3072 7.80118C5.3072 7.50855 5.41028 7.25916 5.61645 7.05299C5.82262 6.84682 6.07202 6.74373 6.36465 6.74373H11.5322L10.0956 5.3072C9.88283 5.09438 9.77642 4.84165 9.77642 4.54903C9.77642 4.2564 9.88283 4.00368 10.0956 3.79086C10.3085 3.57804 10.5612 3.47163 10.8538 3.47163C11.1464 3.47163 11.3992 3.57804 11.612 3.79086L14.904 7.08291C15.1169 7.29573 15.2233 7.54181 15.2233 7.82113C15.2233 8.10046 15.1169 8.34653 14.904 8.55935L11.6319 11.8315C11.4191 12.0443 11.1631 12.1507 10.8638 12.1507C10.5645 12.1507 10.3085 12.0376 10.0956 11.8115C9.88283 11.5987 9.77642 11.346 9.77642 11.0533C9.77642 10.7607 9.88283 10.508 10.0956 10.2952L11.5322 8.85863Z" fill="#0039AE"/>
 </svg>
-
                 </div>
                 <div className="font-bold text-lg my-auto">Выйти</div>
               </div>
 
 
+            </div>
+
+            {/* col-2-3 */}
+            <div className="flex flex-col xl:w-2/3 gap-4">
+                {/* ev-1 */}
+                <div className="flex flex-row gap-2 bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white p-3 rounded-md w-full">
+                  <div className="bg-white my-auto text-[#0039AE] w-9 h-9 rounded-lg flex justify-center items-center font-bold text-xs">JPEG
+                  </div>
+                  <div className="flex flex-col">
+                    <div className="font-bold text-lg xl:text-2xl leading-7">«ДИАСТЕМЫ. Закрытие диастем и трем» 29.03.2026</div>
+                    <div className="text-sm opacity-80">JPEG · 4.2 МБ</div>
+                  </div>
+                  <div className="my-auto ml-auto">
+                    <div className="bg-white my-auto text-[#0039AE] px-3 py-1 rounded-sm flex justify-center items-center font-bold text-sm">Скачать
+                    </div>
+                  </div>
+                </div>
+                {/* ev-2 */}
+                <div className="flex flex-row gap-2 bg-gradient-to-r from-[#013AAF] to-[#0056C5] text-white p-3 rounded-md w-full">
+                  <div className="bg-white my-auto text-[#0039AE] w-9 h-9 rounded-lg flex justify-center items-center font-bold text-xs">JPEG
+                  </div>
+                  <div className="flex flex-col">
+                    <div className="font-bold text-lg xl:text-2xl leading-7">«ДИАСТЕМЫ. Закрытие диастем и трем» 29.03.2026</div>
+                    <div className="text-sm opacity-80">JPEG · 4.2 МБ</div>
+                  </div>
+                  <div className="my-auto ml-auto">
+                    <div className="bg-white my-auto text-[#0039AE] px-3 py-1 rounded-sm flex justify-center items-center font-bold text-sm">Скачать
+                    </div>
+                  </div>
+                </div>
+
+            </div>
+          </div>          
+        </div>
+        {/* end lk */}
+
+ 
+        {/* lk-2 */}
+        <div className="flex flex-col w-full p-0 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-none lg:shadow-lg bg-white/0 lg:bg-white/10 lg:backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
+          <div className="flex gap-4 flex-row text-md text-[#BBBCBC]">
+            <span>Главная</span>
+            <svg className="my-auto" width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.66944 3.87394L0.244156 1.44866C0.0813853 1.28589 0 1.08514 0 0.846407C0 0.607677 0.0813853 0.406926 0.244156 0.244156C0.406926 0.0813853 0.607677 0 0.846407 0C1.08514 0 1.28589 0.0813853 1.44866 0.244156L4.47619 3.27169C4.563 3.3585 4.6254 3.45074 4.66338 3.5484C4.70136 3.64606 4.72035 3.75457 4.72035 3.87394C4.72035 3.9933 4.70136 4.10182 4.66338 4.19948C4.6254 4.29714 4.563 4.38938 4.47619 4.47619L1.44866 7.50372C1.28589 7.66649 1.08514 7.74788 0.846407 7.74788C0.607677 7.74788 0.406926 7.66649 0.244156 7.50372C0.0813853 7.34095 0 7.1402 0 6.90147C0 6.66274 0.0813853 6.46199 0.244156 6.29922L2.66944 3.87394Z" fill="#BBBCBC"/>
+</svg>
+
+            <span className="">Личный кабинет</span>
+          </div>
+
+          <h2 className=" text-[#0039AE] text-2xl lg:text-5xl  font-semibold mb-2"><span>Личный кабинет</span> <span className="text-[#BBBCBC] mx-2">-</span> <span className="text-[#BBBCBC]">Настройка профиля</span></h2>
+
+          <div className="flex flex-col xl:flex-row gap-8">
+            {/* col-1 menu */}
+            <div className="flex xl:w-1/3 flex-col border-2 border-[#0039AE] px-4 py-4 rounded-xl w-full gap-4">
+              {/* line 1 */}
+              <div className="flex flex-row gap-2 bg-gradient-to-b from-[#013AAF] to-[#0056C5] text-white p-3 rounded-xl">
+                <div className="bg-white my-auto text-[#0039AE] w-9 h-9 rounded-lg flex justify-center items-center font-bold">И
+                </div>
+                <div className="flex flex-col">
+                  <div className="font-bold text-lg leading-5">Иван Иванов</div>
+                  <div className="text-xs opacity-50">+7 (913) 749 81 95</div>
+                </div>
+                <div className="my-auto ml-auto"><span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4"></span>
+                </div>
+              </div>
+
+              {/* line .. */}
+              <div className="flex flex-row gap-2 ">
+                <div className="bg-[#F0F4F6] my-auto w-8 h-8 rounded-lg flex justify-center items-center ">
+                  <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.61921 15.323C8.35318 15.323 8.09713 15.2765 7.85106 15.1834C7.60499 15.0903 7.38219 14.9506 7.18267 14.7644L5.50672 13.2281C4.16329 11.9911 2.90965 10.7208 1.74579 9.41728C0.58193 8.11376 0 6.62402 0 4.94806C0 3.53813 0.478845 2.36097 1.43653 1.41658C2.39422 0.472194 3.57804 0 4.98797 0C5.77274 0 6.47771 0.159615 7.10287 0.478845C7.72802 0.798075 8.23347 1.13061 8.61921 1.47644C9.00494 1.13061 9.51039 0.798075 10.1356 0.478845C10.7607 0.159615 11.4657 0 12.2504 0C13.6604 0 14.8442 0.472194 15.8019 1.41658C16.7596 2.36097 17.2384 3.53813 17.2384 4.94806C17.2384 6.62402 16.6565 8.11376 15.4926 9.41728C14.3288 10.7208 13.0818 11.9844 11.7517 13.2081L10.0557 14.7644C9.85622 14.9506 9.63343 15.0903 9.38735 15.1834C9.14128 15.2765 8.88523 15.323 8.61921 15.323Z" fill="#0039AE"/>
+</svg>
+                </div>
+                <div className="font-bold text-lg my-auto">Мои курсы</div>
+              </div>
+
+              {/* line .. */}
+              <div className="flex flex-row gap-2 ">
+                <div className="bg-[#F0F4F6] my-auto w-8 h-8 rounded-lg flex justify-center items-center ">
+                  <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8.61921 15.323C8.35318 15.323 8.09713 15.2765 7.85106 15.1834C7.60499 15.0903 7.38219 14.9506 7.18267 14.7644L5.50672 13.2281C4.16329 11.9911 2.90965 10.7208 1.74579 9.41728C0.58193 8.11376 0 6.62402 0 4.94806C0 3.53813 0.478845 2.36097 1.43653 1.41658C2.39422 0.472194 3.57804 0 4.98797 0C5.77274 0 6.47771 0.159615 7.10287 0.478845C7.72802 0.798075 8.23347 1.13061 8.61921 1.47644C9.00494 1.13061 9.51039 0.798075 10.1356 0.478845C10.7607 0.159615 11.4657 0 12.2504 0C13.6604 0 14.8442 0.472194 15.8019 1.41658C16.7596 2.36097 17.2384 3.53813 17.2384 4.94806C17.2384 6.62402 16.6565 8.11376 15.4926 9.41728C14.3288 10.7208 13.0818 11.9844 11.7517 13.2081L10.0557 14.7644C9.85622 14.9506 9.63343 15.0903 9.38735 15.1834C9.14128 15.2765 8.88523 15.323 8.61921 15.323Z" fill="#0039AE"/>
+</svg>
+                </div>
+                <div className="font-bold text-lg my-auto">Мои вебинары</div>
+              </div>
+
+              {/* line .. */}
+              <div className="flex flex-row gap-2 ">
+                <div className="bg-[#F0F4F6] my-auto w-8 h-8 rounded-lg flex justify-center items-center ">
+                  <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fillRule="evenodd" clipRule="evenodd" d="M1.03342 0.00430379L9.21125 0V2.14329C9.21125 4.20911 9.21532 4.28658 9.29669 4.47594C9.34145 4.58354 9.4513 4.75569 9.54081 4.85898C9.62625 4.96227 9.79306 5.09569 10.1063 5.27215L14.2156 5.31518L14.2278 10.6734C14.2359 14.1896 14.2237 16.1478 14.1953 16.3673C14.1749 16.5481 14.1098 16.7891 14.0569 16.901C14.004 17.0172 13.882 17.185 13.7843 17.2754C13.6867 17.3701 13.5077 17.4906 13.1781 17.6455H1.05376L0.838127 17.5466C0.724206 17.4906 0.545189 17.3701 0.447543 17.2754C0.349897 17.185 0.22784 17.0172 0.174949 16.901C0.122057 16.7891 0.0610286 16.5782 0.0366172 16.4276C0.0122057 16.2597 0 14.2585 0 11.0823C0.00406858 8.2891 0.0162743 4.87189 0.0569601 0.968353L0.166812 0.753164C0.223772 0.632658 0.345829 0.46481 0.431269 0.378734C0.516709 0.292658 0.687589 0.172152 0.809646 0.111899L1.03342 0.00430379ZM3.29148 4.55772C3.20604 4.6481 3.17349 4.72987 3.17349 4.85037C3.16942 4.94075 3.19383 5.05265 3.22231 5.09999C3.25486 5.14734 3.33216 5.21189 3.39726 5.24202C3.48677 5.28506 3.96686 5.29366 5.52106 5.28506L7.53093 5.27215C7.69774 5.06987 7.72622 4.98379 7.72622 4.86329C7.72622 4.72987 7.69774 4.66101 7.60417 4.56202L7.48211 4.43291H3.4054L3.29148 4.55772ZM3.24265 7.24328C3.20604 7.29493 3.17349 7.40252 3.16942 7.4886C3.16942 7.57467 3.20197 7.68657 3.25079 7.75543C3.29961 7.82429 3.40133 7.89316 3.48677 7.91898C3.58035 7.9448 4.93925 7.96202 7.11594 7.96202C9.29263 7.96202 10.6515 7.9448 10.7492 7.91898C10.8346 7.89316 10.9363 7.82429 10.9852 7.75543C11.034 7.68657 11.0665 7.57467 11.0665 7.4886C11.0625 7.40252 11.0299 7.29493 10.9933 7.24328C10.9526 7.19594 10.8794 7.13138 10.8305 7.10556C10.7655 7.07113 9.70355 7.05822 7.1078 7.05822C4.5446 7.05822 3.45422 7.07544 3.39319 7.10556C3.34844 7.13138 3.28334 7.19594 3.24265 7.24328ZM3.25079 9.88581C3.20197 9.95467 3.16942 10.0709 3.16942 10.1569C3.17349 10.2387 3.20604 10.3463 3.24265 10.398C3.28334 10.4496 3.35657 10.5099 3.4054 10.54C3.47049 10.5701 4.53239 10.5873 7.11594 10.5873C9.70355 10.5873 10.7655 10.5701 10.8305 10.54C10.8794 10.5099 10.9526 10.4496 10.9933 10.398C11.0299 10.3463 11.0625 10.2387 11.0665 10.1569C11.0665 10.0666 11.034 9.95467 10.9852 9.88581C10.9363 9.82125 10.8346 9.74809 10.7492 9.72657C10.6515 9.69644 9.30076 9.68353 7.0956 9.68784C5.09792 9.68784 3.53966 9.70505 3.46643 9.73088C3.38912 9.75239 3.29555 9.82125 3.25079 9.88581ZM3.21011 12.5671C3.18976 12.6144 3.16942 12.7177 3.16942 12.8038C3.16942 12.9114 3.20604 12.9888 3.29148 13.0835L3.41353 13.2126H10.8265C11.0299 12.9888 11.0625 12.9114 11.0625 12.8038C11.0625 12.7177 11.0462 12.6144 11.0218 12.5671C11.0014 12.5197 10.9282 12.4509 10.859 12.4164C10.7532 12.3605 10.2569 12.3519 7.1078 12.3519C4.00348 12.3519 3.45829 12.3648 3.36471 12.4164C3.30368 12.4509 3.23452 12.5197 3.21011 12.5671ZM10.0453 0.279747L11.9779 2.32405C13.0398 3.44734 13.8983 4.38126 13.882 4.39848C13.8657 4.41569 13.0479 4.4286 10.2854 4.41139L10.0453 4.13164V0.279747Z" fill="#0039AE"/>
+</svg>
+                </div>
+                <div className="font-bold text-lg my-auto">Сертификаты</div>
+              </div>
+
+              {/* line .. */}
+              <div className="flex flex-row gap-2 ">
+                <div className="bg-gradient-to-b from-[#013AAF] to-[#0056C5]  my-auto w-8 h-8 rounded-lg flex justify-center items-center ">
+                  <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.97096 17.2783C6.62513 17.2783 6.3192 17.1619 6.05318 16.9292C5.78715 16.6964 5.62754 16.4071 5.57433 16.0613L5.37481 14.5848C5.2817 14.5316 5.18194 14.4751 5.07553 14.4152C4.96912 14.3554 4.86936 14.2922 4.77626 14.2257L3.35967 14.8043C3.02714 14.9506 2.69461 14.9639 2.36208 14.8442C2.02955 14.7245 1.77682 14.5117 1.60391 14.2057L0.187326 11.6519C0.0144097 11.346 -0.0387953 11.0267 0.0277109 10.6942C0.0942172 10.3617 0.267133 10.089 0.54646 9.87617L1.70367 8.97834V8.26007L0.566411 7.40214C0.287085 7.18932 0.114169 6.91332 0.0476628 6.57414C-0.0188434 6.23496 0.0343616 5.9124 0.207278 5.60647L1.62386 3.11249C1.79678 2.80656 2.04618 2.59707 2.37206 2.48401C2.69794 2.37095 3.02714 2.38092 3.35967 2.51394L4.69645 3.05264C4.80286 2.98613 4.91924 2.91962 5.04561 2.85312C5.17197 2.78661 5.28835 2.7201 5.39476 2.6536L5.57433 1.21706C5.61423 0.871231 5.77052 0.581929 6.0432 0.349158C6.31588 0.116386 6.62513 0 6.97096 0H9.80413C10.15 0 10.4592 0.116386 10.7319 0.349158C11.0046 0.581929 11.1609 0.871231 11.2008 1.21706L11.3803 2.67355C11.4867 2.74006 11.6031 2.80656 11.7295 2.87307C11.8558 2.93957 11.9722 3.00608 12.0786 3.07259L13.3955 2.51394C13.728 2.36762 14.0572 2.35432 14.3831 2.47403C14.709 2.59374 14.965 2.80656 15.1512 3.11249L16.5678 5.60647C16.7407 5.9124 16.7939 6.23496 16.7274 6.57414C16.6609 6.91332 16.488 7.18932 16.2087 7.40214L15.0315 8.29998V9.01824L16.1688 9.87617C16.4481 10.089 16.6243 10.365 16.6975 10.7042C16.7707 11.0434 16.7208 11.3659 16.5479 11.6718L15.1313 14.2057C14.9584 14.5117 14.7023 14.7245 14.3631 14.8442C14.0239 14.9639 13.6881 14.9506 13.3556 14.8043L11.9789 14.2257C11.8858 14.2789 11.7893 14.3354 11.6896 14.3953C11.5898 14.4551 11.4934 14.5117 11.4003 14.5649L11.2008 16.0613C11.1476 16.4071 10.9879 16.6964 10.7219 16.9292C10.4559 17.1619 10.15 17.2783 9.80413 17.2783H6.97096ZM8.36759 11.9711C9.29868 11.9711 10.0901 11.6452 10.7419 10.9935C11.3936 10.3417 11.7195 9.55029 11.7195 8.61921C11.7195 7.68812 11.3936 6.8967 10.7419 6.24493C10.0901 5.59317 9.29868 5.26729 8.36759 5.26729C7.4365 5.26729 6.64508 5.59317 5.99332 6.24493C5.34156 6.8967 5.01568 7.68812 5.01568 8.61921C5.01568 9.55029 5.34156 10.3417 5.99332 10.9935C6.64508 11.6452 7.4365 11.9711 8.36759 11.9711Z" fill="white"/>
+</svg>
+                </div>
+                <div className="font-bold text-lg my-auto">Настройки профиля</div>
+              </div>
+
+              {/* line .. */}
+              <div className="flex flex-row gap-2 ">
+                <div className="bg-[#F0F4F6] my-auto w-8 h-8 rounded-lg flex justify-center items-center ">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2.1149 15.6423C1.52964 15.6423 1.03085 15.4361 0.618508 15.0238C0.206169 14.6114 0 14.1126 0 13.5274V2.1149C0 1.52964 0.206169 1.03085 0.618508 0.618508C1.03085 0.206169 1.52964 0 2.1149 0H6.76368C7.05631 0 7.30571 0.103085 7.51188 0.309254C7.71805 0.515423 7.82113 0.764822 7.82113 1.05745C7.82113 1.35008 7.71805 1.59948 7.51188 1.80564C7.30571 2.01181 7.05631 2.1149 6.76368 2.1149H2.1149V13.5274H6.76368C7.05631 13.5274 7.30571 13.6305 7.51188 13.8366C7.71805 14.0428 7.82113 14.2922 7.82113 14.5848C7.82113 14.8774 7.71805 15.1268 7.51188 15.333C7.30571 15.5392 7.05631 15.6423 6.76368 15.6423H2.1149ZM11.5322 8.85863H6.36465C6.07202 8.85863 5.82262 8.75555 5.61645 8.54938C5.41028 8.34321 5.3072 8.09381 5.3072 7.80118C5.3072 7.50855 5.41028 7.25916 5.61645 7.05299C5.82262 6.84682 6.07202 6.74373 6.36465 6.74373H11.5322L10.0956 5.3072C9.88283 5.09438 9.77642 4.84165 9.77642 4.54903C9.77642 4.2564 9.88283 4.00368 10.0956 3.79086C10.3085 3.57804 10.5612 3.47163 10.8538 3.47163C11.1464 3.47163 11.3992 3.57804 11.612 3.79086L14.904 7.08291C15.1169 7.29573 15.2233 7.54181 15.2233 7.82113C15.2233 8.10046 15.1169 8.34653 14.904 8.55935L11.6319 11.8315C11.4191 12.0443 11.1631 12.1507 10.8638 12.1507C10.5645 12.1507 10.3085 12.0376 10.0956 11.8115C9.88283 11.5987 9.77642 11.346 9.77642 11.0533C9.77642 10.7607 9.88283 10.508 10.0956 10.2952L11.5322 8.85863Z" fill="#0039AE"/>
+</svg>
+                </div>
+                <div className="font-bold text-lg my-auto">Выйти</div>
+              </div>
 
             </div>
 
-          </div>
-          
-          
+            {/* col-2-3 */}
+            <div className="flex flex-col xl:w-2/3 gap-8">
+                <div className="flex mx-auto lg:mx-0 w-48 lg:w-auto text-center lg:text-left text-xl  font-bold">Личная информация</div>
+                <div className="flex flex-col lg:flex-row gap-6">
+                  <div className="max-w-48 w-full flex justify-center  mx-auto">
+                    <div className=" rounded-full border-2 border-blue-800 w-full aspect-[1/1] text-center bg-cover" style={{backgroundImage:`url(prof-photo.jpg)`}}></div>
+                  </div>
+                  <div className="grid grid-cols-3 gap-3">
+                    <input className="rounded-xl bg-[#EFEFEF] px-4 py-3 text-md font-semibold text-[#0039AE] placeholder:text-[#0039AE]" placeholder="Иван" name="" />
+                    <input className="rounded-xl bg-[#EFEFEF] px-4 py-3 text-md font-semibold text-[#0039AE] placeholder:text-[#0039AE]" placeholder="Иванов" name="" />
+                    <input className="rounded-xl bg-[#EFEFEF] px-4 py-3 text-md font-semibold text-[#0039AE] placeholder:text-[#0039AE]" placeholder="Иванович" name="" />
+                    <input className="rounded-xl bg-[#EFEFEF] px-4 py-3 text-md font-semibold text-[#0039AE] placeholder:text-[#0039AE]" placeholder="example@mail.com" name="" />
+                    <input className="rounded-xl bg-[#EFEFEF] px-4 py-3 text-md font-semibold text-[#0039AE] placeholder:text-[#0039AE]" placeholder="+71234567890" name="" />
+                    {/* gender */}
+                    <div className="relative">
+                      <select
+                        name="gender"
+                        className="w-full appearance-none rounded-xl bg-[#EFEFEF] px-4 py-3 pr-10 text-md font-semibold text-[#1924248F]"
+                        defaultValue=""
+                      >
+                        <option value="" disabled>Пол</option>
+                        <option value="male">Мужской</option>
+                        <option value="female">Женский</option>
+                      </select>
+                      <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 block w-2 h-2 border-r-2 border-b-2 border-blue-800 rotate-45"></span>
+                    </div>
+                    {/* spec */}
+                    <div className="relative">
+                      <select
+                        name="gender"
+                        className="w-full appearance-none rounded-xl bg-[#EFEFEF] px-4 py-3 pr-10 text-md font-semibold text-[#1924248F]"
+                        defaultValue=""
+                      >
+                        <option value="" disabled>Специализация</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                      </select>
+                      <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 block w-2 h-2 border-r-2 border-b-2 border-blue-800 rotate-45"></span>
+                    </div>
+                    {/* city */}
+                    <div className="relative">
+                      <select
+                        name="gender"
+                        className="w-full appearance-none rounded-xl bg-[#EFEFEF] px-4 py-3 pr-10 text-md font-semibold text-[#1924248F]"
+                        defaultValue=""
+                      >
+                        <option value="" disabled>Город/страна</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                      </select>
+                      <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 block w-2 h-2 border-r-2 border-b-2 border-blue-800 rotate-45"></span>
+                    </div>
+                    {/* bday */}
+                    <div className="relative">
+                      <input
+                        type="date"
+                        name="bday"
+                        className="w-full appearance-none rounded-xl bg-[#EFEFEF] px-4 py-3 pr-10 text-md font-semibold text-[#1924248F] [&::-webkit-calendar-picker-indicator]:opacity-0 [&::-webkit-calendar-picker-indicator]:absolute [&::-webkit-calendar-picker-indicator]:inset-0 [&::-webkit-calendar-picker-indicator]:w-full [&::-webkit-calendar-picker-indicator]:h-full"
+                      />
+                      <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 block">
+                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.95149 15.8329C1.41477 15.8329 0.955371 15.6418 0.573297 15.2596C0.191099 14.8774 0 14.418 0 13.8814V3.35067C0 2.81407 0.191099 2.35468 0.573297 1.97248C0.955371 1.59028 1.41477 1.39918 1.95149 1.39918H2.09877V0.975746C2.09877 0.705728 2.19389 0.475599 2.38413 0.28536C2.57437 0.0951199 2.8045 0 3.07452 0C3.34454 0 3.57467 0.0951199 3.7649 0.28536C3.95514 0.475599 4.05026 0.705728 4.05026 0.975746V1.39918H10.3834V0.975746C10.3834 0.705728 10.4785 0.475599 10.6688 0.28536C10.859 0.0951199 11.0891 0 11.3592 0C11.6292 0 11.8593 0.0951199 12.0495 0.28536C12.2398 0.475599 12.3349 0.705728 12.3349 0.975746V1.39918H12.4822C13.0188 1.39918 13.4782 1.59028 13.8604 1.97248C14.2426 2.35468 14.4337 2.81407 14.4337 3.35067V13.8814C14.4337 14.418 14.2426 14.8774 13.8604 15.2596C13.4782 15.6418 13.0188 15.8329 12.4822 15.8329H1.95149ZM1.95149 13.8814H12.4822V6.0754H1.95149V13.8814ZM7.21684 9.49971C6.98364 9.49971 6.78419 9.41687 6.6185 9.25117C6.45281 9.08548 6.36996 8.88604 6.36996 8.65284C6.36996 8.41964 6.45281 8.2202 6.6185 8.0545C6.78419 7.88881 6.98364 7.80597 7.21684 7.80597C7.45003 7.80597 7.64948 7.88881 7.81517 8.0545C7.98086 8.2202 8.06371 8.41964 8.06371 8.65284C8.06371 8.88604 7.98086 9.08548 7.81517 9.25117C7.64948 9.41687 7.45003 9.49971 7.21684 9.49971ZM4.27119 9.49971C4.03799 9.49971 3.83855 9.41687 3.67285 9.25117C3.50716 9.08548 3.42431 8.88604 3.42431 8.65284C3.42431 8.41964 3.50716 8.2202 3.67285 8.0545C3.83855 7.88881 4.03799 7.80597 4.27119 7.80597C4.50438 7.80597 4.70383 7.88881 4.86952 8.0545C5.03522 8.2202 5.11806 8.41964 5.11806 8.65284C5.11806 8.88604 5.03522 9.08548 4.86952 9.25117C4.70383 9.41687 4.50438 9.49971 4.27119 9.49971ZM10.1625 9.49971C9.92929 9.49971 9.72984 9.41687 9.56415 9.25117C9.39845 9.08548 9.31561 8.88604 9.31561 8.65284C9.31561 8.41964 9.39845 8.2202 9.56415 8.0545C9.72984 7.88881 9.92929 7.80597 10.1625 7.80597C10.3957 7.80597 10.5951 7.88881 10.7608 8.0545C10.9265 8.2202 11.0094 8.41964 11.0094 8.65284C11.0094 8.88604 10.9265 9.08548 10.7608 9.25117C10.5951 9.41687 10.3957 9.49971 10.1625 9.49971ZM7.21684 12.4454C6.98364 12.4454 6.78419 12.3625 6.6185 12.1968C6.45281 12.0311 6.36996 11.8317 6.36996 11.5985C6.36996 11.3653 6.45281 11.1658 6.6185 11.0002C6.78419 10.8345 6.98364 10.7516 7.21684 10.7516C7.45003 10.7516 7.64948 10.8345 7.81517 11.0002C7.98086 11.1658 8.06371 11.3653 8.06371 11.5985C8.06371 11.8317 7.98086 12.0311 7.81517 12.1968C7.64948 12.3625 7.45003 12.4454 7.21684 12.4454ZM4.27119 12.4454C4.03799 12.4454 3.83855 12.3625 3.67285 12.1968C3.50716 12.0311 3.42431 11.8317 3.42431 11.5985C3.42431 11.3653 3.50716 11.1658 3.67285 11.0002C3.83855 10.8345 4.03799 10.7516 4.27119 10.7516C4.50438 10.7516 4.70383 10.8345 4.86952 11.0002C5.03522 11.1658 5.11806 11.3653 5.11806 11.5985C5.11806 11.8317 5.03522 12.0311 4.86952 12.1968C4.70383 12.3625 4.50438 12.4454 4.27119 12.4454ZM10.1625 12.4454C9.92929 12.4454 9.72984 12.3625 9.56415 12.1968C9.39845 12.0311 9.31561 11.8317 9.31561 11.5985C9.31561 11.3653 9.39845 11.1658 9.56415 11.0002C9.72984 10.8345 9.92929 10.7516 10.1625 10.7516C10.3957 10.7516 10.5951 10.8345 10.7608 11.0002C10.9265 11.1658 11.0094 11.3653 11.0094 11.5985C11.0094 11.8317 10.9265 12.0311 10.7608 12.1968C10.5951 12.3625 10.3957 12.4454 10.1625 12.4454Z" fill="#192424" fillOpacity="0.56"/>
+</svg>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                {/* notifications */}
+                <div className="flex lg:text-left text-xl font-bold">Уведомления</div>
+                <div className="flex flex-col gap-3">
+                  {/* email */}
+                  <div className="flex flex-row w-full">
+                    <div className="flex">Оповещение по E-mail</div>
+                    <label className="relative ml-auto inline-flex h-6 w-11 cursor-pointer items-center">
+                      <input type="checkbox" className="peer sr-only" defaultChecked />
+                      <span className="h-6 w-11 rounded-full bg-[#D8E6FF] transition peer-checked:bg-[#0139AE]" />
+                      <span className="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
+                    </label>
+                  </div>
+                  {/* phone */}
+                  <div className="flex flex-row w-full">
+                    <div className="flex">Звонки по телефону</div>
+                    <label className="relative ml-auto inline-flex h-6 w-11 cursor-pointer items-center">
+                      <input type="checkbox" className="peer sr-only" defaultChecked />
+                      <span className="h-6 w-11 rounded-full bg-[#D8E6FF] transition peer-checked:bg-[#0139AE]" />
+                      <span className="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
+                    </label>
+                  </div>
+                  {/* sms */}
+                  <div className="flex flex-row w-full">
+                    <div className="flex">Сообщения по SMS</div>
+                    <label className="relative ml-auto inline-flex h-6 w-11 cursor-pointer items-center">
+                      <input type="checkbox" className="peer sr-only" defaultChecked />
+                      <span className="h-6 w-11 rounded-full bg-[#D8E6FF] transition peer-checked:bg-[#0139AE]" />
+                      <span className="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
+                    </label>
+                  </div>
+                  {/* wa */}
+                  <div className="flex flex-row w-full">
+                    <div className="flex">По WhatsApp</div>
+                    <label className="relative ml-auto inline-flex h-6 w-11 cursor-pointer items-center">
+                      <input type="checkbox" className="peer sr-only" defaultChecked />
+                      <span className="h-6 w-11 rounded-full bg-[#D8E6FF] transition peer-checked:bg-[#0139AE]" />
+                      <span className="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
+                    </label>
+                  </div>
+                  {/* tg */}
+                  <div className="flex flex-row w-full">
+                    <div className="flex">По Telegram</div>
+                    <label className="relative ml-auto inline-flex h-6 w-11 cursor-pointer items-center">
+                      <input type="checkbox" className="peer sr-only" defaultChecked />
+                      <span className="h-6 w-11 rounded-full bg-[#D8E6FF] transition peer-checked:bg-[#0139AE]" />
+                      <span className="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
+                    </label>
+                  </div>
+                </div>
+
+            </div>
+            {/* end col 2-3 */}
+          </div>    
         </div>
+        {/* end lk-2 */}
+
+
+
+
 
         {/* courses */}
         <div className=" flex flex-row gap-4 font-gilroy">
@@ -471,8 +712,7 @@ export default function Home() {
         {/* all courses */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
             {/* single */}
-            <div className="flex flex-col gap-3 p-4 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg 
-          shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
+            <div className="flex flex-col gap-3 p-4 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
             <div className="flex flex-col max-w-full aspect-[12/15] bg-cover bg-no-repeat rounded-xl" style={{backgroundImage: `url(c3.webp)`}}></div>
             <div className="flex flex-col text-center ">
               <div className="mb-2 mt-1 uppercase text-[#777777] flex flex-row
