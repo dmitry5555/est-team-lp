@@ -1304,9 +1304,9 @@ export default function Home() {
               <div className="overflow-hidden max-h-0 transition-all duration-300 peer-checked:max-h-full font-gilroy">
                 {/* otziv info */}
                 <div className="mt-4 mb-2 px-1">
-                  <div className="flex flex-row gap-6 rounded-3xl bg-white/10 p-5 md:p-6 shadow-[0_4px_12px_rgba(0,0,0,0.12)]">
+                  <div className="flex flex-col gap-4 lg:flex-row lg:gap-6 rounded-3xl bg-white/10 p-4 md:p-6 shadow-[0_4px_12px_rgba(0,0,0,0.12)]">
                   {/* img */}
-                  <div className="flex rounded-xl w-48 mb-auto">
+                  <div className="flex w-full max-w-28 lg:max-w-48 rounded-xl mb-auto">
                     <svg className="w-full h-auto" viewBox="0 0 44 44" fill="none" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
 <rect x="0.386312" y="0.386312" width="42.3839" height="43.1566" rx="21.192" fill="white"/>
 <rect x="0.386312" y="0.386312" width="42.3839" height="43.1566" rx="21.192" stroke="#9C9C9C" strokeWidth="0.772624"/>
@@ -1316,12 +1316,12 @@ export default function Home() {
 
                   </div>
                   {/* right block */}
-                  <div className="flex flex-col gap-4 font-bold text-[#777777]">
+                  <div className="flex min-w-0 flex-col gap-4 font-bold text-[#777777]">
                     <div className="flex lg:text-xl">24.05.2026   17:44</div>
-                    <div className="flex flex-col lg:flex-row">
-                      <div className= "flex lg:text-2xl text-[#0039AE]">Василевская Наталья Михайловна</div>
+                    <div className="flex flex-col gap-2 lg:flex-row lg:items-start">
+                      <div className="min-w-0 break-words flex lg:text-2xl text-[#0039AE]">Василевская Наталья Михайловна</div>
                       {/* stars */}
-                      <div className="flex flex-row lg:ml-auto gap-1 ">
+                      <div className="flex flex-row flex-wrap lg:ml-auto gap-1 shrink-0">
                         <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
                         <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
                         <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
@@ -1331,7 +1331,7 @@ export default function Home() {
                     </div>
 
                     <div className="text-sm lg:text-xl leading-6 lg:text-2xl my-3">Это трудно описать словами. Эмоции зашкаливают. Разве можно достись этого уровня? Это космос! Эстетическое удовольствие и мечта! Да, теперь у меня появилась мечта и есть куда стремится. Спасибо огромное, что вы есть и делитесь опытом и знаниями.</div>
-                    <div className="inline text-center mt-2 text-white text-lg rounded-2xl py-2  bg-[#013AAF] mx-0 lg:mr-auto">
+                    <div className="inline text-center mt-2 text-white text-lg rounded-2xl py-2 px-4 bg-[#013AAF] mx-0 lg:mr-auto w-fit">
                       Записаться
                     </div>
                   </div>
