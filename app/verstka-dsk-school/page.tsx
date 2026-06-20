@@ -1297,13 +1297,13 @@ export default function Home() {
             <div className="group rounded-xl lg:rounded-3xl shadow-lg bg-gray-50 px-4 py-4 md:px-8 md:py-8">
               <input type="checkbox" id="otzivy" className="peer absolute opacity-0 pointer-events-none" />
               <label htmlFor="otzivy" className="flex flex-row  cursor-pointer items-center">
-                <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-xl  lg:text-4xl font-bold text-[#6C6C6C]  uppercase">Отзывы</div>
+                <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-xl  lg:text-4xl font-bold text-[#6C6C6C]  leading-5 uppercase">Отзывы</div>
                 <span className="ml-auto block lg:w-6 lg:h-6 h-3 w-3 lg:border-r-6 lg:border-b-6 border-r-4 border-b-4 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] -mt-2 "></span>
               </label>
 
               <div className="overflow-hidden max-h-0 transition-all duration-300 peer-checked:max-h-full font-gilroy">
                 {/* otziv info */}
-                <div className="mt-4 mb-2 px-1">
+                <div className="mt-8 mb-2 px-1">
                   <div className="flex flex-col gap-4 lg:flex-row lg:gap-6 rounded-3xl bg-white/10 p-4 md:p-6 shadow-[0_4px_12px_rgba(0,0,0,0.12)]">
                   {/* img */}
                   <div className="flex w-full max-w-28 lg:max-w-48 rounded-xl mb-auto">
