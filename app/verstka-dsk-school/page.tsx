@@ -391,7 +391,7 @@ export default function Home() {
             <span className="">Личный кабинет</span>
           </div>
 
-          <h2 className="flex text-[#0039AE] text-2xl lg:text-5xl font-semibold mb-2"><span>Личный кабинет</span> <span className="text-[#BBBCBC] mx-2">-</span> <span className="text-[#BBBCBC]">Сертификаты</span></h2>
+          <h2 className="flex flex-wrap text-[#0039AE] text-2xl lg:text-5xl font-semibold mb-2"><span>Личный кабинет</span> <span className="text-[#BBBCBC] mx-2">-</span> <span className="text-[#BBBCBC]">Сертификаты</span></h2>
 
           <div className="flex flex-col xl:flex-row gap-8">
             {/* col-1 menu */}
@@ -507,7 +507,7 @@ export default function Home() {
             <span className="">Личный кабинет</span>
           </div>
 
-          <h2 className=" text-[#0039AE] text-2xl lg:text-5xl  font-semibold mb-2"><span>Личный кабинет</span> <span className="text-[#BBBCBC] mx-2">-</span> <span className="text-[#BBBCBC]">Настройка профиля</span></h2>
+          <h2 className=" text-[#0039AE] text-2xl lg:text-5xl flex flex-wrap font-semibold mb-2"><span>Личный кабинет</span> <span className="text-[#BBBCBC] mx-2">-</span> <span className="text-[#BBBCBC]">Настройка профиля</span></h2>
 
           <div className="flex flex-col xl:flex-row gap-8">
             {/* col-1 menu */}
@@ -605,7 +605,7 @@ export default function Home() {
                     {/* spec */}
                     <div className="relative">
                       <select
-                        name="gender"
+                        name="spec"
                         className="w-full appearance-none rounded-xl bg-[#EFEFEF] px-4 py-3 pr-10 text-md font-semibold text-[#1924248F]"
                         defaultValue=""
                       >
@@ -618,7 +618,7 @@ export default function Home() {
                     {/* city */}
                     <div className="relative">
                       <select
-                        name="gender"
+                        name="city"
                         className="w-full appearance-none rounded-xl bg-[#EFEFEF] px-4 py-3 pr-10 text-md font-semibold text-[#1924248F]"
                         defaultValue=""
                       >
@@ -659,7 +659,7 @@ export default function Home() {
                   <div className="flex flex-row w-full">
                     <div className="flex">Звонки по телефону</div>
                     <label className="relative ml-auto inline-flex h-6 w-11 cursor-pointer items-center">
-                      <input type="checkbox" className="peer sr-only" defaultChecked />
+                      <input type="checkbox" className="peer sr-only"/>
                       <span className="h-6 w-11 rounded-full bg-[#D8E6FF] transition peer-checked:bg-[#0139AE]" />
                       <span className="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
                     </label>
@@ -1040,7 +1040,7 @@ export default function Home() {
 
 
         {/* congress */}
-        <div className="flex flex-col p-8 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10  gap-10">
+        <div className="flex flex-col p-8 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10  gap-10 ">
           
           {/* single */}
           <div className="flex flex-col border-blue-800 pb-8 border-b-2 pb-3 gap-4 text-[#777777]">
@@ -1073,7 +1073,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-
+          {/* end single */}
           
         </div>
 
@@ -1152,7 +1152,7 @@ export default function Home() {
         </div>
 
         {/* congress info */}
-        <div className="flex-col flex gap-3 p-4 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
+        <div className="flex-col flex gap-3 p-4 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-lg bg-white/10 backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10 text-[#777777]">
 
           {/* bread */}
           <div className="flex gap-4 flex-row text-md text-[#BBBCBC]">
@@ -1181,7 +1181,14 @@ export default function Home() {
                 <div className="flex flex-col lg:gap-6">
                   <div className="hidden lg:flex lg:text-4xl text-[#0039AE]">Большой стоматологический конгресс Погружение</div>
                   <div className="flex flex-row">
-                    <div>4.9/5</div>
+                    <div className="flex flex-row gap-1">
+                      <div className="w-6 h-6 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                      <div className="w-6 h-6 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                      <div className="w-6 h-6 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                      <div className="w-6 h-6 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                      <div className="w-6 h-6 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                      <div className="ml-2 my-auto">4.9/5</div>
+                    </div>
                     <div className="ml-auto underline">читать отзывы</div>
                   </div>
                   <div className="uppercase flex flex-row gap-1 mt-2 lg:justify-start"> 
@@ -1219,8 +1226,7 @@ export default function Home() {
                   <div className="font-bold text-2xl leading-6 text-[#0039AE]">Адрес проведения</div>
                   <div className="text-xs opacity-50">Новосибирск, концертный комплекс им В.В. Маяковского</div>
                 </div>
-                <div className="my-auto ml-auto"><span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4"></span>
-                </div>
+
               </div>
           {/* date end */}
 
@@ -1236,21 +1242,115 @@ export default function Home() {
                   <div className="font-bold text-2xl leading-6 text-[#0039AE]">Дата проведения</div>
                   <div className="text-sm opacity-50">23-24.05.2026   10:00-20:00</div>
                 </div>
-                <div className="my-auto ml-auto"><span className="ml-auto block w-2 h-2 border-r-2 border-b-2 border-white rotate-45 transition-transform duration-300 peer-checked:rotate-[225deg] mr-4"></span>
-                </div>
               </div>
           {/* address end */}
-          
         </div>
+        {/* date/address end */}
+        
 
+        {/* partners */}
+        <div className="flex flex-col gap-3">
+            <div className="group rounded-xl lg:rounded-3xl shadow-lg bg-gray-50 px-4 py-4 md:px-8 md:py-8">
+              <input type="checkbox" id="partner" className="peer absolute opacity-0 pointer-events-none" />
+              <label htmlFor="partner" className="flex flex-row  cursor-pointer items-center">
+                <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-xl leading-5 lg:text-4xl font-bold text-[#6C6C6C]  uppercase">Партнеры</div>
+                <span className="ml-auto block lg:w-6 lg:h-6 h-3 w-3 lg:border-r-6 lg:border-b-6 border-r-4 border-b-4 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] -mt-2 "></span>
+              </label>
+
+              <div className="overflow-hidden  max-h-0 transition-all duration-300 peer-checked:max-h-full font-gilroy">
+                <div className="grid grid-cols-3 lg:grid-cols-5 gap-3 mt-10">
+                  <div className="border-[#0039AE] border-2 h-20 rounded-xl bg-no-repeat bg-size-[6rem]  bg-center" style={{backgroundImage: "url(brand-1.png)"}}></div>
+                  <div className="border-[#0039AE] border-2 h-20 rounded-xl bg-no-repeat bg-size-[10rem] bg-center" style={{backgroundImage: "url(brand-2.png)"}}></div>
+                  <div className="border-[#0039AE] border-2 h-20 rounded-xl bg-no-repeat bg-size-[10rem]  bg-center" style={{backgroundImage: "url(brand-3.png)"}}></div>
+                  <div className="border-[#0039AE] border-2 h-20 rounded-xl bg-no-repeat bg-size-[5rem]  bg-center" style={{backgroundImage: "url(brand-4.png)"}}></div>
+                  <div className="border-[#0039AE] border-2 h-20 rounded-xl bg-no-repeat bg-size-[11rem]  bg-center" style={{backgroundImage: "url(brand-5.png)"}}></div>
+                </div>
+              
+                <div className="text-2xl leading-5 lg:text-4xl font-bold text-[#013CB0]   my-8 pt-4">Подарки от партнеров</div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-4">
+                  {/* gift */}
+                  <div className="flex flex-row gap-10">
+                    <div className="my-auto mx-auto rounded-full border-3 border-blue-800 w-48 aspect-[1/1] bg-center text-center bg-contain bg-no-repeat" style={{backgroundImage: "url(gift.png)"}}></div>
+                    <div className="flex flex-col gap-4  my-auto">
+                      <div className="h-10 w-auto bg-top-left bg-contain bg-no-repeat" style={{backgroundImage: "url(brand-5.png)"}}></div>
+                      <div className="text-xl font-bold text-[#646464]  leading-5">Сертификат 20 000 ₽, до 5% заказа</div>
+                    </div>
+                  </div>
+                  {/* gift */}
+                  <div className="flex flex-row gap-10">
+                    <div className="my-auto mx-auto rounded-full border-3 border-blue-800 w-48 aspect-[1/1] bg-center text-center bg-contain bg-no-repeat" style={{backgroundImage: "url(gift.png)"}}></div>
+                    <div className="flex flex-col gap-4  my-auto">
+                      <div className="h-10 w-auto bg-top-left bg-contain bg-no-repeat" style={{backgroundImage: "url(brand-5.png)"}}></div>
+                      <div className="text-xl font-bold text-[#646464]  leading-5">Сертификат 20 000 ₽, до 5% заказа</div>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+       {/* otzivy */}
+        <div className="flex flex-col gap-3">
+            <div className="group rounded-xl lg:rounded-3xl shadow-lg bg-gray-50 px-4 py-4 md:px-8 md:py-8">
+              <input type="checkbox" id="otzivy" className="peer absolute opacity-0 pointer-events-none" />
+              <label htmlFor="otzivy" className="flex flex-row  cursor-pointer items-center">
+                <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-xl  lg:text-4xl font-bold text-[#6C6C6C]  uppercase">Отзывы</div>
+                <span className="ml-auto block lg:w-6 lg:h-6 h-3 w-3 lg:border-r-6 lg:border-b-6 border-r-4 border-b-4 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] -mt-2 "></span>
+              </label>
+
+              <div className="overflow-hidden max-h-0 transition-all duration-300 peer-checked:max-h-full font-gilroy">
+                {/* otziv info */}
+                <div className="mt-4 mb-2 px-1">
+                  <div className="flex flex-row gap-6 rounded-3xl bg-white/10 p-5 md:p-6 shadow-[0_4px_12px_rgba(0,0,0,0.12)]">
+                  {/* img */}
+                  <div className="flex rounded-xl max-w-34 shrink-0 mb-auto">
+                    <svg className="block w-full h-auto" viewBox="0 0 44 44" fill="none" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.386312" y="0.386312" width="42.3839" height="43.1566" rx="21.192" fill="white"/>
+<rect x="0.386312" y="0.386312" width="42.3839" height="43.1566" rx="21.192" stroke="#9C9C9C" strokeWidth="0.772624"/>
+<path d="M19.0617 5.96397C19.2776 5.90418 19.6796 5.79656 19.9615 5.73677C20.3215 5.65904 20.7294 5.62317 21.3413 5.61719C21.8213 5.61719 22.3072 5.63512 22.4212 5.66502C22.5352 5.70089 22.7931 5.75471 22.9911 5.79058C23.1891 5.83243 23.567 5.94006 23.831 6.02974C24.0949 6.11943 24.4609 6.2689 24.6409 6.35859C24.8208 6.44828 25.1448 6.63961 25.3608 6.7831C25.5767 6.92062 25.9547 7.21359 26.2006 7.42286C26.4466 7.63811 26.7706 7.955 26.9205 8.12839C27.0705 8.30776 27.2745 8.55888 27.3765 8.69042C27.4785 8.82196 27.6464 9.07308 27.7484 9.24647C27.8564 9.41389 28.0484 9.8085 28.1744 10.1075C28.3063 10.4124 28.4683 10.8788 28.5343 11.1418C28.6003 11.4049 28.6783 11.9191 28.7143 12.2779C28.7563 12.7203 28.7563 13.1628 28.7143 13.6231C28.6843 13.9998 28.6183 14.4841 28.5643 14.6994C28.5163 14.9146 28.4083 15.2793 28.3243 15.5065C28.2403 15.7337 28.0604 16.1403 27.9224 16.4034C27.7844 16.6665 27.5445 17.0551 27.3825 17.2704C27.2265 17.4856 26.8905 17.8683 26.6326 18.1313C26.3806 18.3884 25.9667 18.7532 25.7207 18.9385C25.4747 19.1239 25.0548 19.3869 24.7908 19.5245C24.5269 19.662 24.1249 19.8414 23.891 19.9251C23.657 20.0028 23.2851 20.1164 23.0511 20.1702C22.8171 20.224 22.3492 20.2898 22.0012 20.3137C21.6533 20.3436 21.0774 20.3436 20.7114 20.3137C20.3455 20.2838 19.7936 20.2001 19.4816 20.1164C19.1697 20.0387 18.6837 19.8712 18.4018 19.7517C18.1198 19.6261 17.6339 19.357 17.3219 19.1478C17.01 18.9445 16.524 18.5559 16.2421 18.2808C15.9601 18.0058 15.6062 17.6171 15.4502 17.4198C15.3002 17.2225 15.0483 16.8339 14.8863 16.5529C14.7243 16.2719 14.4903 15.7517 14.3704 15.387C14.2384 15.0103 14.1064 14.4363 14.0464 14.0417C13.9804 13.5633 13.9564 13.1448 13.9804 12.6665C13.9984 12.2898 14.0584 11.7637 14.1124 11.5006C14.1664 11.2375 14.2804 10.819 14.3644 10.5738C14.4483 10.3287 14.5983 9.96396 14.6943 9.76665C14.7963 9.56934 15.0183 9.19266 15.1922 8.92958C15.3662 8.6665 15.7202 8.22405 15.9781 7.94902C16.2421 7.67398 16.68 7.27338 16.962 7.06412C17.2439 6.85485 17.7419 6.54992 18.0718 6.38251C18.4018 6.21509 18.8457 6.02974 19.0617 5.96397Z" fill="#9C9C9C"/>
+<path d="M13.8424 20.6246C14.0884 20.5529 14.5083 20.4751 14.7723 20.4452C15.0363 20.4213 15.3062 20.3914 15.3722 20.3854C15.4382 20.3854 15.6302 20.4153 15.7921 20.4572C15.9841 20.505 16.476 20.7741 17.142 21.1926C17.7179 21.5573 18.2878 21.9041 18.4018 21.9639C18.5158 22.0237 18.8937 22.1732 19.2416 22.2987C19.5896 22.4183 20.0995 22.5618 20.3815 22.6156C20.6634 22.6694 21.1974 22.7173 21.5813 22.7173C22.0552 22.7173 22.4452 22.6814 22.8411 22.5917C23.1531 22.5259 23.669 22.3765 23.981 22.2569C24.2929 22.1373 24.6469 21.9938 24.7609 21.934C24.8748 21.8742 25.3488 21.5872 25.8107 21.2943C26.2726 20.9953 26.7886 20.6844 26.9505 20.6067C27.1185 20.523 27.3405 20.4393 27.4485 20.4153C27.5504 20.3974 27.9164 20.4094 28.2583 20.4452C28.5943 20.4811 29.0982 20.5768 29.3802 20.6605C29.6621 20.7382 30.0941 20.9116 30.34 21.0431C30.586 21.1687 30.976 21.4198 31.2039 21.5932C31.4319 21.7606 31.7678 22.0775 31.9538 22.2928C32.1338 22.508 32.3917 22.8548 32.5297 23.07C32.6737 23.2853 32.8777 23.644 32.9977 23.8772C33.1116 24.1104 33.2976 24.5409 33.4116 24.8339C33.5316 25.1328 33.7056 25.7068 33.8075 26.1194C33.9095 26.5319 34.0535 27.2016 34.1195 27.6141C34.1855 28.0267 34.2695 28.7681 34.3055 29.2584C34.3415 29.7546 34.3595 30.5737 34.3415 31.082C34.3235 31.7516 34.2755 32.1403 34.1855 32.487C34.1135 32.7501 33.9575 33.1806 33.8255 33.4437C33.6996 33.7068 33.4536 34.1014 33.2736 34.3286C33.0936 34.5498 32.7637 34.8846 32.5297 35.07C32.2958 35.2553 31.8638 35.5184 31.5699 35.6619C31.2759 35.7994 30.802 35.9788 30.0101 36.1941L21.7913 36.212C15.6662 36.2299 13.4645 36.212 13.1525 36.1582C12.9246 36.1223 12.5166 36.0207 12.2527 35.9429C11.9887 35.8592 11.6107 35.7098 11.4128 35.6081C11.2148 35.5124 10.9208 35.3271 10.7529 35.2075C10.5909 35.0879 10.2609 34.789 10.033 34.5438C9.73302 34.221 9.53505 33.94 9.33108 33.5334C9.1751 33.2225 9.00713 32.8039 8.95313 32.6066C8.90514 32.4093 8.83915 32.0625 8.80316 31.8293C8.77316 31.5962 8.74316 31.1178 8.74316 30.7531C8.74316 30.3944 8.77316 29.7187 8.80316 29.2584C8.83915 28.798 8.92314 28.0685 8.98913 27.644C9.06112 27.2195 9.2051 26.514 9.31308 26.0895C9.42107 25.6649 9.62504 25.0312 9.75702 24.6844C9.889 24.3376 10.141 23.8174 10.3089 23.5185C10.4769 23.2255 10.7409 22.8189 10.8969 22.6216C11.0468 22.4243 11.3168 22.1253 11.4908 21.952C11.6587 21.7786 11.9707 21.5215 12.1747 21.3839C12.3846 21.2464 12.7446 21.0491 12.9726 20.9415C13.2005 20.8339 13.5965 20.6904 13.8424 20.6246Z" fill="#9C9C9C"/>
+</svg>
+
+                  </div>
+                  {/* right block */}
+                  <div className="flex flex-col gap-4 font-bold text-[#777777]">
+                    <div className="flex lg:text-xl">24.05.2026   17:44</div>
+                    <div className="flex flex-row">
+                      <div className= "flex lg:text-2xl text-[#0039AE]">Василевская Наталья Михайловна</div>
+                      {/* stars */}
+                      <div className="flex flex-row ml-auto gap-1 ">
+                        <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                        <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                        <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                        <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                        <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                      </div>
+                    </div>
+
+                    <div className="text-sm lg:text-xl leading-6 lg:text-2xl my-3">Это трудно описать словами. Эмоции зашкаливают. Разве можно достись этого уровня? Это космос! Эстетическое удовольствие и мечта! Да, теперь у меня появилась мечта и есть куда стремится. Спасибо огромное, что вы есть и делитесь опытом и знаниями.</div>
+                    <div className="inline text-center mt-2 text-white text-lg rounded-2xl py-2 px-14 bg-[#013AAF] mx-0 lg:mr-auto">
+                      Записаться
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+
+
+
+            </div>
+          </div>
+          
 
       </div>
     </div>
 
-
-
     
     {/* footer */}
+    
     <div className="flex flex-col bg-gradient-to-r from-[#091930] via-[#0156C5] to-[#091930] gap-8  ">
       <div className="max-w-[1350px] flex w-full mx-auto flex flex-col py-12 lg:gap-8 gap-6 px-16 lg:px-8  ">
 
@@ -1261,8 +1361,7 @@ export default function Home() {
               ИП Добрынин Вячеслав Александрович ИНН: 540862498786<br/>
               ИП Михайлов Михаил Владимирович ИНН: 434548399519ОГРНИП: 322435000047713
               </div>
-              <div className="flex w-60 h-9 bg-fill bg-no-repeat" style={{
-          backgroundImage: "url(visa.png)"}}></div>
+              <div className="flex w-60 h-9 bg-fill bg-no-repeat" style={{backgroundImage: "url(visa.png)"}}></div>
 
             {/* social */}
               <div className="flex flex-row gap-4 ">
