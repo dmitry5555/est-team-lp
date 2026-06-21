@@ -1280,7 +1280,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-4">
                   {/* gift */}
                   <div className="flex flex-row gap-0 mx-10">
-                    <div className="my-auto mx-auto rounded-full border-3 border-blue-800 w-32 xl:w-48 aspect-[1/1] bg-center text-center bg-contain bg-no-repeat" style={{backgroundImage: "url(gift.png)"}}></div>
+                    <div className="my-auto mx-auto rounded-full border-3 border-blue-800 w-32 xl:w-48 aspect-square bg-center bg-contain bg-no-repeat shrink-0" style={{backgroundImage: "url(gift.png)"}} />
                     <div className="flex flex-col gap-2 my-auto mx-10">
                       <div className="h-8 xl:h-12 w-auto bg-top-left bg-contain bg-no-repeat" style={{backgroundImage: "url(brand-5.png)"}}></div>
                       <div className="text-lg lg:text-2xl font-bold text-[#646464]  leading-6 max-w-48">Сертификат 20 000 ₽, до 5% заказа</div>
@@ -1288,7 +1288,7 @@ export default function Home() {
                   </div>
                   {/* gift */}
                   <div className="flex flex-row gap-0 mx-10">
-                    <div className="my-auto mx-auto rounded-full border-3 border-blue-800 w-32 xl:w-48 aspect-[1/1] bg-center text-center bg-contain bg-no-repeat" style={{backgroundImage: "url(gift.png)"}}></div>
+                    <div className="my-auto mx-auto rounded-full border-3 border-blue-800 w-32 xl:w-48 aspect-square bg-center bg-contain bg-no-repeat shrink-0" style={{backgroundImage: "url(gift.png)"}} />
                     <div className="flex flex-col gap-2 my-auto mx-10">
                       <div className="h-8 xl:h-12 w-auto bg-top-left bg-contain bg-no-repeat" style={{backgroundImage: "url(brand-5.png)"}}></div>
                       <div className="text-lg lg:text-2xl font-bold text-[#646464]  leading-6 max-w-48">Сертификат 20 000 ₽, до 5% заказа</div>
