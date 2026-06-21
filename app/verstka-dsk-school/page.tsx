@@ -381,7 +381,7 @@ export default function Home() {
 
       
         {/* lk */}
-        <div className="flex flex-col w-full p-0 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-none lg:shadow-lg bg-white/0 lg:bg-white/10 lg:backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
+        <div className="flex flex-col w-full p-0 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-none lg:shadow-lg bg-white/0 lg:bg-white/10 lg:backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10 gap-2">
           <div className="flex gap-4 flex-row text-md text-[#BBBCBC]">
             <span>Главная</span>
             <svg className="my-auto" width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -497,7 +497,7 @@ export default function Home() {
 
  
         {/* lk-2 */}
-        <div className="flex flex-col w-full p-0 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-none lg:shadow-lg bg-white/0 lg:bg-white/10 lg:backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10">
+        <div className="flex flex-col w-full p-0 lg:p-6 lg:py-12 bg-gray-50 rounded-4xl font-gilroy text-md lg:text-lg shadow-none lg:shadow-lg bg-white/0 lg:bg-white/10 lg:backdrop-blur-md shadow-[inset_0_1px_0_rgba(255,255,255,0.35),0_8px_20px_rgba(0,0,0,0.25)] transition z-10 gap-2">
           <div className="flex gap-4 flex-row text-md text-[#BBBCBC]">
             <span>Главная</span>
             <svg className="my-auto" width="5" height="8" viewBox="0 0 5 8" fill="none" xmlns="http://www.w3.org/2000/svg">
