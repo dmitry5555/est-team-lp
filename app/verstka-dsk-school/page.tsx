@@ -1009,7 +1009,7 @@ export default function Home() {
               <input type="checkbox" id="faq-1" className="peer absolute opacity-0 pointer-events-none" />
               <label htmlFor="faq-1" className="flex flex-row  cursor-pointer items-center">
                 <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-md leading-5 lg:text-3xl font-bold text-[#6C6C6C]  uppercase">Для кого подходит обучение в DSK School?</div>
-                <span className="ml-auto block lg:w-6 lg:h-6 h-3 w-3 lg:border-r-6 lg:border-b-6 border-r-4 border-b-4 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] -mt-2 "></span>
+                <span className="ml-auto block lg:w-6 lg:h-6 h-3 w-3 lg:border-r-6 lg:border-b-6 border-r-4 border-b-4 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] peer-checked:rotate-[225deg] -mt-2 "></span>
               </label>
 
               <div className="overflow-hidden max-h-0 transition-all
@@ -1259,31 +1259,42 @@ export default function Home() {
 
               <div className="overflow-hidden  max-h-0 transition-all duration-300 peer-checked:max-h-full font-gilroy">
                 <div className="grid grid-cols-3 lg:grid-cols-5 gap-3 mt-10">
-                  <div className="border-[#0039AE] border-2 h-20 rounded-xl bg-no-repeat bg-size-[6rem]  bg-center" style={{backgroundImage: "url(brand-1.png)"}}></div>
-                  <div className="border-[#0039AE] border-2 h-20 rounded-xl bg-no-repeat bg-size-[10rem] bg-center" style={{backgroundImage: "url(brand-2.png)"}}></div>
-                  <div className="border-[#0039AE] border-2 h-20 rounded-xl bg-no-repeat bg-size-[10rem]  bg-center" style={{backgroundImage: "url(brand-3.png)"}}></div>
-                  <div className="border-[#0039AE] border-2 h-20 rounded-xl bg-no-repeat bg-size-[5rem]  bg-center" style={{backgroundImage: "url(brand-4.png)"}}></div>
-                  <div className="border-[#0039AE] border-2 h-20 rounded-xl bg-no-repeat bg-size-[11rem]  bg-center" style={{backgroundImage: "url(brand-5.png)"}}></div>
+                  <div className="border-[#0039AE] border-2 h-20 rounded-xl px-4 py-2">
+                    <div className="w-full h-full bg-no-repeat bg-contain bg-center" style={{ backgroundImage: "url(brand-1.png)" }} />
+                  </div>
+                  <div className="border-[#0039AE] border-2 h-20 rounded-xl px-4 py-2">
+                    <div className="w-full h-full bg-no-repeat bg-contain bg-center" style={{ backgroundImage: "url(brand-2.png)" }} />
+                  </div>
+                  <div className="border-[#0039AE] border-2 h-20 rounded-xl px-4 py-2">
+                    <div className="w-full h-full bg-no-repeat bg-contain bg-center" style={{ backgroundImage: "url(brand-3.png)" }} />
+                  </div>
+                  <div className="border-[#0039AE] border-2 h-20 rounded-xl px-4 py-2">
+                    <div className="w-full h-full bg-no-repeat bg-contain bg-center" style={{ backgroundImage: "url(brand-4.png)" }} />
+                  </div>
+                  <div className="border-[#0039AE] border-2 h-20 rounded-xl px-4 py-2">
+                    <div className="w-full h-full bg-no-repeat bg-contain bg-center" style={{ backgroundImage: "url(brand-5.png)" }} />
+                  </div>
                 </div>
               
                 <div className="text-2xl leading-5 lg:text-4xl font-bold text-[#013CB0]   my-8 pt-4">Подарки от партнеров</div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-4">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-4">
                   {/* gift */}
-                  <div className="flex flex-row gap-10">
-                    <div className="my-auto mx-auto rounded-full border-3 border-blue-800 w-48 aspect-[1/1] bg-center text-center bg-contain bg-no-repeat" style={{backgroundImage: "url(gift.png)"}}></div>
-                    <div className="flex flex-col gap-4  my-auto">
-                      <div className="h-10 w-auto bg-top-left bg-contain bg-no-repeat" style={{backgroundImage: "url(brand-5.png)"}}></div>
-                      <div className="text-xl font-bold text-[#646464]  leading-5">Сертификат 20 000 ₽, до 5% заказа</div>
+                  <div className="flex flex-row gap-0 mx-10">
+                    <div className="my-auto mx-auto rounded-full border-3 border-blue-800 w-32 xl:w-48 aspect-[1/1] bg-center text-center bg-contain bg-no-repeat" style={{backgroundImage: "url(gift.png)"}}></div>
+                    <div className="flex flex-col gap-2 my-auto mx-10">
+                      <div className="h-8 xl:h-12 w-auto bg-top-left bg-contain bg-no-repeat" style={{backgroundImage: "url(brand-5.png)"}}></div>
+                      <div className="text-lg lg:text-2xl font-bold text-[#646464]  leading-6 max-w-48">Сертификат 20 000 ₽, до 5% заказа</div>
                     </div>
                   </div>
                   {/* gift */}
-                  <div className="flex flex-row gap-10">
-                    <div className="my-auto mx-auto rounded-full border-3 border-blue-800 w-48 aspect-[1/1] bg-center text-center bg-contain bg-no-repeat" style={{backgroundImage: "url(gift.png)"}}></div>
-                    <div className="flex flex-col gap-4  my-auto">
-                      <div className="h-10 w-auto bg-top-left bg-contain bg-no-repeat" style={{backgroundImage: "url(brand-5.png)"}}></div>
-                      <div className="text-xl font-bold text-[#646464]  leading-5">Сертификат 20 000 ₽, до 5% заказа</div>
+                  <div className="flex flex-row gap-0 mx-10">
+                    <div className="my-auto mx-auto rounded-full border-3 border-blue-800 w-32 xl:w-48 aspect-[1/1] bg-center text-center bg-contain bg-no-repeat" style={{backgroundImage: "url(gift.png)"}}></div>
+                    <div className="flex flex-col gap-2 my-auto mx-10">
+                      <div className="h-8 xl:h-12 w-auto bg-top-left bg-contain bg-no-repeat" style={{backgroundImage: "url(brand-5.png)"}}></div>
+                      <div className="text-lg lg:text-2xl font-bold text-[#646464]  leading-6 max-w-48">Сертификат 20 000 ₽, до 5% заказа</div>
                     </div>
                   </div>
+                  
 
                 </div>
 
@@ -1294,10 +1305,10 @@ export default function Home() {
 
        {/* otzivy */}
         <div className="flex flex-col gap-3">
-            <div className="group rounded-xl lg:rounded-3xl shadow-lg bg-gray-50 px-2 py-4 md:px-8 md:py-8">
+            <div className="group rounded-xl lg:rounded-3xl shadow-lg bg-gray-50 px-4 py-4 md:px-8 md:py-8">
               <input type="checkbox" id="otzivy" className="peer absolute opacity-0 pointer-events-none" />
               <label htmlFor="otzivy" className="flex flex-row  cursor-pointer items-center">
-                <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-xl px-2 lg:text-4xl font-bold text-[#6C6C6C]  leading-5 uppercase">Отзывы</div>
+                <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-xl leading-5 lg:text-4xl font-bold text-[#6C6C6C]  uppercase">Отзывы</div>
                 <span className="ml-auto block lg:w-6 lg:h-6 h-3 w-3 lg:border-r-6 lg:border-b-6 border-r-4 border-b-4 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] -mt-2 "></span>
               </label>
 
@@ -1306,7 +1317,7 @@ export default function Home() {
                 <div className="flex flex-row gap-2 lg:flex-row lg:items-start mt-4">
                   <div className="flex lg:text-2xl text-[#0039AE] font-bold">Оцените мероприятие</div>
                   {/* stars */}
-                  <div className="flex flex-row flex-wrap lg:ml-auto gap-1 shrink-0 ml-auto">
+                  <div className="flex flex-row flex-wrap lg:ml-4 gap-1 shrink-0 ml-auto">
                     <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
                     <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
                     <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
@@ -1314,25 +1325,31 @@ export default function Home() {
                     <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
                   </div>
                 </div>
+                <input className="my-2 w-1/2 flex rounded-lg border-1 border-[#777777] px-4 py-2 text-sm lg:text-lg" type="text" name="" id="" placeholder="Ваше имя"/>
                 <div className="flex lg:text-2xl text-[#0039AE] mt-3">Общее впечатление</div>
-                <textarea className="my-2 w-full flex rounded-lg border-1 border-[#777777] p-4 min-h-40" name="" id="" placeholder="Поделитесь своими впечатлениями о мероприятии: что вам понравилось/не понравилось, какие моменты запомнились, как была организована программа и порекомендовали бы вы его другим."></textarea>
-                <div className="flex flex-row gap-2 flex lg:text-2xl text-[#777777] mt-3">
-                  <label className="relative inline-flex h-6 w-11 cursor-pointer items-center">
-                    <input type="checkbox" className="peer sr-only" defaultChecked />
-                    <span className="h-6 w-11 rounded-full bg-[#D8E6FF] transition peer-checked:bg-[#0139AE]" />
+                <textarea className="my-2 w-full flex rounded-lg border-1 border-[#777777] p-4 min-h-40 lg:text-lg" name="" id="" placeholder="Поделитесь своими впечатлениями о мероприятии: что вам понравилось/не понравилось, какие моменты запомнились, как была организована программа и порекомендовали бы вы его другим."></textarea>
+                <label htmlFor="policy-agree" className="flex items-center gap-2 cursor-pointer select-none lg:text-2xl text-[#0039AE] mt-3">
+                  <input type="checkbox" name="" id="policy-agree" value="child" className="" />
+                  <span>Я согласен на обработку моих персональных данных</span>
+                </label>
+
+                <div className="flex flex-row gap-4 flex lg:text-2xl text-[#777777] mt-4">
+                  <label className="relative  my-auto inline-flex h-6 w-11 cursor-pointer items-center">
+                    <input type="checkbox" className="peer sr-only"  />
+                    <span className="h-6 w-11 rounded-full bg-[#D8E6FF] transition peer-checked:bg-[#0139AE] " />
                     <span className="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
                   </label>
-                  <div className="">Скрыть мои данные в отзыве</div>
-                  <div className="ml-auto">0\100</div>
+                  <div className="text-sm my-auto lg:text-xl">Скрыть мои данные в отзыве</div>
+                  <div className="ml-auto my-auto text-sm lg:text-lg my-auto">0\100</div>
                 </div>
-                <div className="break-words flex lg:text-2xl text-[#777777] mt-3 mb-6">Перед отправкой ознакомьтесь <a href="" className="text-[#0039AE] underline ml-1">правилами публикации</a></div>
-                <div className="flex justify-center mt-2 text-white text-lg rounded-xl py-2 px-4 bg-[#013AAF] mx-0 lg:mr-auto w-full">Опубликовать</div>
+                <div className="break-words flex flex-wrap lg:text-xl text-[#777777] mt-3 mb-6 text-sm"> <span>Перед отправкой ознакомьтесь</span> <a href="" className="text-[#0039AE] underline ml-1">правилами публикации</a></div>
+                <div className="flex justify-center mt-2 text-white text-lg rounded-xl py-2 px-4 bg-[#013AAF] mx-0 lg:w-64 w-full lg:ml-auto lg:-mt-10">Опубликовать</div>
 
 
 
 
                 {/* otziv */}
-                <h2 className="flex mt-4  text-[#0039AE] text-2xl lg:text-5xl text-[#0039AE] font-semibold mb-2 px-2">Все отзывы</h2>
+                <h2 className="flex mt-4 text-[#0039AE] text-2xl lg:mb-6 lg:text-3xl text-[#0039AE] font-semibold mb-2 px-2">Все отзывы</h2>
                 <div className=" mb-2 px-1">
                   <div className="flex flex-col gap-4 lg:flex-row lg:gap-6 rounded-3xl bg-white/10 p-4 md:p-6 shadow-[0_4px_12px_rgba(0,0,0,0.12)]">
                   {/* img */}
