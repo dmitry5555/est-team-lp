@@ -1294,16 +1294,46 @@ export default function Home() {
 
        {/* otzivy */}
         <div className="flex flex-col gap-3">
-            <div className="group rounded-xl lg:rounded-3xl shadow-lg bg-gray-50 px-4 py-4 md:px-8 md:py-8">
+            <div className="group rounded-xl lg:rounded-3xl shadow-lg bg-gray-50 px-2 py-4 md:px-8 md:py-8">
               <input type="checkbox" id="otzivy" className="peer absolute opacity-0 pointer-events-none" />
               <label htmlFor="otzivy" className="flex flex-row  cursor-pointer items-center">
-                <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-xl  lg:text-4xl font-bold text-[#6C6C6C]  leading-5 uppercase">Отзывы</div>
+                <div className="hover:text-[#013CB0] group-has-[:checked]:text-[#013CB0] text-xl px-2 lg:text-4xl font-bold text-[#6C6C6C]  leading-5 uppercase">Отзывы</div>
                 <span className="ml-auto block lg:w-6 lg:h-6 h-3 w-3 lg:border-r-6 lg:border-b-6 border-r-4 border-b-4 border-[#0039AE] rotate-45 transition-transform duration-300 shrink-0 group-has-[:checked]:rotate-[225deg] -mt-2 "></span>
               </label>
 
               <div className="overflow-hidden max-h-0 transition-all duration-300 peer-checked:max-h-full font-gilroy">
-                {/* otziv info */}
-                <div className="mt-8 mb-2 px-1">
+                {/* leave feedback */}
+                <div className="flex flex-row gap-2 lg:flex-row lg:items-start mt-4">
+                  <div className="flex lg:text-2xl text-[#0039AE] font-bold">Оцените мероприятие</div>
+                  {/* stars */}
+                  <div className="flex flex-row flex-wrap lg:ml-auto gap-1 shrink-0 ml-auto">
+                    <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                    <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                    <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                    <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                    <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
+                  </div>
+                </div>
+                <div className="flex lg:text-2xl text-[#0039AE] mt-3">Общее впечатление</div>
+                <textarea className="my-2 w-full flex rounded-lg border-1 border-[#777777] p-4 min-h-40" name="" id="" placeholder="Поделитесь своими впечатлениями о мероприятии: что вам понравилось/не понравилось, какие моменты запомнились, как была организована программа и порекомендовали бы вы его другим."></textarea>
+                <div className="flex flex-row gap-2 flex lg:text-2xl text-[#777777] mt-3">
+                  <label className="relative inline-flex h-6 w-11 cursor-pointer items-center">
+                    <input type="checkbox" className="peer sr-only" defaultChecked />
+                    <span className="h-6 w-11 rounded-full bg-[#D8E6FF] transition peer-checked:bg-[#0139AE]" />
+                    <span className="absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white shadow transition-transform peer-checked:translate-x-5" />
+                  </label>
+                  <div className="">Скрыть мои данные в отзыве</div>
+                  <div className="ml-auto">0\100</div>
+                </div>
+                <div className="break-words flex lg:text-2xl text-[#777777] mt-3 mb-6">Перед отправкой ознакомьтесь <a href="" className="text-[#0039AE] underline ml-1">правилами публикации</a></div>
+                <div className="flex justify-center mt-2 text-white text-lg rounded-xl py-2 px-4 bg-[#013AAF] mx-0 lg:mr-auto w-full">Опубликовать</div>
+
+
+
+
+                {/* otziv */}
+                <h2 className="flex mt-4  text-[#0039AE] text-2xl lg:text-5xl text-[#0039AE] font-semibold mb-2 px-2">Все отзывы</h2>
+                <div className=" mb-2 px-1">
                   <div className="flex flex-col gap-4 lg:flex-row lg:gap-6 rounded-3xl bg-white/10 p-4 md:p-6 shadow-[0_4px_12px_rgba(0,0,0,0.12)]">
                   {/* img */}
                   <div className="flex w-full max-w-28 lg:max-w-48 rounded-xl mb-auto">
@@ -1316,12 +1346,12 @@ export default function Home() {
 
                   </div>
                   {/* right block */}
-                  <div className="flex min-w-0 flex-col gap-4 font-bold text-[#777777]">
-                    <div className="flex lg:text-xl">24.05.2026   17:44</div>
-                    <div className="flex flex-col gap-2 lg:flex-row lg:items-start">
-                      <div className="min-w-0 break-words flex lg:text-2xl text-[#0039AE]">Василевская Наталья Михайловна</div>
+                  <div className="flex min-w-0 flex-col gap-2 font-bold text-[#777777] mb-1">
+                    <div className="flex text-sm lg:text-xl">24.05.2026   17:44</div>
+                    <div className="flex flex-row gap-2 lg:flex-row lg:items-start ">
+                      <div className="break-words flex lg:text-2xl text-[#0039AE]">Василевская Наталья Михайловна</div>
                       {/* stars */}
-                      <div className="flex flex-row flex-wrap lg:ml-auto gap-1 shrink-0">
+                      <div className="flex flex-row flex-wrap lg:ml-auto gap-1 shrink-0 ml-auto">
                         <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
                         <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
                         <div className="w-8 h-8 bg-cover" style={{backgroundImage:`url(star.png)`}}></div>
@@ -1330,12 +1360,12 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <div className="text-sm lg:text-xl leading-6 lg:text-2xl my-3">Это трудно описать словами. Эмоции зашкаливают. Разве можно достись этого уровня? Это космос! Эстетическое удовольствие и мечта! Да, теперь у меня появилась мечта и есть куда стремится. Спасибо огромное, что вы есть и делитесь опытом и знаниями.</div>
-                    <div className="inline text-center mt-2 text-white text-lg rounded-2xl py-2 px-4 bg-[#013AAF] mx-0 lg:mr-auto w-fit">
-                      Записаться
-                    </div>
+                    <div className="text-sm lg:text-xl lg:text-2xl my-1">Это трудно описать словами. Эмоции зашкаливают. Разве можно достись этого уровня? Это космос! Эстетическое удовольствие и мечта! Да, теперь у меня появилась мечта и есть куда стремится. Спасибо огромное, что вы есть и делитесь опытом и знаниями.</div>
+                    <div className="text-sm lg:text-xl lg:text-2xl underline text-[#0039AE]">Большой стоматологический конгресс Погружение 2025</div>
+
                   </div>
                   </div>
+
               </div>
             </div>
 
